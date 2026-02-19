@@ -1,0 +1,20 @@
+{
+    "state": "Punjab",
+    "districts": {
+        "Ludhiana": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        },
+        "Amritsar": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        },
+        "Jalandhar": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        }
+    }
+}

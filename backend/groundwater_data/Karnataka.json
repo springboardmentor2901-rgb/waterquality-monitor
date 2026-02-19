@@ -1,0 +1,20 @@
+{
+    "state": "Karnataka",
+    "districts": {
+        "Bengaluru Urban": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        },
+        "Mysuru": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        },
+        "Hubli": {
+            "statusCode": 500,
+            "message": "No data found for the given criteria.",
+            "data": []
+        }
+    }
+}
