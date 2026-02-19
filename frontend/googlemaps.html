@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaterWatch India</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root {
+  --deep: #003566; --mid: #0077b6; --light: #48cae4; --pale: #ade8f4;
+  --surface: #f8fbff; --border: rgba(0,100,180,0.13);
+  --safe: #0a9150; --warn: #d97706; --danger: #dc2626;
+  --ink: #0d1b2a; --muted: #64748b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: var(--ink); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* ── NAV ── */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; height: 62px; background: var(--deep);
+  flex-shrink: 0; z-index: 500; box-shadow: 0 2px 16px rgba(0,0,0,.25);
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.drop { width: 30px; height: 30px; background: var(--light); border-radius: 50% 50% 50% 8px; transform: rotate(-45deg); position: relative; }
+.drop::after { content: ''; position: absolute; inset: 6px; background: white; border-radius: 50%; opacity: .4; }
+.brand-text h1 { font-family: 'Playfair Display', serif; font-size: 19px; color: white; line-height: 1.1; }
+.brand-text span { font-size: 9px; color: var(--pale); letter-spacing: 2.5px; text-transform: uppercase; }
+
+.search-wrap { position: relative; }
+.search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--light); pointer-events: none; }
+#searchInput { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: white; padding: 8px 14px 8px 36px; border-radius: 24px; width: 255px; font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; transition: all .3s; }
+#searchInput::placeholder { color: rgba(255,255,255,.4); }
+#searchInput:focus { background: rgba(255,255,255,.17); border-color: var(--light); width: 295px; }
+#searchDrop { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: white; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.15); max-height: 220px; overflow-y: auto; display: none; z-index: 9999; }
+.sd-item { display: flex; align-items: center; gap: 8px; padding: 9px 13px; cursor: pointer; font-size: 13px; border-bottom: 1px solid var(--border); transition: background .15s; }
+.sd-item:last-child { border: none; }
+.sd-item:hover { background: #eef6ff; }
+.sd-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.sd-state { font-size: 11px; color: var(--muted); margin-left: auto; }
+
+.nav-stats { display: flex; gap: 22px; }
+.ns { text-align: center; color: white; }
+.ns .v { font-family: 'DM Mono', monospace; font-size: 17px; font-weight: 500; line-height: 1; }
+.ns .l { font-size: 9px; color: var(--pale); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+/* ── LAYOUT ── */
+.layout { display: flex; flex: 1; overflow: hidden; }
+
+/* ── SIDEBAR ── */
+.sidebar { width: 208px; background: white; border-right: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.sb-head { padding: 13px 13px 9px; border-bottom: 1px solid var(--border); font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); }
+.sb-scroll { overflow-y: auto; flex: 1; padding: 5px; }
+.sb-scroll::-webkit-scrollbar { width: 3px; }
+.sb-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.s-item { display: flex; align-items: center; gap: 8px; padding: 7px 9px; border-radius: 8px; cursor: pointer; font-size: 12.5px; color: var(--muted); transition: all .2s; }
+.s-item:hover { background: #eef6ff; color: var(--deep); }
+.s-item.active { background: #eef6ff; color: var(--deep); font-weight: 600; }
+.s-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.s-badge { margin-left: auto; font-size: 9.5px; padding: 1px 5px; border-radius: 7px; font-family: 'DM Mono', monospace; }
+
+/* ── MAP ── */
+#map { flex: 1; }
+.leaflet-container { font-family: 'DM Sans', sans-serif; }
+.mtt { background: var(--deep) !important; color: white !important; border: none !important; border-radius: 8px !important; font-family: 'DM Sans', sans-serif !important; font-size: 12px !important; padding: 5px 10px !important; box-shadow: 0 4px 14px rgba(0,0,0,.2) !important; }
+.mtt::before { display: none !important; }
+
+/* ── RIGHT PANEL ── */
+.panel { width: 288px; background: white; border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; }
+.panel-head { padding: 15px 17px 11px; border-bottom: 1px solid var(--border); }
+.panel-head h2 { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--deep); }
+.panel-head p { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.panel-body { flex: 1; overflow-y: auto; padding: 14px; }
+.panel-body::-webkit-scrollbar { width: 3px; }
+.panel-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.empty-state { display: flex; flex-direction: column; align-items: center; padding: 36px 14px; text-align: center; gap: 10px; }
+.empty-icon { width: 54px; height: 54px; background: #eef6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.empty-state h3 { font-family: 'Playfair Display', serif; color: var(--deep); font-size: 14px; }
+.empty-state p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* Detail card */
+.detail-card { animation: fadeUp .3s ease; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+.dc-hdr { background: linear-gradient(135deg, var(--deep), var(--mid)); border-radius: 13px; padding: 15px; color: white; margin-bottom: 12px; }
+.dc-hdr h3 { font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 2px; }
+.dc-hdr .slbl { font-size: 11px; color: var(--pale); }
+.dc-hdr .wstars { font-size: 14px; color: #ffd166; margin-top: 7px; letter-spacing: 1px; }
+.ptag { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 500; }
+.ptag.drinking { background: rgba(10,145,80,.22); color: #5effa8; }
+.ptag.irrigation { background: rgba(217,119,6,.22); color: #fcd34d; }
+.ptag.unsafe { background: rgba(220,38,38,.22); color: #fca5a5; }
+
+.metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 11px; }
+.metric.warn { border-color: var(--warn); }
+.metric.danger { border-color: var(--danger); }
+.ml { font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.mv { font-family: 'DM Mono', monospace; font-size: 19px; font-weight: 500; color: var(--deep); line-height: 1; }
+.metric.warn .mv { color: var(--warn); }
+.metric.danger .mv { color: var(--danger); }
+.mu { font-size: 9.5px; color: var(--muted); margin-top: 1px; }
+
+.ph-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 11px; margin-bottom: 12px; }
+.ph-track { height: 7px; border-radius: 7px; background: linear-gradient(to right,#ef4444 0%,#f97316 20%,#22c55e 35%,#22c55e 65%,#f97316 80%,#ef4444 100%); position: relative; margin: 8px 0 4px; }
+.ph-needle { position: absolute; top: -4px; width: 15px; height: 15px; background: white; border: 3px solid var(--deep); border-radius: 50%; transform: translateX(-50%); transition: left .5s ease; }
+.ph-labels { display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); }
+.ph-val { font-family: 'DM Mono', monospace; font-size: 19px; font-weight: 500; margin-top: 5px; }
+.ph-note { font-size: 9.5px; color: var(--muted); margin-top: 1px; }
+
+/* ── REVIEW PREVIEW in panel ── */
+.review-preview { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+.rp-top { display: flex; align-items: center; justify-content: space-between; padding: 11px 12px 8px; }
+.rp-score { display: flex; align-items: center; gap: 8px; }
+.rp-num { font-family: 'DM Mono', monospace; font-size: 26px; font-weight: 500; color: var(--deep); line-height: 1; }
+.rp-stars-col .rp-stars { font-size: 13px; color: #f59e0b; }
+.rp-stars-col .rp-count { font-size: 10px; color: var(--muted); }
+.open-reviews-btn {
+  padding: 6px 13px; border-radius: 20px; border: none;
+  background: var(--deep); color: white;
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all .2s; white-space: nowrap;
+}
+.open-reviews-btn:hover { background: var(--mid); transform: translateY(-1px); }
+.rp-divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+.rp-snippets { padding: 8px 12px 10px; }
+.snippet { padding: 5px 0; border-bottom: 1px solid var(--border); }
+.snippet:last-child { border: none; }
+.sn-row { display: flex; justify-content: space-between; align-items: center; }
+.sn-name { font-size: 11.5px; font-weight: 600; color: var(--ink); }
+.sn-stars { font-size: 10.5px; color: #f59e0b; }
+.sn-text { font-size: 11px; color: #4a5a6a; margin-top: 1px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.no-reviews-snip { font-size: 11.5px; color: var(--muted); text-align: center; padding: 8px 0; }
+.write-snip-btn { width: 100%; padding: 8px; border: 1.5px dashed var(--border); border-radius: 8px; background: white; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; color: var(--mid); cursor: pointer; transition: all .2s; }
+.write-snip-btn:hover { border-color: var(--mid); background: #eef6ff; }
+
+/* Compare */
+.cmp-btn { width: 100%; padding: 7px 12px; border-radius: 8px; border: 1.5px solid var(--border); background: white; font-family: 'DM Sans', sans-serif; font-size: 11.5px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 10px; }
+.cmp-btn:hover { border-color: var(--mid); color: var(--mid); background: #eef6ff; }
+.cmp-btn.in { background: var(--deep); color: white; border-color: var(--deep); }
+
+/* Filter / Export */
+.panel-footer { flex-shrink: 0; border-top: 1px solid var(--border); }
+.filter-sec { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.sec-lbl { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+.filter-btns { display: flex; gap: 5px; flex-wrap: wrap; }
+.fbtn { padding: 5px 11px; border-radius: 20px; border: 1.5px solid var(--border); background: white; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; cursor: pointer; color: var(--muted); transition: all .2s; }
+.fbtn:hover { border-color: var(--mid); color: var(--mid); }
+.fbtn.on { background: var(--deep); border-color: var(--deep); color: white; }
+.action-bar { padding: 8px 14px; display: flex; gap: 6px; }
+.abtn { flex: 1; padding: 7px; border-radius: 8px; border: 1.5px solid var(--border); background: white; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all .2s; }
+.abtn:hover { border-color: var(--mid); color: var(--mid); background: #eef6ff; }
+.legend-bar { padding: 8px 14px 10px; display: flex; gap: 14px; }
+.li { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--muted); }
+.ld { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ═══════════════════════════════════════
+   REVIEW MODAL — Google Maps Style
+   ═══════════════════════════════════════ */
+.overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 8000; align-items: center; justify-content: center; }
+.overlay.open { display: flex; animation: bgin .2s ease; }
+@keyframes bgin { from{opacity:0} to{opacity:1} }
+@keyframes mUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+
+/* Modal shell */
+.rm { background: white; border-radius: 16px; width: 96%; max-width: 560px; max-height: 92vh; display: flex; flex-direction: column; box-shadow: 0 24px 80px rgba(0,0,0,.3); animation: mUp .3s ease; overflow: hidden; }
+
+/* ── Header gradient bar ── */
+.rm-hdr { background: linear-gradient(135deg, var(--deep), var(--mid)); padding: 18px 20px 16px; flex-shrink: 0; position: relative; }
+.rm-close { position: absolute; right: 14px; top: 14px; background: rgba(255,255,255,.15); border: none; color: white; font-size: 15px; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; }
+.rm-close:hover { background: rgba(255,255,255,.3); }
+.rm-hdr h2 { font-family: 'Playfair Display', serif; font-size: 19px; color: white; margin-bottom: 2px; }
+.rm-hdr .rm-loc { font-size: 11.5px; color: var(--pale); margin-bottom: 12px; }
+.rm-summary { display: flex; align-items: center; gap: 14px; }
+.rm-big { font-family: 'DM Mono', monospace; font-size: 40px; font-weight: 500; color: white; line-height: 1; }
+.rm-right .rm-stars { font-size: 18px; color: #fbbc04; letter-spacing: 2px; }
+.rm-right .rm-cnt { font-size: 11px; color: var(--pale); margin-top: 3px; }
+
+/* Breakdown bars */
+.rm-breakdown { padding: 12px 20px 4px; flex-shrink: 0; }
+.rb-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.rb-lbl { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); width: 10px; text-align: right; flex-shrink: 0; }
+.rb-star { font-size: 11px; color: #fbbc04; flex-shrink: 0; }
+.rb-track { flex: 1; height: 8px; background: #f1f5f9; border-radius: 8px; overflow: hidden; }
+.rb-fill { height: 100%; background: #fbbc04; border-radius: 8px; transition: width .7s ease; }
+.rb-n { font-family: 'DM Mono', monospace; font-size: 11px; color: #aaa; width: 18px; text-align: right; flex-shrink: 0; }
+
+/* Toolbar */
+.rm-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px 8px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.rm-toolbar .tl { font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); }
+.rm-sort { border: 1.5px solid var(--border); border-radius: 8px; padding: 5px 10px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink); outline: none; background: white; cursor: pointer; }
+.rm-sort:focus { border-color: var(--mid); }
+
+/* Reviews list */
+.rm-list { overflow-y: auto; flex: 1; padding: 8px 0; }
+.rm-list::-webkit-scrollbar { width: 4px; }
+.rm-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ── Google Maps–style review card ── */
+.rv-card { padding: 16px 20px 12px; border-bottom: 1px solid #e8eaed; animation: fadeUp .25s ease; }
+.rv-card:last-child { border-bottom: none; }
+
+/* Card header: avatar circle + name + subtitle + 3-dot */
+.rv-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+.rv-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: white; flex-shrink: 0; }
+.rv-info { flex: 1; }
+.rv-name { font-size: 14px; font-weight: 600; color: #202124; line-height: 1.3; }
+.rv-handle { font-size: 12px; color: #70757a; margin-top: 1px; }  
+.rv-meta { font-size: 12px; color: #70757a; margin-top: 1px; }
+.rv-dot-btn { background: none; border: none; cursor: pointer; color: #70757a; font-size: 18px; padding: 0 0 0 6px; line-height: 1; flex-shrink: 0; }
+
+/* Stars row + timestamp — exactly like Google Maps */
+.rv-rating-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.rv-stars-gm { font-size: 14px; color: #fbbc04; letter-spacing: 1px; }
+.rv-time { font-size: 13px; color: #70757a; }
+
+/* Review text with "More" truncation */
+.rv-text-wrap { margin-bottom: 10px; }
+.rv-text { font-size: 14px; color: #3c4043; line-height: 1.6; }
+.rv-text.collapsed { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.rv-more-btn { background: none; border: none; color: #1a73e8; font-size: 14px; font-weight: 500; cursor: pointer; padding: 0; margin-top: 2px; display: inline; }
+
+/* Photo grid — 2 columns like Google Maps */
+.rv-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+.rv-photos.one   { grid-template-columns: 1fr; }
+.rv-photos.three { grid-template-columns: 1fr 1fr; }
+.rv-photo-wrap { position: relative; cursor: pointer; overflow: hidden; aspect-ratio: 4/3; }
+.rv-photo-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .2s; display: block; }
+.rv-photo-wrap:hover img { transform: scale(1.04); }
+.rv-photo-more { position: absolute; inset: 0; background: rgba(0,0,0,.5); color: white; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+/* Like + Share action bar */
+.rv-actions { display: flex; gap: 4px; }
+.rv-action-btn { display: flex; align-items: center; gap: 6px; background: none; border: 1.5px solid #dadce0; border-radius: 20px; padding: 6px 14px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: #444746; cursor: pointer; transition: all .15s; font-weight: 500; }
+.rv-action-btn:hover { background: #f1f3f4; border-color: #bdc1c6; }
+.rv-action-btn.liked { color: #1a73e8; border-color: #1a73e8; }
+
+.no-rv { text-align: center; padding: 32px 0; color: var(--muted); font-size: 13.5px; line-height: 1.8; }
+
+/* ── Lightbox ── */
+.rv-lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.9); z-index: 9999; align-items: center; justify-content: center; }
+.rv-lightbox.open { display: flex; }
+.rv-lightbox img { max-width: 88%; max-height: 82vh; border-radius: 6px; object-fit: contain; }
+.lb-close { position: absolute; top: 18px; right: 26px; font-size: 34px; color: white; cursor: pointer; line-height: 1; background: none; border: none; }
+.lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: white; border: none; border-radius: 50%; width: 46px; height: 46px; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.lb-prev { left: 18px; } .lb-next { right: 18px; }
+
+/* Write form */
+.rm-form { border-top: 1px solid var(--border); padding: 16px 20px 18px; flex-shrink: 0; background: white; }
+.rm-form h3 { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--deep); margin-bottom: 13px; }
+.fg { margin-bottom: 11px; }
+.fg label { display: block; font-size: 10.5px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.fg input, .fg textarea { width: 100%; padding: 9px 12px; border: 1.5px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ink); outline: none; transition: border-color .2s; background: white; }
+.fg textarea { resize: vertical; min-height: 72px; }
+.fg input:focus, .fg textarea:focus { border-color: var(--mid); }
+.fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 11px; }
+
+/* Star picker */
+.star-row { display: flex; align-items: center; gap: 4px; }
+.sp span { font-size: 28px; cursor: pointer; transition: transform .12s; color: #e2e8f0; user-select: none; line-height: 1; }
+.sp span.lit { color: #fbbc04; }
+.sp span:hover { transform: scale(1.3); }
+.sh { font-size: 12px; color: var(--muted); margin-left: 6px; font-style: italic; }
+
+.sub-btn { width: 100%; padding: 11px; border-radius: 10px; border: none; background: linear-gradient(135deg, var(--deep), var(--mid)); color: white; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .2s; margin-top: 4px; }
+.sub-btn:hover { opacity: .9; transform: translateY(-1px); }
+
+/* Compare modal */
+.cmp-modal { max-width: 580px; padding: 26px; }
+.cmp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.cmp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 13px; }
+.cmp-card h4 { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--deep); margin-bottom: 3px; }
+.cmp-card .ccs { font-size: 10.5px; color: var(--muted); margin-bottom: 8px; }
+.cmp-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 12px; border-bottom: 1px solid var(--border); }
+.cmp-row:last-child { border: none; }
+.ck { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .5px; }
+.cv { font-family: 'DM Mono', monospace; font-size: 12.5px; font-weight: 500; }
+.cv.good { color: var(--safe); }
+.cv.bad { color: var(--danger); }
+
+/* Generic modal box (for compare) */
+.m-box { background: white; border-radius: 18px; width: 94%; box-shadow: 0 20px 60px rgba(0,0,0,.25); animation: mUp .3s ease; position: relative; max-height: 88vh; overflow-y: auto; }
+.m-box-close { position: absolute; right: 16px; top: 16px; background: #f1f5f9; border: none; font-size: 16px; color: #64748b; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; }
+.m-box-close:hover { background: #e2e8f0; }
+
+/* Toast */
+.toast { position: fixed; bottom: 22px; right: 22px; background: var(--deep); color: white; padding: 11px 18px; border-radius: 10px; font-size: 13px; font-weight: 500; box-shadow: 0 8px 30px rgba(0,0,0,.2); z-index: 99999; pointer-events: none; transition: opacity .4s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="brand">
+    <div class="drop"></div>
+    <div class="brand-text">
+      <h1>WaterWatch</h1>
+      <span>India</span>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input id="searchInput" type="text" placeholder="Search river, lake or state…" autocomplete="off">
+    <div id="searchDrop"></div>
+  </div>
+
+  <div class="nav-stats">
+    <div class="ns"><div class="v" id="sTotal">28</div><div class="l">Bodies</div></div>
+    <div class="ns"><div class="v" id="sSafe">—</div><div class="l">Drinkable</div></div>
+    <div class="ns"><div class="v" id="sPh">—</div><div class="l">Avg pH</div></div>
+    <div class="ns"><div class="v" id="sCmp">0</div><div class="l">Compare</div></div>
+  </div>
+</nav>
+
+<div class="layout">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sb-head">States &amp; Territories</div>
+    <div class="sb-scroll" id="stateList"></div>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- RIGHT PANEL -->
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Water Quality</h2>
+      <p id="panelSub">Select a marker to inspect</p>
+    </div>
+    <div class="panel-body" id="panelBody">
+      <div class="empty-state">
+        <div class="empty-icon">💧</div>
+        <h3>Select a Water Body</h3>
+        <p>Click any marker on the map or pick a state from the sidebar to begin.</p>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <div class="filter-sec">
+        <div class="sec-lbl">Filter</div>
+        <div class="filter-btns">
+          <button class="fbtn on" id="fAll" onclick="doFilter('all')">All</button>
+          <button class="fbtn" id="fSafe" onclick="doFilter('safe')">Drinkable</button>
+          <button class="fbtn" id="fWarn" onclick="doFilter('warn')">Caution</button>
+          <button class="fbtn" id="fBad" onclick="doFilter('bad')">Unsafe</button>
+        </div>
+      </div>
+      <div class="action-bar">
+        <button class="abtn" onclick="openCompare()">⚖ Compare</button>
+        <button class="abtn" onclick="doExport()">⬇ CSV</button>
+      </div>
+      <div class="legend-bar">
+        <div class="li"><div class="ld" style="background:var(--safe)"></div>Good</div>
+        <div class="li"><div class="ld" style="background:var(--warn)"></div>Moderate</div>
+        <div class="li"><div class="ld" style="background:var(--danger)"></div>Poor</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ REVIEW MODAL ═══════════════ -->
+<div class="overlay" id="reviewOverlay">
+  <div class="rm">
+    <!-- Header -->
+    <div class="rm-hdr">
+      <button class="rm-close" onclick="closeReviewModal()">✕</button>
+      <h2 id="rmTitle">River Name</h2>
+      <div class="rm-loc" id="rmLoc">📍 State</div>
+      <div class="rm-summary">
+        <div class="rm-big" id="rmBig">—</div>
+        <div class="rm-right">
+          <div class="rm-stars" id="rmStars">☆☆☆☆☆</div>
+          <div class="rm-cnt" id="rmCnt">No reviews yet</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breakdown -->
+    <div class="rm-breakdown" id="rmBreakdown"></div>
+
+    <!-- Toolbar -->
+    <div class="rm-toolbar">
+      <span class="tl" id="rmTlCount">Reviews</span>
+      <select class="rm-sort" id="rmSort" onchange="renderCards()">
+        <option value="newest">Newest first</option>
+        <option value="top">Highest rated</option>
+        <option value="low">Lowest rated</option>
+      </select>
+    </div>
+
+    <!-- Cards -->
+    <div class="rm-list" id="rmCards"></div>
+
+    <!-- Write form -->
+    <div class="rm-form">
+      <h3>✍️ Write a Review</h3>
+      <div class="fg-row">
+        <div class="fg" style="margin-bottom:0">
+          <label>Your Name</label>
+          <input id="rvName" type="text" placeholder="e.g. Rama Krishna">
+        </div>
+        <div class="fg" style="margin-bottom:0">
+          <label>@Username</label>
+          <input id="rvHandle" type="text" placeholder="@yourhandle" autocomplete="off">
+        </div>
+      </div>
+      <div class="fg" style="margin-top:11px">
+        <label>Your Rating</label>
+        <div class="star-row">
+          <div class="sp" id="starPicker">
+            <span onclick="setStar(1)">★</span>
+            <span onclick="setStar(2)">★</span>
+            <span onclick="setStar(3)">★</span>
+            <span onclick="setStar(4)">★</span>
+            <span onclick="setStar(5)">★</span>
+          </div>
+          <span class="sh" id="starHint">Tap to rate</span>
+        </div>
+      </div>
+      <div class="fg">
+        <label>Your Review</label>
+        <textarea id="rvText" placeholder="Describe the water quality, clarity, or your experience…"></textarea>
+      </div>
+      <button class="sub-btn" onclick="submitReview()">Post Review</button>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="rv-lightbox" id="rvLightbox">
+  <button class="lb-close" onclick="closeLightbox()">×</button>
+  <button class="lb-prev" onclick="lbPrev()">&#10094;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNext()">&#10095;</button>
+</div>
+
+<!-- COMPARE MODAL -->
+<div class="overlay" id="cmpOverlay">
+  <div class="m-box cmp-modal">
+    <button class="m-box-close" onclick="closeOverlay('cmpOverlay')">✕</button>
+    <h2 style="font-family:'Playfair Display',serif;font-size:19px;color:var(--deep);margin-bottom:3px">Compare Water Bodies</h2>
+    <p style="font-size:12px;color:var(--muted)" id="cmpSub">Side-by-side quality comparison</p>
+    <div class="cmp-grid" id="cmpGrid"></div>
+    <button class="sub-btn" style="background:linear-gradient(135deg,#475569,#334155);margin-top:4px" onclick="clearCompare()">Clear Compare List</button>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  DATA
+// ═══════════════════════════════════════════════════
+const rivers = [
+  { name:"Krishna River",      state:"Andhra Pradesh",    lat:16.5062, lng:80.6480, ph:7.2, tds:320, arsenic:0.01, reviews:[
+    {name:"Suresh Babu", rating:4, text:"Generally clean near Vijayawada. Good for agriculture.", date:"14 Jan 2025"},
+    {name:"Lakshmi Devi", rating:5, text:"Beautiful and clean! Water quality has improved a lot.", date:"2 Feb 2025"}
+  ]},
+  { name:"Siang River",        state:"Arunachal Pradesh", lat:28.1500, lng:95.1500, ph:7.5, tds:280, arsenic:0.01, reviews:[
+    {name:"Tapang Riba", rating:5, text:"Crystal clear glacial water. One of India's purest rivers!", date:"5 Mar 2025"}
+  ]},
+  { name:"Brahmaputra",        state:"Assam",             lat:26.2006, lng:92.9376, ph:7.0, tds:350, arsenic:0.02, reviews:[
+    {name:"Dipankar Bora", rating:4, text:"Mighty river, water quality decent away from Guwahati.", date:"10 Jan 2025"},
+    {name:"Priya Das", rating:3, text:"Some pollution near city outskirts but rural stretches are fine.", date:"22 Feb 2025"}
+  ]},
+  { name:"Ganga River",        state:"Bihar",             lat:25.5941, lng:85.1376, ph:6.8, tds:450, arsenic:0.03, reviews:[
+    {name:"Amit Singh", rating:3, text:"Water looks murky near Patna. Needs treatment before use.", date:"8 Jan 2025"},
+    {name:"Priya Devi", rating:2, text:"Pollution levels are concerning. Not suitable for direct use.", date:"19 Feb 2025"},
+    {name:"Rajan Kumar", rating:3, text:"Cleaner upstream. Government efforts are showing results slowly.", date:"1 Mar 2025"}
+  ]},
+  { name:"Mahanadi",           state:"Chhattisgarh",      lat:21.2787, lng:81.8661, ph:7.3, tds:300, arsenic:0.01, reviews:[]},
+  { name:"Mandovi River",      state:"Goa",               lat:15.4909, lng:73.8278, ph:7.4, tds:260, arsenic:0.01, reviews:[
+    {name:"Carlos Fernandes", rating:5, text:"Crystal clear and beautiful. Great for boating and fishing!", date:"3 Dec 2024"}
+  ]},
+  { name:"Sabarmati River",    state:"Gujarat",           lat:23.0225, lng:72.5714, ph:6.9, tds:520, arsenic:0.02, reviews:[
+    {name:"Hardik Patel", rating:3, text:"TDS is on the higher side. Not ideal for direct drinking.", date:"15 Jan 2025"}
+  ]},
+  { name:"Yamuna River",       state:"Haryana",           lat:30.7333, lng:76.7794, ph:6.5, tds:600, arsenic:0.04, reviews:[
+    {name:"Rahul Sharma", rating:2, text:"Heavy industrial pollution near Panipat stretch. Very alarming.", date:"7 Jan 2025"},
+    {name:"Sunita Arora", rating:1, text:"Avoid direct contact. Very polluted in this region.", date:"20 Feb 2025"}
+  ]},
+  { name:"Beas River",         state:"Himachal Pradesh",  lat:31.1048, lng:77.1734, ph:7.6, tds:240, arsenic:0.01, reviews:[
+    {name:"Vikram Thakur", rating:5, text:"Pristine mountain water! So clean and refreshing at source.", date:"1 Feb 2025"},
+    {name:"Ananya Singh", rating:5, text:"Best water I've ever tasted. Himachal is truly blessed!", date:"14 Feb 2025"}
+  ]},
+  { name:"Subarnarekha River", state:"Jharkhand",         lat:22.8046, lng:86.2029, ph:6.7, tds:480, arsenic:0.03, reviews:[]},
+  { name:"Kaveri River",       state:"Karnataka",         lat:12.2958, lng:76.6394, ph:7.2, tds:310, arsenic:0.01, reviews:[
+    {name:"Deepa Rao", rating:4, text:"Good quality around Mysuru. Great for irrigation and general use.", date:"9 Jan 2025"}
+  ]},
+  { name:"Vembanad Lake",      state:"Kerala",            lat:9.5916,  lng:76.3970, ph:7.4, tds:250, arsenic:0.01, reviews:[
+    {name:"Thomas Kurian", rating:4, text:"Beautiful backwaters. Water quality is decent overall.", date:"25 Jan 2025"},
+    {name:"Meena Nair", rating:5, text:"Stunning ecosystem! Very clean compared to north India rivers.", date:"5 Feb 2025"}
+  ]},
+  { name:"Narmada River",      state:"Madhya Pradesh",    lat:22.9734, lng:78.6569, ph:7.1, tds:330, arsenic:0.02, reviews:[
+    {name:"Shyam Tiwari", rating:4, text:"Sacred and relatively clean. Good water quality near Omkareshwar.", date:"12 Feb 2025"}
+  ]},
+  { name:"Godavari River",     state:"Maharashtra",       lat:19.9975, lng:73.7898, ph:6.2, tds:650, arsenic:0.05, reviews:[
+    {name:"Sneha Patil", rating:1, text:"pH dangerously low near Nashik industrial zone. Avoid!", date:"5 Jan 2025"},
+    {name:"Raju Deshmukh", rating:2, text:"High arsenic detected. Government needs to act urgently.", date:"18 Feb 2025"}
+  ]},
+  { name:"Loktak Lake",        state:"Manipur",           lat:24.5470, lng:93.8264, ph:7.3, tds:290, arsenic:0.01, reviews:[
+    {name:"Ibemcha Devi", rating:4, text:"The floating phumdis are amazing. Water is fairly clean.", date:"20 Jan 2025"}
+  ]},
+  { name:"Umiam Lake",         state:"Meghalaya",         lat:25.6680, lng:91.8850, ph:7.5, tds:270, arsenic:0.01, reviews:[
+    {name:"Mary Khongwir", rating:5, text:"Stunning reservoir with excellent water quality! Highly recommended.", date:"30 Jan 2025"}
+  ]},
+  { name:"Tlawng River",       state:"Mizoram",           lat:23.1645, lng:92.9376, ph:7.2, tds:310, arsenic:0.01, reviews:[]},
+  { name:"Doyang River",       state:"Nagaland",          lat:26.1584, lng:94.5624, ph:7.0, tds:350, arsenic:0.02, reviews:[]},
+  { name:"Chilika Lake",       state:"Odisha",            lat:19.8450, lng:85.4788, ph:7.1, tds:400, arsenic:0.02, reviews:[
+    {name:"Bibhuti Mohanty", rating:4, text:"Asia's largest coastal lagoon! Good water quality for fishing.", date:"6 Jan 2025"}
+  ]},
+  { name:"Sutlej River",       state:"Punjab",            lat:31.1471, lng:75.3412, ph:6.9, tds:520, arsenic:0.03, reviews:[
+    {name:"Gurpreet Singh", rating:2, text:"Dyeing industry effluent visible. TDS very high downstream.", date:"11 Jan 2025"}
+  ]},
+  { name:"Sambhar Lake",       state:"Rajasthan",         lat:26.9087, lng:75.1911, ph:8.7, tds:900, arsenic:0.04, reviews:[
+    {name:"Rajesh Mehta", rating:3, text:"It's a salt lake — not for drinking but unique ecosystem. Worth visiting!", date:"28 Jan 2025"}
+  ]},
+  { name:"Teesta River",       state:"Sikkim",            lat:27.5330, lng:88.5122, ph:7.4, tds:260, arsenic:0.01, reviews:[
+    {name:"Tenzin Lepcha", rating:5, text:"Glacier-fed river, incredibly pure. One of India's cleanest rivers!", date:"3 Feb 2025"},
+    {name:"Karma Bhutia", rating:5, text:"Pristine beauty. The water here is as pure as it gets in India.", date:"17 Feb 2025"}
+  ]},
+  { name:"Kaveri River",       state:"Tamil Nadu",        lat:11.1271, lng:78.6569, ph:7.3, tds:300, arsenic:0.01, reviews:[
+    {name:"Karthik Rajan", rating:4, text:"Good quality around Trichy. Suitable for most uses.", date:"9 Feb 2025"}
+  ]},
+  { name:"Hussain Sagar",      state:"Telangana",         lat:17.4239, lng:78.4738, ph:7.1, tds:300, arsenic:0.01, reviews:[
+    {name:"Lakshmi Reddy", rating:3, text:"Improving after cleanup drives but still some algal bloom issues.", date:"21 Jan 2025"}
+  ]},
+  { name:"Gomti River",        state:"Tripura",           lat:23.9408, lng:91.9882, ph:6.6, tds:480, arsenic:0.03, reviews:[]},
+  { name:"Ganga River",        state:"Uttar Pradesh",     lat:26.8467, lng:80.9462, ph:6.4, tds:700, arsenic:0.05, reviews:[
+    {name:"Sanjay Mishra", rating:1, text:"Very polluted near Kanpur industrial area. Extremely high TDS.", date:"4 Jan 2025"},
+    {name:"Ananya Tiwari", rating:2, text:"Sewage disposal is a major problem. Needs immediate attention.", date:"16 Feb 2025"},
+    {name:"Rohit Yadav",   rating:1, text:"Shocking state. Can't believe this is the holy Ganga.", date:"28 Feb 2025"}
+  ]},
+  { name:"Alaknanda River",    state:"Uttarakhand",       lat:30.3165, lng:78.0322, ph:7.6, tds:230, arsenic:0.01, reviews:[
+    {name:"Hemant Bisht", rating:5, text:"Himalayan origin water — pristine and crystal clear at source!", date:"2 Jan 2025"},
+    {name:"Geeta Rawat", rating:5, text:"Absolutely pure. The Devprayag confluence is breathtaking.", date:"20 Feb 2025"}
+  ]},
+  { name:"Hooghly River",      state:"West Bengal",       lat:22.5726, lng:88.3639, ph:6.8, tds:550, arsenic:0.04, reviews:[
+    {name:"Subhadeep Roy", rating:2, text:"Tannery and industrial waste visible. High arsenic is alarming.", date:"13 Jan 2025"}
+  ]}
+];
+
+// ═══════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════
+function rating(r) {
+  let s = 5;
+  if (r.ph < 6.5 || r.ph > 8.5) s--;
+  if (r.tds > 500) s--;
+  if (r.arsenic > 0.03) s -= 2;
+  return Math.max(1, s);
+}
+function status(r) {
+  const s = rating(r);
+  if (s >= 4) return {label:'Drinkable', cls:'drinking', color:'#0a9150'};
+  if (s >= 3) return {label:'Irrigation Only', cls:'irrigation', color:'#d97706'};
+  return {label:'Unsafe', cls:'unsafe', color:'#dc2626'};
+}
+function markerColor(r) { return status(r).color; }
+function avgRating(r) {
+  if (!r.reviews.length) return null;
+  return (r.reviews.reduce((a,v)=>a+v.rating,0)/r.reviews.length).toFixed(1);
+}
+function stars(n, max=5) { return '★'.repeat(Math.round(n||0)) + '☆'.repeat(max-Math.round(n||0)); }
+
+const AC = ['#0077b6','#0a9150','#d97706','#7c3aed','#dc2626','#0891b2','#16a34a','#9333ea'];
+function avatarColor(name) {
+  let h=0; for(let c of name) h=(h*31+c.charCodeAt(0))&0xffffffff;
+  return AC[Math.abs(h)%AC.length];
+}
+function initials(name) { return name.trim().split(' ').map(p=>p[0]).join('').toUpperCase().slice(0,2); }
+const STAR_LABELS = ['','Terrible','Poor','Okay','Good','Excellent'];
+
+// ═══════════════════════════════════════════════════
+//  NAV STATS
+// ═══════════════════════════════════════════════════
+function updateStats(data) {
+  document.getElementById('sTotal').textContent = data.length;
+  document.getElementById('sSafe').textContent = data.filter(r=>rating(r)>=4).length;
+  document.getElementById('sPh').textContent = data.length
+    ? (data.reduce((a,r)=>a+r.ph,0)/data.length).toFixed(1) : '—';
+}
+updateStats(rivers);
+
+// ═══════════════════════════════════════════════════
+//  MAP
+// ═══════════════════════════════════════════════════
+const map = L.map('map',{zoomControl:false}).setView([22.5,82],5);
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+  attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
+}).addTo(map);
+
+let leafletMarkers = [], current = null, cmpList = [], visibleData = rivers;
+
+function makeIcon(r) {
+  const col = markerColor(r), sel = r===current;
+  const sz = sel ? 17 : 13;
+  const glow = sel ? `0 0 0 5px ${col}28, 0 3px 12px ${col}90` : `0 2px 8px ${col}70`;
+  return L.divIcon({
+    className:'',
+    html:`<div style="width:${sz}px;height:${sz}px;background:${col};border:2.5px solid white;border-radius:50%;box-shadow:${glow};cursor:pointer;transition:transform .15s" onmouseenter="this.style.transform='scale(1.6)'" onmouseleave="this.style.transform='scale(1)'"></div>`,
+    iconSize:[sz,sz], iconAnchor:[sz/2,sz/2]
+  });
+}
+
+function loadMap(data) {
+  leafletMarkers.forEach(m=>map.removeLayer(m));
+  leafletMarkers=[];
+  data.forEach(r=>{
+    const m = L.marker([r.lat,r.lng],{icon:makeIcon(r)})
+      .bindTooltip(`<b>${r.name}</b><br>${r.state}`,{className:'mtt',direction:'top',offset:[0,-10]})
+      .addTo(map);
+    m.on('click',()=>selectRiver(r));
+    leafletMarkers.push(m);
+  });
+  updateStats(data);
+}
+
+function setVisible(data) { visibleData=data; loadMap(data); }
+
+function selectRiver(r) {
+  current=r;
+  document.getElementById('panelSub').textContent=r.state;
+  showPanel(r);
+  map.setView([r.lat,r.lng],Math.max(map.getZoom(),7),{animate:true});
+  loadMap(visibleData);
+}
+
+// ═══════════════════════════════════════════════════
+//  PANEL
+// ═══════════════════════════════════════════════════
+function showPanel(r) {
+  const rt = rating(r), st = status(r), avgR = avgRating(r);
+  const phPct = ((r.ph/14)*100).toFixed(1);
+  const phWarn = r.ph<6.5||r.ph>8.5, tdsWarn=r.tds>500, arsWarn=r.arsenic>0.03;
+  const inCmp = cmpList.includes(r);
+
+  // Review snippets (last 2)
+  const snips = r.reviews.length
+    ? [...r.reviews].reverse().slice(0,2).map(rv=>`
+        <div class="snippet">
+          <div class="sn-row">
+            <span class="sn-name">${rv.name}</span>
+            <span class="sn-stars">${'★'.repeat(rv.rating)}</span>
+          </div>
+          <div class="sn-text">${rv.text}</div>
+        </div>`).join('')
+    : '<div class="no-reviews-snip">No reviews yet</div>';
+
+  document.getElementById('panelBody').innerHTML = `
+    <div class="detail-card">
+      <div class="dc-hdr">
+        <h3>${r.name}</h3>
+        <div class="slbl">📍 ${r.state}</div>
+        <div class="wstars">${stars(rt)}</div>
+        <span class="ptag ${st.cls}">${st.label==='Drinkable'?'✓ Drinkable':st.label==='Irrigation Only'?'⚠ Irrigation Only':'✕ Unsafe'}</span>
+      </div>
+
+      <button class="cmp-btn ${inCmp?'in':''}" onclick="toggleCmp()">
+        ${inCmp?'✓ In Compare List':'+ Add to Compare'}
+      </button>
+
+      <div class="metrics-grid">
+        <div class="metric ${tdsWarn?'warn':''}">
+          <div class="ml">TDS</div>
+          <div class="mv">${r.tds}</div>
+          <div class="mu">mg/L · ${tdsWarn?'⚠ High':'✓ OK'}</div>
+        </div>
+        <div class="metric ${arsWarn?'danger':''}">
+          <div class="ml">Arsenic</div>
+          <div class="mv">${r.arsenic}</div>
+          <div class="mu">mg/L · ${arsWarn?'⚠ Danger':'✓ OK'}</div>
+        </div>
+      </div>
+
+      <div class="ph-box">
+        <div class="ml">pH Level</div>
+        <div class="ph-track"><div class="ph-needle" style="left:${phPct}%"></div></div>
+        <div class="ph-labels"><span>0</span><span>3.5</span><span>7</span><span>10.5</span><span>14</span></div>
+        <div class="ph-val" style="color:${phWarn?'#dc2626':'#003566'}">${r.ph}</div>
+        <div class="ph-note">${phWarn?'⚠ Outside safe range (6.5–8.5)':'✓ Within safe range (6.5–8.5)'}</div>
+      </div>
+
+      <!-- ★ REVIEW PREVIEW ★ -->
+      <div class="review-preview">
+        <div class="rp-top">
+          <div class="rp-score">
+            <div class="rp-num">${avgR||'—'}</div>
+            <div class="rp-stars-col">
+              <div class="rp-stars">${avgR?stars(parseFloat(avgR)):'☆☆☆☆☆'}</div>
+              <div class="rp-count">${r.reviews.length} review${r.reviews.length!==1?'s':''}</div>
+            </div>
+          </div>
+          <button class="open-reviews-btn" onclick="openReviewModal()">
+            ${r.reviews.length?'See Reviews':'Add Review'}
+          </button>
+        </div>
+        <hr class="rp-divider">
+        <div class="rp-snippets">
+          ${snips}
+          <button class="write-snip-btn" onclick="openReviewModal()" style="margin-top:8px">
+            ✍️ Write a Review for ${r.name}
+          </button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  REVIEW MODAL — Google Maps Style
+// ═══════════════════════════════════════════════════
+let chosenStar = 0;
+let lbImages = [], lbIdx = 0;
+// track per-card liked state: cardKey -> bool
+const likedMap = {};
+
+// Water-themed stock photos for existing reviews
+const WATER_PHOTOS = [
+  'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80',
+  'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&q=80',
+  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=80',
+  'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&q=80',
+  'https://images.unsplash.com/photo-1501959915551-4e8d30928317?w=400&q=80',
+  'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&q=80',
+  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80',
+  'https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=400&q=80',
+];
+
+// Assign random 0–4 photos to reviews that don't have them
+function ensurePhotos(r) {
+  r.reviews.forEach((rv, i) => {
+    if (!rv.photos) {
+      // seed by name+index for stability
+      let h = 0;
+      for (let c of (rv.name + i)) h = (h * 31 + c.charCodeAt(0)) & 0xffffffff;
+      const count = Math.abs(h) % 4; // 0,1,2,3
+      rv.photos = [];
+      for (let p = 0; p < count; p++) {
+        rv.photos.push(WATER_PHOTOS[(Math.abs(h) + p * 3) % WATER_PHOTOS.length]);
+      }
+    }
+  });
+}
+
+function timeAgo(dateStr) {
+  if (!dateStr) return 'Recently';
+  const parts = dateStr.match(/(\d+)\s+(\w+)\s+(\d+)/);
+  if (!parts) return dateStr;
+  const months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  const d = new Date(+parts[3], months[parts[2]] ?? 0, +parts[1]);
+  const now = new Date(), diff = now - d;
+  const days = Math.floor(diff / 86400000);
+  if (days < 1) return 'Today';
+  if (days < 7) return days + ' day' + (days>1?'s':'') + ' ago';
+  const wk = Math.floor(days/7);
+  if (wk < 5) return wk + ' week' + (wk>1?'s':'') + ' ago';
+  const mo = Math.floor(days/30);
+  if (mo < 12) return mo + ' month' + (mo>1?'s':'') + ' ago';
+  const yr = Math.floor(days/365);
+  return yr + ' year' + (yr>1?'s':'') + ' ago';
+}
+
+function openReviewModal() {
+  if (!current) return;
+  ensurePhotos(current);
+  const r = current, avgR = avgRating(r), rounded = avgR ? parseFloat(avgR) : 0;
+
+  document.getElementById('rmTitle').textContent = r.name;
+  document.getElementById('rmLoc').textContent = `📍 ${r.state}`;
+  document.getElementById('rmBig').textContent = avgR || '—';
+  document.getElementById('rmStars').textContent = avgR ? stars(rounded) : '☆☆☆☆☆';
+  document.getElementById('rmCnt').textContent = r.reviews.length
+    ? `Based on ${r.reviews.length} review${r.reviews.length!==1?'s':''}`
+    : 'No reviews yet — be the first!';
+
+  // Breakdown bars
+  renderBreakdown(r);
+
+  // Reset form
+  document.getElementById('rvName').value='';
+  if(document.getElementById('rvHandle')) document.getElementById('rvHandle').value='';
+  document.getElementById('rvText').value='';
+  setStar(0);
+  document.getElementById('rmSort').value='newest';
+  renderCards();
+
+  document.getElementById('reviewOverlay').classList.add('open');
+}
+
+function renderBreakdown(r) {
+  const counts = [0,0,0,0,0];
+  r.reviews.forEach(rv=>{ if(rv.rating>=1&&rv.rating<=5) counts[rv.rating-1]++; });
+  const maxC = Math.max(...counts, 1);
+  document.getElementById('rmBreakdown').innerHTML = [5,4,3,2,1].map(n=>{
+    const c=counts[n-1], pct=Math.round((c/maxC)*100);
+    return `<div class="rb-row">
+      <span class="rb-lbl">${n}</span>
+      <span class="rb-star">★</span>
+      <div class="rb-track"><div class="rb-fill" style="width:${pct}%"></div></div>
+      <span class="rb-n">${c}</span>
+    </div>`;
+  }).join('');
+}
+
+function closeReviewModal() {
+  document.getElementById('reviewOverlay').classList.remove('open');
+}
+
+function renderCards() {
+  if (!current) return;
+  const r = current, sort = document.getElementById('rmSort').value;
+  let rvs = [...r.reviews];
+  if (sort==='newest') rvs.reverse();
+  else if (sort==='top') rvs.sort((a,b)=>b.rating-a.rating);
+  else rvs.sort((a,b)=>a.rating-b.rating);
+
+  document.getElementById('rmTlCount').textContent =
+    `${r.reviews.length} Review${r.reviews.length!==1?'s':''}`;
+
+  if (!rvs.length) {
+    document.getElementById('rmCards').innerHTML =
+      `<div class="no-rv">💬 No reviews yet for <b>${r.name}</b>.<br>Be the first to share your experience!</div>`;
+    return;
+  }
+
+  document.getElementById('rmCards').innerHTML = rvs.map((rv, idx) => {
+    const cardKey = r.name + '|' + rv.name + '|' + idx;
+    const liked = !!likedMap[cardKey];
+    const handleStr = rv.handle ? `<div class="rv-handle">${rv.handle}</div>` : '';
+    // meta: "Local Guide · X reviews · X photos" — simplified
+    const photoCount = (rv.photos||[]).length;
+    const meta = `Local Guide · ${Math.floor(Math.random()*40)+1} reviews${photoCount?` · ${photoCount} photo${photoCount>1?'s':''}`:''}`;
+
+    // Stars row
+    const starsGm = '★'.repeat(rv.rating) + '☆'.repeat(5 - rv.rating);
+    const timeStr = timeAgo(rv.date);
+
+    // Text — show 3 lines then "More"
+    const longText = rv.text.length > 160;
+    const textHtml = longText
+      ? `<div class="rv-text collapsed" id="rt-${idx}">${rv.text}</div>
+         <button class="rv-more-btn" onclick="toggleMore(${idx}, this)">More</button>`
+      : `<div class="rv-text">${rv.text}</div>`;
+
+    // Photos grid
+    let photosHtml = '';
+    if (photoCount > 0) {
+      const photos = rv.photos;
+      const gridClass = photoCount === 1 ? 'one' : photoCount === 3 ? 'three' : '';
+      const show = Math.min(photoCount, 4);
+      let cells = '';
+      for (let p = 0; p < show; p++) {
+        const isLast = p === 3 && photoCount > 4;
+        cells += `<div class="rv-photo-wrap" onclick="openLightbox(${idx}, ${p})">
+          <img src="${photos[p]}" loading="lazy" alt="photo">
+          ${isLast ? `<div class="rv-photo-more">+${photoCount-4}</div>` : ''}
+        </div>`;
+      }
+      photosHtml = `<div class="rv-photos ${gridClass}">${cells}</div>`;
+    }
+
+    return `
+    <div class="rv-card" data-key="${cardKey}">
+      <div class="rv-head">
+        <div class="rv-avatar" style="background:${avatarColor(rv.name)}">${initials(rv.name)}</div>
+        <div class="rv-info">
+          <div class="rv-name">${rv.name}</div>
+          ${handleStr}
+          <div class="rv-meta">${meta}</div>
+        </div>
+        <button class="rv-dot-btn" title="Options">⋮</button>
+      </div>
+      <div class="rv-rating-row">
+        <span class="rv-stars-gm">${starsGm}</span>
+        <span class="rv-time">${timeStr}</span>
+      </div>
+      <div class="rv-text-wrap">${textHtml}</div>
+      ${photosHtml}
+      <div class="rv-actions">
+        <button class="rv-action-btn ${liked?'liked':''}" onclick="toggleLike('${cardKey}', this)">
+          👍 Like
+        </button>
+        <button class="rv-action-btn" onclick="shareReview('${rv.name}')">
+          ↗ Share
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleMore(idx, btn) {
+  const el = document.getElementById('rt-' + idx);
+  if (el.classList.contains('collapsed')) {
+    el.classList.remove('collapsed');
+    btn.textContent = 'Less';
+  } else {
+    el.classList.add('collapsed');
+    btn.textContent = 'More';
+  }
+}
+
+function toggleLike(key, btn) {
+  likedMap[key] = !likedMap[key];
+  btn.classList.toggle('liked', likedMap[key]);
+}
+
+function shareReview(name) {
+  toast(`🔗 Review by ${name} — link copied!`);
+}
+
+// ── Lightbox ──
+function openLightbox(reviewIdx, photoIdx) {
+  const r = current;
+  const sort = document.getElementById('rmSort').value;
+  let rvs = [...r.reviews];
+  if (sort==='newest') rvs.reverse();
+  else if (sort==='top') rvs.sort((a,b)=>b.rating-a.rating);
+  else rvs.sort((a,b)=>a.rating-b.rating);
+  lbImages = rvs[reviewIdx]?.photos || [];
+  lbIdx = photoIdx;
+  document.getElementById('lbImg').src = lbImages[lbIdx];
+  document.getElementById('rvLightbox').classList.add('open');
+}
+function closeLightbox() { document.getElementById('rvLightbox').classList.remove('open'); }
+function lbNext() { lbIdx = (lbIdx+1) % lbImages.length; document.getElementById('lbImg').src = lbImages[lbIdx]; }
+function lbPrev() { lbIdx = (lbIdx-1+lbImages.length) % lbImages.length; document.getElementById('lbImg').src = lbImages[lbIdx]; }
+
+document.getElementById('rvLightbox').addEventListener('click', e => {
+  if (e.target === document.getElementById('rvLightbox')) closeLightbox();
+});
+
+const SP = ['', 'Terrible', 'Poor', 'Okay', 'Good', 'Excellent'];
+
+function setStar(n) {
+  chosenStar = n;
+  document.querySelectorAll('#starPicker span').forEach((s,i) => s.classList.toggle('lit', i<n));
+  document.getElementById('starHint').textContent = n ? SP[n] : 'Tap to rate';
+}
+
+// Star hover
+document.querySelectorAll('#starPicker span').forEach((star, i) => {
+  star.addEventListener('mouseenter', () => {
+    document.querySelectorAll('#starPicker span').forEach((s,j) => s.classList.toggle('lit', j<=i));
+    document.getElementById('starHint').textContent = SP[i+1];
+  });
+  star.addEventListener('mouseleave', () => setStar(chosenStar));
+});
+
+function submitReview() {
+  const name = document.getElementById('rvName').value.trim();
+  let handle = document.getElementById('rvHandle') ? document.getElementById('rvHandle').value.trim() : '';
+  const text = document.getElementById('rvText').value.trim();
+  if (!name) { toast('Please enter your name'); return; }
+  if (!handle) { toast('Please enter a @username'); return; }
+  if (!chosenStar) { toast('Please pick a star rating'); return; }
+  if (!text) { toast('Please write your review'); return; }
+  if (!handle.startsWith('@')) handle = '@' + handle;
+  handle = handle.replace(/\s+/g, '');
+
+  const now = new Date();
+  const date = now.toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'});
+  current.reviews.push({ name, handle, rating: chosenStar, text, date, photos: [] });
+
+  // Update header live
+  const avgR = avgRating(current), rounded = parseFloat(avgR);
+  document.getElementById('rmBig').textContent = avgR;
+  document.getElementById('rmStars').textContent = stars(rounded);
+  document.getElementById('rmCnt').textContent = `Based on ${current.reviews.length} review${current.reviews.length!==1?'s':''}`;
+  renderBreakdown(current);
+
+  document.getElementById('rvName').value = '';
+  if (document.getElementById('rvHandle')) document.getElementById('rvHandle').value = '';
+  document.getElementById('rvText').value = '';
+  setStar(0);
+  document.getElementById('rmSort').value = 'newest';
+  renderCards();
+
+  toast('✓ Review posted — thank you!');
+  showPanel(current);
+}
+
+// Close on backdrop click
+document.getElementById('reviewOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('reviewOverlay')) closeReviewModal();
+});
+document.getElementById('cmpOverlay').addEventListener('click',e=>{
+  if(e.target===document.getElementById('cmpOverlay')) closeOverlay('cmpOverlay');
+});
+
+// ═══════════════════════════════════════════════════
+//  SEARCH
+// ═══════════════════════════════════════════════════
+const si=document.getElementById('searchInput'), sd=document.getElementById('searchDrop');
+si.addEventListener('input',()=>{
+  const q=si.value.toLowerCase().trim();
+  if(!q){sd.style.display='none';return;}
+  const res=rivers.filter(r=>r.name.toLowerCase().includes(q)||r.state.toLowerCase().includes(q)).slice(0,8);
+  if(!res.length){sd.style.display='none';return;}
+  sd.innerHTML=res.map(r=>`
+    <div class="sd-item" onclick="pickSearch(${rivers.indexOf(r)})">
+      <div class="sd-dot" style="background:${markerColor(r)}"></div>
+      <span>${r.name}</span>
+      <span class="sd-state">${r.state}</span>
+    </div>`).join('');
+  sd.style.display='block';
+});
+function pickSearch(i){
+  const r=rivers[i]; si.value=r.name; sd.style.display='none';
+  setVisible(rivers); setFilter('all');
+  document.querySelectorAll('.s-item').forEach(el=>el.classList.remove('active'));
+  selectRiver(r);
+}
+document.addEventListener('click',e=>{ if(!e.target.closest('.search-wrap')) sd.style.display='none'; });
+si.addEventListener('keydown',e=>{ if(e.key==='Escape'){sd.style.display='none';si.blur();} });
+
+// ═══════════════════════════════════════════════════
+//  FILTERS
+// ═══════════════════════════════════════════════════
+function setFilter(t){
+  ['fAll','fSafe','fWarn','fBad'].forEach(id=>document.getElementById(id).classList.remove('on'));
+  document.getElementById({all:'fAll',safe:'fSafe',warn:'fWarn',bad:'fBad'}[t]).classList.add('on');
+}
+function doFilter(t){
+  setFilter(t);
+  const fn={all:_=>true,safe:r=>rating(r)>=4,warn:r=>rating(r)===3,bad:r=>rating(r)<=2};
+  setVisible(rivers.filter(fn[t]));
+  document.querySelectorAll('.s-item').forEach(el=>el.classList.remove('active'));
+}
+
+// ═══════════════════════════════════════════════════
+//  STATES SIDEBAR
+// ═══════════════════════════════════════════════════
+function buildSidebar(){
+  const states=[...new Set(rivers.map(r=>r.state))].sort();
+  const container=document.getElementById('stateList');
+  states.forEach(state=>{
+    const r=rivers.find(b=>b.state===state);
+    const col=markerColor(r), rt=rating(r);
+    const qL=rt>=4?'Good':rt>=3?'OK':'Poor';
+    const qBg=rt>=4?'#e6f7ef':rt>=3?'#fff7ed':'#fef2f2';
+    const qC=rt>=4?'#0a9150':rt>=3?'#d97706':'#dc2626';
+    const div=document.createElement('div');
+    div.className='s-item';
+    div.innerHTML=`<div class="s-dot" style="background:${col}"></div><span>${state}</span><span class="s-badge" style="background:${qBg};color:${qC}">${qL}</span>`;
+    div.onclick=()=>{
+      document.querySelectorAll('.s-item').forEach(el=>el.classList.remove('active'));
+      div.classList.add('active');
+      const filtered=rivers.filter(b=>b.state===state);
+      setVisible(filtered); setFilter('all');
+      if(filtered.length){selectRiver(filtered[0]);map.setView([filtered[0].lat,filtered[0].lng],7,{animate:true});}
+    };
+    container.appendChild(div);
+  });
+}
+
+// ═══════════════════════════════════════════════════
+//  COMPARE
+// ═══════════════════════════════════════════════════
+function toggleCmp(){
+  if(!current)return;
+  const i=cmpList.indexOf(current);
+  if(i>-1){cmpList.splice(i,1);toast('Removed from compare');}
+  else{if(cmpList.length>=4){toast('Max 4 water bodies');return;}cmpList.push(current);toast(`"${current.name}" added`);}
+  document.getElementById('sCmp').textContent=cmpList.length;
+  showPanel(current);
+}
+function clearCompare(){cmpList=[];document.getElementById('sCmp').textContent=0;closeOverlay('cmpOverlay');if(current)showPanel(current);toast('Compare list cleared');}
+function flag(v,good,bad){return v<=good?'good':v>=bad?'bad':'';}
+function openCompare(){
+  if(cmpList.length<2){toast('Add at least 2 water bodies to compare');return;}
+  document.getElementById('cmpSub').textContent=`Comparing ${cmpList.length} water bodies`;
+  document.getElementById('cmpGrid').innerHTML=cmpList.map(r=>{
+    const st=status(r),rt=rating(r),avgR=avgRating(r);
+    return `<div class="cmp-card">
+      <h4>${r.name}</h4>
+      <div class="ccs" style="color:${st.color}">● ${r.state} · ${st.label}</div>
+      <div class="cmp-row"><span class="ck">pH</span><span class="cv ${r.ph>=6.5&&r.ph<=8.5?'good':'bad'}">${r.ph}</span></div>
+      <div class="cmp-row"><span class="ck">TDS</span><span class="cv ${flag(r.tds,300,500)}">${r.tds} mg/L</span></div>
+      <div class="cmp-row"><span class="ck">Arsenic</span><span class="cv ${flag(r.arsenic,0.01,0.03)}">${r.arsenic}</span></div>
+      <div class="cmp-row"><span class="ck">Score</span><span class="cv">${stars(rt)}</span></div>
+      <div class="cmp-row"><span class="ck">Reviews</span><span class="cv">${avgR?avgR+' ★ ('+r.reviews.length+')':'None'}</span></div>
+    </div>`;
+  }).join('');
+  document.getElementById('cmpOverlay').classList.add('open');
+}
+function closeOverlay(id){document.getElementById(id).classList.remove('open');}
+
+// ═══════════════════════════════════════════════════
+//  EXPORT
+// ═══════════════════════════════════════════════════
+function doExport(){
+  const h=['Name','State','Lat','Lng','pH','TDS','Arsenic','Quality Score','Status','Avg Review','Review Count'];
+  const rows=rivers.map(r=>[`"${r.name}"`,`"${r.state}"`,r.lat,r.lng,r.ph,r.tds,r.arsenic,rating(r),status(r).label,avgRating(r)||'N/A',r.reviews.length]);
+  const csv=[h.join(','),...rows.map(r=>r.join(','))].join('\n');
+  const a=Object.assign(document.createElement('a'),{href:URL.createObjectURL(new Blob([csv],{type:'text/csv'})),download:'waterwatch_india.csv'});
+  a.click(); toast('⬇ CSV downloaded!');
+}
+
+// ═══════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════
+function toast(msg){
+  const t=document.createElement('div');
+  t.className='toast'; t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.remove(),400);},2600);
+}
+
+// ═══════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════
+buildSidebar();
+setVisible(rivers);
+</script>
+</body>
+</html>
