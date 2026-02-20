@@ -7,7 +7,11 @@ const fs = require('fs');
 const path = require('path');
 const AWS = require('aws-sdk');
 const multer = require('multer');
-require('dotenv').config();
+require('dotenv').config({ path: __dirname + '/.env' });
+
+console.log("ENV CHECK:");
+console.log("Bucket:", process.env.AWS_BUCKET_NAME);
+console.log("Region:", process.env.AWS_REGION);
 
 const app = express();
 const PORT = process.env.PORT || 5001;
