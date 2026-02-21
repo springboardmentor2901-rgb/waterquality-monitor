@@ -1,0 +1,5764 @@
+[
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4349",
+        "monitoringLocation": "SEA WATER , BAY OF BENGAL, AFTER CONFLUENCE OF MARINE OUTFALL OF M/S. AUROBINDO PHARMA LTD. PYDIBHEEMAVARAM (V) RANASTHALAM (M)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 34.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4352",
+        "monitoringLocation": "SEA WAER BAY OF BENGAL, AFTER CONFLUENCE OF MARINE OUTFALL OF M/S MATRIX LABORATORIES LTD THAMMAYYAPALEM (V) PUSAPATIREGA (M)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4357",
+        "monitoringLocation": "RUSHIKONDA BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4361",
+        "monitoringLocation": "SEA WATER BAY BENGAL, UPPADA BEACH ROAD, KAKINADA",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4362",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL NEAR DEEP WATER PORT, KAKINADA (1KM AWAY FROM JETTY)",
+        "state": "SEA",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4363",
+        "monitoringLocation": "SEA WATER BAY OF BENGAL NEAR KUMBHABHISHEKAM TEMPALE, KAKINADA",
+        "state": "SEA",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 2.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4371",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL AFTER CONFLUENCE OF RIVER VASHISTA GODAVARI AT CHINNAMAINAVANILANKA (V), NARSAPUR (M)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4378",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL, MANGINAPUDI BEACH, MACHILIPATNAM",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4383",
+        "monitoringLocation": "SEA WATER BAY OF BENGAL, FISHING HARBOUR, NIZAMPATNAM",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 25.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4385",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL, KOTHAPATNAM BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 22.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 25.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4386",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL, VADAREVU BEACH, CHIRALA",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 22.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 25.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4387",
+        "monitoringLocation": "SEA WATER, BAY OF BENGAL, KRISHNAPATNAM PORT",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 18.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2267",
+        "monitoringLocation": "CREEK AT DANDO MOLLO, VELSAO, MAMUGAO",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4013",
+        "monitoringLocation": "TIRACOL BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 31.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4014",
+        "monitoringLocation": "MIRAMAR BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4015",
+        "monitoringLocation": "CALANGUTE BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4016",
+        "monitoringLocation": "MORJIM BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 31.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4017",
+        "monitoringLocation": "MOBOR BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4018",
+        "monitoringLocation": "BAINA BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 33.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4019",
+        "monitoringLocation": "GALGIBAG BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 34.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4020",
+        "monitoringLocation": "COLVA BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4021",
+        "monitoringLocation": "VAGATOR BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4022",
+        "monitoringLocation": "VELSAO BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2080",
+        "monitoringLocation": "MASMA KHADI- OLPAD- SARAS ROAD",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 20.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2081",
+        "monitoringLocation": "AMLAKHADI CREEK AT PUNGAM.",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 32.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": null
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "3196",
+        "monitoringLocation": "VANDKHADI AT VILLAGE UMARWADA, TA ANKLESHWAR, BHARUCH",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 34.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": null
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "1316",
+        "monitoringLocation": "BASSEIN CREEK AT VASAIFORT AT BASSEIN , VASAI,THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "1317",
+        "monitoringLocation": "THANE CREEK AT ELEPHANTA ISLAND, ELEPHANTA, MUMBAI",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "1318",
+        "monitoringLocation": "MAHIM CREEK AT MAHIM BAY, MAHIM, MUMBAI",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2165",
+        "monitoringLocation": "SEA WATER AT GATEWAY OF INDIA,COLABA, MUMBAI",
+        "state": "SEA",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2166",
+        "monitoringLocation": "SEA WATER AT CHARNI ROAD CHOUPATHY, GIRGAON, MUMBAI",
+        "state": "SEA",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2167",
+        "monitoringLocation": "SEA WATER AT WORLI SEA FACE, WORLI, MUMBAI",
+        "state": "SEA",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2169",
+        "monitoringLocation": "SEA WATER AT VERSOVA BEACH, VERSOVA, ANDHERI, MUMBAI",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2184",
+        "monitoringLocation": "VASHI CREEK AT AIROLI BRIDGE,AIROLI, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2185",
+        "monitoringLocation": "VASHI CREEK AT VASHI BRIDGE, VASHI,THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2791",
+        "monitoringLocation": "ULHAS CREEK AT RETI BUNDER, D/S OF KALYAN- BHIWANDI BRIDGE, KALYAN,KALYAN, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 20.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 2.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2792",
+        "monitoringLocation": "ULHAS CREEK AT MUMBRA RETI BUNDER, VILLAGE MUMBRA, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2793",
+        "monitoringLocation": "THANE CREEK AT KALWA ROAD BRIDGE, KALWA, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2794",
+        "monitoringLocation": "ULHAS CREEK AT KOLSHET RETI BUNDER, KOLSHET, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2795",
+        "monitoringLocation": "ULHAS CREEK AT GAIMUKH AT NAGLA BUNDER ON GHOD BUNDER ROAD, NAGLA, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 2.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2796",
+        "monitoringLocation": "ULHAS CREEK AT VERSOVA BRIDGE, VERSOVA, VASAI, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2797",
+        "monitoringLocation": "BHAYANDER CREEK AT D/S OF RAILWAY BRIDGE, JASAL PARK CHOUPATHY, NAVGHAR, BHAYANDER, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2798",
+        "monitoringLocation": "KHAREKURAN MURBE CREEK, KHAREKURAN, PALGHAR, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2799",
+        "monitoringLocation": "DANDI CREEK, DANDI, PALGHAR, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2800",
+        "monitoringLocation": "SARAWALI CREEK, SARAWALI, PALGHAR, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2801",
+        "monitoringLocation": "SAVTA CREEK, SAVTA, DAHANU, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 26.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2802",
+        "monitoringLocation": "DAHANU CREEK AT DAHANU FORT, DANUGAON, DAHANU, THANE",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 26.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2803",
+        "monitoringLocation": "PANVEL CREEK AT KOPRA BRIDGE, KOPRA, PANVEL, RAIGAD",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2804",
+        "monitoringLocation": "KARAMBAVANE CREEK AT CHIPLUN, KARAMBAVANE, RATNAGIRI",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2805",
+        "monitoringLocation": "ARNALA SEA, ARNALA, VASAI, THANE",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2806",
+        "monitoringLocation": "UTTAN SEA, UTTAN, BHAYANDER, THANE",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 21.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 38.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2807",
+        "monitoringLocation": "NAVAPURA SEA, NAVAPUR, PALGHAR, THANE",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2808",
+        "monitoringLocation": "SEA WATER AT NARIMAN POINT, COLABA, MUMBAI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2809",
+        "monitoringLocation": "SEA WATER AT MALABAR HILL, WALKESHWAR, MUMBAI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2810",
+        "monitoringLocation": "SEA WATER AT HAJI ALI, WORLI, MUMBAI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2811",
+        "monitoringLocation": "SEA WATER AT SHIVAJI PARK, DADAR CHOUPATHY,DADAR, MUMBAI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2812",
+        "monitoringLocation": "SEA WATER AT JUHU BEACH, JUHUGAON, SANTACRUZ, MUMBAI",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2813",
+        "monitoringLocation": "SEA WATER AT GANAPATIPULE, RATNAGIRI, RATNAGIRI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 35.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2814",
+        "monitoringLocation": "SEA WATER AT BHAGWATI BUNDER NEAR ULTRA TECH CEMENT JETTY, MIRKARWADA, RATNAGIRI, RATNAGIRI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 35.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 1.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2815",
+        "monitoringLocation": "MADVI SEA WATER NEAR JODHALE MARUTI TEMPLE, MADVIGAON, RATNAGIRI, RATNAGIRI",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 35.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2439",
+        "monitoringLocation": "PURI",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 31.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2440",
+        "monitoringLocation": "PARADEEP",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.7
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 33.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "2441",
+        "monitoringLocation": "GOPALPUR",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 13.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "3961",
+        "monitoringLocation": "ATHARABANKI CREEK",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 33.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 3.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4975",
+        "monitoringLocation": "JATADHARI MUHANA (NORTH)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.3
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.3,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4976",
+        "monitoringLocation": "JATADHARI MUHANA",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4977",
+        "monitoringLocation": "JATADHARI MUHANA (SOUTH - 1)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.1
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.1,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4978",
+        "monitoringLocation": "JATADHARI MUHANA (SOUTH - 2)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4979",
+        "monitoringLocation": "JATADHARI MUHANA CS - 3 (2.5 KM FROM SHORE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4980",
+        "monitoringLocation": "JATADHARI MUHANA CS - 4 (SOUTH 5 KM FROM SHORE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4981",
+        "monitoringLocation": "JATADHARI MUHANA CS - 5 (NORTH 5 KM SHORE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4982",
+        "monitoringLocation": "PARADEEP PORT NORTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4983",
+        "monitoringLocation": "PARADEEP PORT",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 22.8
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 22.8,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4984",
+        "monitoringLocation": "PARADEEP PORT SOUTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 8.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4985",
+        "monitoringLocation": "PARADEEP PORT NORTH (2.5 KM FROM SHORE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4986",
+        "monitoringLocation": "PARADEEP PORT SOUTH (5 KM FROM PORT ENTRANCE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.8
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.8,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4987",
+        "monitoringLocation": "MAHANADI MUHANA C - 1",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.6
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.6,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.9
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 4.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4988",
+        "monitoringLocation": "MAHANADI MUHANA NORTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 24.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4989",
+        "monitoringLocation": "MAHANADI MUHANA UP NORTH (2.5 KM FROM SHORE)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.5
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 23.5,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4995",
+        "monitoringLocation": "HANSUA RIVER MOUTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.8
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.8,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 7.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4996",
+        "monitoringLocation": "HANSUA RIVER MOUTH (NORTH)",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.1
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.1,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4997",
+        "monitoringLocation": "GAHIRMATH 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.4
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.4,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4998",
+        "monitoringLocation": "GAHIRMATHA, SATABHAYA",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.4
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.4,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "4999",
+        "monitoringLocation": "GAHIRMATHA 3",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.8
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.8,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5000",
+        "monitoringLocation": "HABADHIKUTA 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.4
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.4,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5001",
+        "monitoringLocation": "EKAKULA FOREST RH - 1",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.5
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.5,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.1,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5002",
+        "monitoringLocation": "JAMBU 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.6
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.6,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5003",
+        "monitoringLocation": "HANSUA MOUTH NORTH 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.4
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.4,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 7.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5004",
+        "monitoringLocation": "HANSUA MOUTH NORTH 3",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.5
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.5,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5005",
+        "monitoringLocation": "GAHIRMATHA, SATABHAYA SOUTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.5
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.5,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5006",
+        "monitoringLocation": "GAHIRMATHA 4",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.7
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.7,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5007",
+        "monitoringLocation": "HABADHIKUTA 3",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.4
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.4,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5008",
+        "monitoringLocation": "EKAKULA FOREST RH - 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.2
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.2,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5009",
+        "monitoringLocation": "DHAMRA MUHANA C - 1",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.3,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5010",
+        "monitoringLocation": "DHAMRA MUHANA C - 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.3
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.3,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": null
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5011",
+        "monitoringLocation": "DHAMRA MUHANA C - NORTH",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.2
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.1,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5012",
+        "monitoringLocation": "KANAKPRASAD - 1",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.5
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5013",
+        "monitoringLocation": "KANAKPRASAD - 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.8,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5014",
+        "monitoringLocation": "DHAMRA PORT 2",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.6
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.1,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5064",
+        "monitoringLocation": "ENNORE CREEK",
+        "state": "CREEK",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.0
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5065",
+        "monitoringLocation": "TIRUVOTTIYUR",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.9
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5066",
+        "monitoringLocation": "CHENNAI PORT TRUST",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": null
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5067",
+        "monitoringLocation": "SANTHOME BEACH",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 25.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5068",
+        "monitoringLocation": "INJAMBAKKAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5069",
+        "monitoringLocation": "MAMALLAPURAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5070",
+        "monitoringLocation": "KALPAKKAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5071",
+        "monitoringLocation": "ALAMPARAIKUPPAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5072",
+        "monitoringLocation": "THALNGADU",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5073",
+        "monitoringLocation": "KOTTAKUPPAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5074",
+        "monitoringLocation": "CUDDALORE",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 24.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5075",
+        "monitoringLocation": "PICHAVARAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 23.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 26.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5076",
+        "monitoringLocation": "KOLLIDAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5077",
+        "monitoringLocation": "THARANGAMBADI BEACH",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 30.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5078",
+        "monitoringLocation": "NAGAPATTINAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 22.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5079",
+        "monitoringLocation": "VELLANKANNI",
+        "state": "BEACH",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5080",
+        "monitoringLocation": "MUTHUPETTAI",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 26.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 30.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.6
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.0,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5081",
+        "monitoringLocation": "LAGOON NEARBY THE COAST LINE",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 5.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 8.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5082",
+        "monitoringLocation": "ADIRAMAPATTINAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.8
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.9
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5083",
+        "monitoringLocation": "KEZHATHOTTAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 27.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.7
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5084",
+        "monitoringLocation": "MALLIPATANAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 28.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 28.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.5
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5085",
+        "monitoringLocation": "KOTTAIPATTINAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 29.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 4.9
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.9,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5086",
+        "monitoringLocation": "RMESWARAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 2.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.4
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5087",
+        "monitoringLocation": "ERWADI",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 6.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.7
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5088",
+        "monitoringLocation": "TUTICORIN",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.3
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5089",
+        "monitoringLocation": "THIRUCHENDUR",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.4
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 8.2,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5090",
+        "monitoringLocation": "PUNNAKAYAL",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5091",
+        "monitoringLocation": "VEMBAR",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.8
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5092",
+        "monitoringLocation": "UVARI",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5093",
+        "monitoringLocation": "KOODANKULAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.2
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.8,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.2
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5094",
+        "monitoringLocation": "KANYAKUMARI",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.7,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5095",
+        "monitoringLocation": "KEEZHAMANAKUDY",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.1
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.5,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.5
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5096",
+        "monitoringLocation": "COLACHEL",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.6,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 6.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5097",
+        "monitoringLocation": "THANGAPATTINAM",
+        "state": "SEA WATER",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": null
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": null,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 5.0
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.4,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.1
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    },
+    {
+        "year": 2021,
+        "category": "creek",
+        "stationCode": "5028",
+        "monitoringLocation": "DIGHA, PURBA MEDINIPUR",
+        "state": "MARINE",
+        "typeOfWaterBody": null,
+        "waterQualityClass": null,
+        "parameters": {
+            "temperature": {
+                "min": null,
+                "max": 27.0
+            },
+            "dissolvedOxygen": {
+                "min": null,
+                "max": null
+            },
+            "pH": {
+                "min": 31.0,
+                "max": null
+            },
+            "conductivity": {
+                "min": null,
+                "max": 6.3
+            },
+            "BOD": {
+                "min": null,
+                "max": null
+            },
+            "nitrate": {
+                "min": 7.3,
+                "max": null
+            },
+            "fecalColiform": {
+                "min": null,
+                "max": 7.6
+            },
+            "totalColiform": {
+                "min": null,
+                "max": null
+            }
+        }
+    }
+]
