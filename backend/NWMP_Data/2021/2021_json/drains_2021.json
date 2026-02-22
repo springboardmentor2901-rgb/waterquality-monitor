@@ -1,5506 +1,1850 @@
 [
     {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4369",
-        "monitoringLocation": null,
-        "state": "COLLING WATER BLOWDOWNS FROM ANDHRA SUGARS LTD, TANUKU BEFORE JOINING RIVER GODAVARI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 22.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 254.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4373",
-        "monitoringLocation": null,
-        "state": "GOSTANI RIVER SAMPLE AFTER CONFLUENCE WITH M/S DELTA PAPEER MILL EFFLUENTS, BENDRA, PALAKODERU (M), BUT BEFORE CONFLUENCE WITH YANAMADURRU DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 24.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 612.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3052",
-        "monitoringLocation": null,
-        "state": "GUNTATHIPPA DRAIN B/C WITH RYVES CANAL AT RAMAVARAPPADU, KRISHNA, A.P.",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 24.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 27.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1458.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3067",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP ON GODAVARI, RAJAHMUNDRY, EAST GODAVARI, A.P.",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 24.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.6,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 156.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3053",
-        "monitoringLocation": null,
-        "state": "TULIA BAGH DRAIN AT VEMULAVADA, EAST GODAVARI, A.P.",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 1.5
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 785.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2047",
-        "monitoringLocation": null,
-        "state": "N-CHOE (ATTAWA CHOE), CHANDIGARH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 16.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 460.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2048",
-        "monitoringLocation": null,
-        "state": "PATIALA KI RAO, CHANDIGARH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 16.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 33.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 828.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2049",
-        "monitoringLocation": null,
-        "state": "SUKHNA CHOE, CHANDIGARH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 16.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 2.6,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 495.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5268",
-        "monitoringLocation": null,
-        "state": "ABU FAZAL DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1505",
-        "monitoringLocation": null,
-        "state": "BARAPULA DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1502",
-        "monitoringLocation": null,
-        "state": "CIVIL MILL DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5274",
-        "monitoringLocation": null,
-        "state": "CONTRIBUTION OF OUT FALLS IN OLD AGRA CANAL",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5267",
-        "monitoringLocation": null,
-        "state": "DRAIN NO. 14",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5263",
-        "monitoringLocation": null,
-        "state": "ISBT + MORI GATE DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5269",
-        "monitoringLocation": null,
-        "state": "JAITPUR DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5266",
-        "monitoringLocation": null,
-        "state": "KAILASH NAGAR DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5261",
-        "monitoringLocation": null,
-        "state": "KHYBER PASS DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5259",
-        "monitoringLocation": null,
-        "state": "MAGZINE ROAD DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1857",
-        "monitoringLocation": null,
-        "state": "MAHARANI BAGH DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5262",
-        "monitoringLocation": null,
-        "state": "METCALF HOUSE DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5275",
-        "monitoringLocation": null,
-        "state": "MOLARBANDH DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5271",
-        "monitoringLocation": null,
-        "state": "OLD AGRA CANAL AT OKHLA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5273",
-        "monitoringLocation": null,
-        "state": "OLD AGRA CANAL NEAR KALINDI KUNJ - SARITA VIHAR PULL",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1503",
-        "monitoringLocation": null,
-        "state": "POWER HOUSE DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1858",
-        "monitoringLocation": null,
-        "state": "SARITA VIHAR, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1504",
-        "monitoringLocation": null,
-        "state": "SEN NURSING HOME DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "1506",
-        "monitoringLocation": null,
-        "state": "SHAHDARA DRAIN, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5265",
-        "monitoringLocation": null,
-        "state": "SHASTRI PARK DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5276",
-        "monitoringLocation": null,
-        "state": "SONIA VIHAR DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5260",
-        "monitoringLocation": null,
-        "state": "SWEEPER COLONY DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5264",
-        "monitoringLocation": null,
-        "state": "TONGA STAND DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "5270",
-        "monitoringLocation": null,
-        "state": "TUGHLAKABAD DRAIN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": null
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4860",
-        "monitoringLocation": null,
-        "state": "RANIA DRAIN MEETING DISCHARGE OF PHED STP, 6 MLD, RANIA, SIRSA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1720.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3868",
-        "monitoringLocation": null,
-        "state": "BARAGRAM NALLAH BEFORE CONFLUENCE TO RIVER BEAS",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 3.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 14.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 48.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3881",
-        "monitoringLocation": null,
-        "state": "BHATIAN NALLAH D/S SARA TEXTILE, NALAGARH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 15.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 33.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 2.5
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 4.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 777.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3879",
-        "monitoringLocation": null,
-        "state": "BHATIAN NALLAH U/S BHATIAN VILLAGE, NALAGARH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 13.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 34.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 1.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 3.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 787.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4463",
-        "monitoringLocation": null,
-        "state": "DHANESON NALLAH (U/S SAINJ WATER SUPPLY SCHEME)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 8.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 19.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 729.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4481",
-        "monitoringLocation": null,
-        "state": "HATHLI NALLAH LIFT WATER SUPPLY SCHEME FOR MUNICIPAL COUNCIL HAMIRPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 11.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 255.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4466",
-        "monitoringLocation": null,
-        "state": "JARANGLA NALLAH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 4.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 14.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.7
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 126.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4454",
-        "monitoringLocation": null,
-        "state": "JARANGLA NALLAH U/S IPH WATER SUPPLY SCHEME (FOR MOHALLA MUGLA & VILLAGE KARIAN)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 4.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 14.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.7
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 104.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4477",
-        "monitoringLocation": null,
-        "state": "KHALADA NALA WATER SUPPLY SCHEME KULLU TOWN TEHSIL KULLU",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 7.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.8
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 110.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4455",
-        "monitoringLocation": null,
-        "state": "KLUIN NALLAH U/S IPH WATER SUPPLY SCHEME (FOR CHAMBA TOWN)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 4.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 16.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.7
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 208.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4430",
-        "monitoringLocation": null,
-        "state": "LIFT NALLAH BEFORE CONFLUENCE TO ASHWANI KHAD NEAR DOGRHA BRIDGE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 12.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 17.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.4
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 2738.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4482",
-        "monitoringLocation": null,
-        "state": "LIFT WATER SUPPLY SCHEME (PANJARAR) AND BHOTA ROPARI & UJHAN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 12.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 28.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 257.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4475",
-        "monitoringLocation": null,
-        "state": "MACHADA NALLAH, MAJHOUTI WATER SUPPLY SCHEME NEW NIRSOO, MAJHOUTI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 8.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 9.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.7,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1145.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4476",
-        "monitoringLocation": null,
-        "state": "MANALSU NALA (( WATER SUPPLY SCHEME FOR MANALI TOWN U/S OF OLD MANALI THESIL MANALI DIST KULLU",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 4.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 12.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.7,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 34.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4474",
-        "monitoringLocation": null,
-        "state": "NALLAH, HALOG WATER SUPPLY SCHEME BAG KHANEREI, HALOG",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 8.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 9.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 120.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3863",
-        "monitoringLocation": null,
-        "state": "RAMPUR JATTAN MOGINAND NALA BEFORE CONFLUENCE TO RIVER MARKANDA NEAR RADHA SWAMI SATSANG BHAWAN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 17.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 27.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.9
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 324.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4425",
-        "monitoringLocation": null,
-        "state": "RAW WATER FROM AT CHURAT NALLAH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 10.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.9
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 150.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3865",
-        "monitoringLocation": null,
-        "state": "ROON NALLAH NEAR MEERPUR KOTLA, GURUDWARA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 23.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 25.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 217.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4035",
-        "monitoringLocation": null,
-        "state": "SAHU NALLAH D/S BHURI SINGH SHEP",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 3.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 209.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4034",
-        "monitoringLocation": null,
-        "state": "SAHU NALLAH U/S BHURI SINGH SHEP",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 3.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 15.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 194.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4462",
-        "monitoringLocation": null,
-        "state": "SAINJ NALLAH (U/S SAINJ WATER SUPPLY SCHEME)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 9.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 19.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1701.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3861",
-        "monitoringLocation": null,
-        "state": "SALANI NALLAH NEAR BRIDGE, NH-7, MOGINAND KALA AMB",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 15.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 315.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3867",
-        "monitoringLocation": null,
-        "state": "SARVARI NALLAH BEFORE CONFLUENCE TO RIVER BEAS",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 6.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 18.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.8
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.6,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 110.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4480",
-        "monitoringLocation": null,
-        "state": "SURAJMUKHI NALLAH D/S STP SAMTI SOLAN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 9.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 21.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 205.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3875",
-        "monitoringLocation": null,
-        "state": "SURAJMUKHI NALLAH U/S DWSS GALAYANA NEAR M/S SHOOLINI UNIVERSITY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 9.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 21.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.7,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 195.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4029",
-        "monitoringLocation": null,
-        "state": "TAALO NALA (FROM NAHAR TOWN) AT KHADDAR KA BAGH B/C TO RIVER MARKANDA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 15.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 25.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 302.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4082",
-        "monitoringLocation": null,
-        "state": "BAJU NALLAH AT KHOKHYAL NEAR BARAGE, CONFLUENCE POINT",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 15.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.5,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 182.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2763",
-        "monitoringLocation": null,
-        "state": "ASANGI NALLA AT ASANGI VILLAGE,",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 17.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 21.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 380.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2785",
-        "monitoringLocation": null,
-        "state": "BPT NAVAPUR (DISCHARGE FROM MIDC TARAPUR), NAVAPUR, PALGHAR, THANE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 27.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 6434.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2178",
-        "monitoringLocation": null,
-        "state": "CHIKHALI NALLAH MEETS GODAVARI RIVER, CHIKHALI, NASHIK",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 17.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 25.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 1.9
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 496.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2783",
-        "monitoringLocation": null,
-        "state": "COLOUR CHEMICAL NALLAH, VILLAGE- MAJIWADA, THANE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 546.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2789",
-        "monitoringLocation": null,
-        "state": "NALLA AT D/S OF AKLAI MANDIR, AKLAI, MALSHIRAS, SOLAPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 12.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 36.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 4.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 500.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2790",
-        "monitoringLocation": null,
-        "state": "PIMPAL-PANERI NALLA NEAR FINOLEX INDUSTRIES, YAHGANIGAON, RATNAGIRI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 23.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 179.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2782",
-        "monitoringLocation": null,
-        "state": "RABODI NALLAH, RABODI, THANE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 36.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 2.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 502.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2784",
-        "monitoringLocation": null,
-        "state": "SANDOZ NALLAH, SANDOZBAUG, THANE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 2.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 556.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3930",
-        "monitoringLocation": null,
-        "state": "BANGURU NALLAH (OVER BRIDGE TALCHER RENGALI DAM ROAD, SARKISOREPAL)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 21.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 164.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3934",
-        "monitoringLocation": null,
-        "state": "GANDA NALLAH AT MARTHAPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 21.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 24.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.7
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 138.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3923",
-        "monitoringLocation": null,
-        "state": "GURADIH NALLAH AT PANPOSH",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 17.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 2.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 4.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 312.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3939",
-        "monitoringLocation": null,
-        "state": "KUNDRA NALLAH AT JODA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 21.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 5.8
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 78.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2906",
-        "monitoringLocation": null,
-        "state": "DHANAULA DRAIN FALLING INTO LASSARA DRAIN NEAR VILL. DHUNAS, PUNJAB",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 10.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 34.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 3508.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2907",
-        "monitoringLocation": null,
-        "state": "HUDIARA DRAIN AT VILL. DHAHUKE (WHERE IT ENTERS PAKISTAN), PUNJAB",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 15.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1108.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "2914",
-        "monitoringLocation": null,
-        "state": "POINT SOURSE BUDHA NALLAH, PUNJAB",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 18.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1280.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4158",
-        "monitoringLocation": null,
-        "state": "SAGARPARA DRAIN AT VILL SAGRA DIST, PATIALA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 10.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 36.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 1.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 2.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 693.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "10051",
-        "monitoringLocation": null,
-        "state": "CHENNAI WATERWAYS AT BUCKINGHAM CANAL X OTTERI NULLAH CONFLUENCE (GMR VASAVI INDUSTRIES)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 892.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "10056",
-        "monitoringLocation": null,
-        "state": "CHENNAI WATERWAYS AT MAMBALAM DRAIN (GOLF COURSE)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 25.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 3.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 734.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "10048",
-        "monitoringLocation": null,
-        "state": "CHENNAI WATERWAYS AT OTTERI NULLAH (KILPAUK GARDEN)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 28.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 3.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 923.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "10047",
-        "monitoringLocation": null,
-        "state": "CHENNAI WATERWAYS AT OTTERI NULLAH (ORIGIN)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 28.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 2.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 845.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3054",
-        "monitoringLocation": null,
-        "state": "OUTLET OF ASH POND EFFLUENTS OF M/S.NTPC, RAMAGUNDAM, KARIMNAGAR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 27.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1088.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3060",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, DURGAM CHERUVU, RANGAREDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 2.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 4.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 980.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3058",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, KHAIRATABAD ON HUSSAINSAGAR LAKE, RANGA REDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 987.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3056",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, LANGARHOUSE LAKE, RANGA REDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1261.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3057",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, NAGOLE ON MUSI, RANGA REDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 28.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.7,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1272.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3061",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, NALLACHERUVU ON MUSI, RANGAREDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.4
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.5,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1351.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3059",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, SAFILGUDA LAKE, RANGA REDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 4.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1574.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3062",
-        "monitoringLocation": null,
-        "state": "OUTLET OF STP, SAROOR NAGAR, RANGAREDDY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 3.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 4.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1303.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3055",
-        "monitoringLocation": null,
-        "state": "TREATED EFFLUENTS OF 339 MLD STP, AMBERPET, HYDERABAD BEFORE JOINING TO MUSI, HYDERABAD",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 1.9
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.5,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 1155.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20004",
-        "monitoringLocation": null,
-        "state": "STP AT RAJAHMUNDRY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 6.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20013",
-        "monitoringLocation": null,
-        "state": "PANAJI-1 TONCA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 28.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 5.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20015",
-        "monitoringLocation": null,
-        "state": "AHMEDABAD-1 BENRAMPURA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 27.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 27.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20016",
-        "monitoringLocation": null,
-        "state": "AHMEDABAD-2 NAROL SARKHEJ HIGHWAY",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 27.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20017",
-        "monitoringLocation": null,
-        "state": "STP NEAR PAMBA AT PATHANAMTHITTA KERALA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20019",
-        "monitoringLocation": null,
-        "state": "STP, PURI AT MANGALAGHAT",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20020",
-        "monitoringLocation": null,
-        "state": "WASTEWATER OF TALCHER",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20018",
-        "monitoringLocation": null,
-        "state": "STP, CUTTACK AT MATTAGAJPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20021",
-        "monitoringLocation": null,
-        "state": "JALANDHAR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 8.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20025",
-        "monitoringLocation": null,
-        "state": "PHAGWARA",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20026",
-        "monitoringLocation": null,
-        "state": "PHILLAUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 6.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20028",
-        "monitoringLocation": null,
-        "state": "SULTANPUR LODHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20022",
-        "monitoringLocation": null,
-        "state": "LUDHIANA-1, BHATTIAN",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20023",
-        "monitoringLocation": null,
-        "state": "LUDHIANA-2, BALLOKE",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20024",
-        "monitoringLocation": null,
-        "state": "LUDHIANA-3, JAMALPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20038",
-        "monitoringLocation": null,
-        "state": "ERODE-2",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20043",
-        "monitoringLocation": null,
-        "state": "TIRCHIRAPPALLLI- SRIRANGAM",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 31.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 31.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20044",
-        "monitoringLocation": null,
-        "state": "THANJAVUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 30.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20041",
-        "monitoringLocation": null,
-        "state": "KARUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 0.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20032",
-        "monitoringLocation": null,
-        "state": "CHENNAI-1 NESAPAKKAM (ZONE-IV)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 28.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 28.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 8.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20034",
-        "monitoringLocation": null,
-        "state": "CHENNAI- 3KODUNGAIYUR (ZONE I&II)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 27.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20035",
-        "monitoringLocation": null,
-        "state": "CHENNAI-4 KOYAMBEDU (ZONE- III)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 30.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 34.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20042",
-        "monitoringLocation": null,
-        "state": "MAYILADUTHURAI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 24.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.6,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20045",
-        "monitoringLocation": null,
-        "state": "TIRUNELVELI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 34.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.4,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20047",
-        "monitoringLocation": null,
-        "state": "KUMBAKONAM",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20033",
-        "monitoringLocation": null,
-        "state": "CHENNAI-2 PERUNGADI(ZONE-V)",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20036",
-        "monitoringLocation": null,
-        "state": "BHAWANI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 26.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 0.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20048",
-        "monitoringLocation": null,
-        "state": "SWARG ASHRAM - 1",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 12.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 29.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 9.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 10.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20049",
-        "monitoringLocation": null,
-        "state": "LAKKAR GHAT- OXIDATION PONDS",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 14.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.8
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 9.8,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "20050",
-        "monitoringLocation": null,
-        "state": "JAGJITPUR",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 14.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.8,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 10.5,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.0
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3043",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- CHANDRAVAL, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 32.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 17.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 17.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.4
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3042",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- SONIA VIHAR, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 7.5
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.5,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.4
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3041",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- WAZIRABAD, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 17.0
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 17.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.4
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3044",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- NANGLOI, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.2
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.2,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.5
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3045",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- HAIDERPUR, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 32.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 32.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 8.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 8.3,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.5
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3046",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- DWARKA, DELHI",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": null
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": null,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": null
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": null,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.5
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3047",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- GURGAON",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 3.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 7.0,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.1
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "4861",
-        "monitoringLocation": null,
-        "state": "NEAR HUDA/ HSVP WATER WORKS, BASAI, GURUGRAM",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 16.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 26.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 4.6
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 5.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.4
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3048",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- FARIDABAD",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 20.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 20.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 9.3
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 10.1,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.3
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
-    },
-    {
-        "year": 2021,
-        "category": "drains",
-        "stationCode": "3050",
-        "monitoringLocation": null,
-        "state": "WATER WORKS- GHAZIABAD",
-        "typeOfWaterBody": "DRAIN",
-        "waterQualityClass": null,
-        "parameters": {
-            "temperature": {
-                "min": null,
-                "max": 3.0
-            },
-            "dissolvedOxygen": {
-                "min": null,
-                "max": null
-            },
-            "pH": {
-                "min": 24.0,
-                "max": null
-            },
-            "conductivity": {
-                "min": null,
-                "max": 6.1
-            },
-            "BOD": {
-                "min": null,
-                "max": null
-            },
-            "nitrate": {
-                "min": 6.9,
-                "max": null
-            },
-            "fecalColiform": {
-                "min": null,
-                "max": 7.1
-            },
-            "totalColiform": {
-                "min": null,
-                "max": null
-            }
-        }
+        "station_code": 4369,
+        "location_name": "COLLING WATER BLOWDOWNS FROM ANDHRA SUGARS LTD, TANUKU BEFORE JOINING RIVER GODAVARI",
+        "water_body_type": "ANDHRA PRADESH",
+        "state": 22,
+        "temp_min": 29,
+        "temp_max": 5,
+        "do_min": 8,
+        "do_max": 254,
+        "ph_min": 645,
+        "ph_max": 7.3,
+        "cond_min": 7.9,
+        "cond_max": 1,
+        "bod_min": 2.5,
+        "bod_max": 0.5,
+        "nitrate_min": 2.7,
+        "nitrate_max": 3,
+        "faecal_min": 9,
+        "faecal_max": 64,
+        "total_min": 120
+    },
+    {
+        "station_code": 4373,
+        "location_name": "GOSTANI RIVER SAMPLE AFTER CONFLUENCE WITH M/S DELTA PAPEER MILL EFFLUENTS, BENDRA, PALAKODERU (M), BUT BEFORE CONFLUENCE WITH YANAMADURRU DRAIN",
+        "water_body_type": "ANDHRA PRADESH",
+        "state": 24,
+        "temp_min": 30,
+        "temp_max": 0.3,
+        "do_min": 6.2,
+        "do_max": 612,
+        "ph_min": 3850,
+        "ph_max": 7,
+        "cond_min": 7.7,
+        "cond_max": 1.9,
+        "bod_min": 12.2,
+        "bod_max": 1,
+        "nitrate_min": 3.1,
+        "nitrate_max": 11,
+        "faecal_min": 21,
+        "faecal_max": 150,
+        "total_min": 240
+    },
+    {
+        "station_code": 3052,
+        "location_name": "GUNTATHIPPA DRAIN B/C WITH RYVES CANAL AT RAMAVARAPPADU, KRISHNA, A.P.",
+        "water_body_type": "ANDHRA PRADESH",
+        "state": 24,
+        "temp_min": 27,
+        "temp_max": 5.1,
+        "do_min": 5.9,
+        "do_max": 1458,
+        "ph_min": 2100,
+        "ph_max": 6.9,
+        "cond_min": 7.9,
+        "cond_max": 4.4,
+        "bod_min": 10.8,
+        "bod_max": 2.8,
+        "nitrate_min": 4.6,
+        "nitrate_max": 3,
+        "faecal_min": 3,
+        "faecal_max": 1100,
+        "total_min": 1100
+    },
+    {
+        "station_code": 3067,
+        "location_name": "OUTLET OF STP ON GODAVARI, RAJAHMUNDRY, EAST GODAVARI, A.P.",
+        "water_body_type": "ANDHRA PRADESH",
+        "state": 24,
+        "temp_min": 31,
+        "temp_max": 6,
+        "do_min": 7.6,
+        "do_max": 156,
+        "ph_min": 346,
+        "ph_max": 6.7,
+        "cond_min": 7.8,
+        "cond_max": 1.6,
+        "bod_min": 2.4,
+        "bod_max": 0.5,
+        "nitrate_min": 2.7,
+        "nitrate_max": 9,
+        "faecal_min": 15,
+        "faecal_max": 150,
+        "total_min": 210
+    },
+    {
+        "station_code": 3053,
+        "location_name": "TULIA BAGH DRAIN AT VEMULAVADA, EAST GODAVARI, A.P.",
+        "water_body_type": "ANDHRA PRADESH",
+        "state": 25,
+        "temp_min": 30,
+        "temp_max": 1.5,
+        "do_min": 5,
+        "do_max": 785,
+        "ph_min": 21420,
+        "ph_max": 6.6,
+        "cond_min": 7.7,
+        "cond_max": 3.5,
+        "bod_min": 8.4,
+        "bod_max": 1.3,
+        "nitrate_min": 3.7,
+        "nitrate_max": 15,
+        "faecal_min": 28,
+        "faecal_max": 210,
+        "total_min": 1100
+    },
+    {
+        "station_code": 2047,
+        "location_name": "N-CHOE (ATTAWA CHOE), CHANDIGARH",
+        "water_body_type": "CHANDIGARH",
+        "state": 16,
+        "temp_min": 32,
+        "temp_max": 0.3,
+        "do_min": 9.1,
+        "do_max": 460,
+        "ph_min": 669,
+        "ph_max": 6.9,
+        "cond_min": 7.8,
+        "cond_max": 2.1,
+        "bod_min": 185,
+        "bod_max": 0.5,
+        "nitrate_min": 2.2,
+        "nitrate_max": 2700,
+        "faecal_min": 6900000,
+        "faecal_max": 17200,
+        "total_min": 76000000
+    },
+    {
+        "station_code": 2048,
+        "location_name": "PATIALA KI RAO, CHANDIGARH",
+        "water_body_type": "CHANDIGARH",
+        "state": 16,
+        "temp_min": 33,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 828,
+        "ph_min": 1099,
+        "ph_max": 7.5,
+        "cond_min": 8,
+        "cond_max": 36,
+        "bod_min": 421,
+        "bod_max": 0.7,
+        "nitrate_min": 9.3,
+        "nitrate_max": 1100000,
+        "faecal_min": 10900000,
+        "faecal_max": 4500000,
+        "total_min": 76000000
+    },
+    {
+        "station_code": 2049,
+        "location_name": "SUKHNA CHOE, CHANDIGARH",
+        "water_body_type": "CHANDIGARH",
+        "state": 16,
+        "temp_min": 32,
+        "temp_max": 0.1,
+        "do_min": 2.6,
+        "do_max": 495,
+        "ph_min": 1074,
+        "ph_max": 7.2,
+        "cond_min": 7.8,
+        "cond_max": 76,
+        "bod_min": 255,
+        "bod_max": 0.6,
+        "nitrate_min": 13.4,
+        "nitrate_max": 2200000,
+        "faecal_min": 27000000,
+        "faecal_max": 7000000,
+        "total_min": 220000000
+    },
+    {
+        "station_code": 5268,
+        "location_name": "ABU FAZAL DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.2,
+        "cond_min": 7.7,
+        "cond_max": 42,
+        "bod_min": 73,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1505,
+        "location_name": "BARAPULA DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7,
+        "cond_min": 7.8,
+        "cond_max": 26,
+        "bod_min": 93,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1502,
+        "location_name": "CIVIL MILL DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 6.9,
+        "cond_min": 7.6,
+        "cond_max": 20,
+        "bod_min": 66,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5274,
+        "location_name": "CONTRIBUTION OF OUT FALLS IN OLD AGRA CANAL",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.5,
+        "cond_min": 7.5,
+        "cond_max": 66,
+        "bod_min": 66,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5267,
+        "location_name": "DRAIN NO. 14",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7,
+        "cond_min": 7.6,
+        "cond_max": 32,
+        "bod_min": 77,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5263,
+        "location_name": "ISBT + MORI GATE DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.3,
+        "cond_min": 7.4,
+        "cond_max": 24,
+        "bod_min": 70,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5269,
+        "location_name": "JAITPUR DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.4,
+        "cond_min": 8,
+        "cond_max": 37,
+        "bod_min": 82,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5266,
+        "location_name": "KAILASH NAGAR DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.1,
+        "cond_min": 7.3,
+        "cond_max": 43,
+        "bod_min": 123,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5261,
+        "location_name": "KHYBER PASS DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 6.4,
+        "cond_min": 7.5,
+        "cond_max": 30,
+        "bod_min": 44,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5259,
+        "location_name": "MAGZINE ROAD DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 6.8,
+        "cond_min": 7.5,
+        "cond_max": 40,
+        "bod_min": 50,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1857,
+        "location_name": "MAHARANI BAGH DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.1,
+        "cond_min": 7.8,
+        "cond_max": 34,
+        "bod_min": 74,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5262,
+        "location_name": "METCALF HOUSE DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.4,
+        "cond_min": 7.4,
+        "cond_max": 24,
+        "bod_min": 24,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5275,
+        "location_name": "MOLARBANDH DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7,
+        "cond_min": 7.7,
+        "cond_max": 63,
+        "bod_min": 120,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5271,
+        "location_name": "OLD AGRA CANAL AT OKHLA",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.2,
+        "cond_min": 7.6,
+        "cond_max": 44,
+        "bod_min": 56,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 390000,
+        "faecal_min": 390000,
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5273,
+        "location_name": "OLD AGRA CANAL NEAR KALINDI KUNJ - SARITA VIHAR PULL",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.1,
+        "cond_min": 8.2,
+        "cond_max": 30,
+        "bod_min": 48,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1503,
+        "location_name": "POWER HOUSE DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.2,
+        "cond_min": 7.5,
+        "cond_max": 50,
+        "bod_min": 100,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1858,
+        "location_name": "SARITA VIHAR, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.4,
+        "cond_min": 8,
+        "cond_max": 27,
+        "bod_min": 70,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1504,
+        "location_name": "SEN NURSING HOME DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.1,
+        "cond_min": 7.3,
+        "cond_max": 58,
+        "bod_min": 153,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 1506,
+        "location_name": "SHAHDARA DRAIN, DELHI",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.3,
+        "cond_min": 7.7,
+        "cond_max": 60,
+        "bod_min": 173,
+        "bod_max": NaN,
+        "nitrate_min": NaN,
+        "nitrate_max": NaN,
+        "faecal_min": NaN,
+        "faecal_max": NaN,
+        "total_min": NaN
+    },
+    {
+        "station_code": 5265,
+        "location_name": "SHASTRI PARK DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 6.8,
+        "cond_min": 7.4,
+        "cond_max": 27,
+        "bod_min": 86,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5276,
+        "location_name": "SONIA VIHAR DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.3,
+        "cond_min": 7.7,
+        "cond_max": 42,
+        "bod_min": 88,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5260,
+        "location_name": "SWEEPER COLONY DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 6.9,
+        "cond_min": 7.5,
+        "cond_max": 26,
+        "bod_min": 160,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5264,
+        "location_name": "TONGA STAND DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.1,
+        "cond_min": 7.5,
+        "cond_max": 40,
+        "bod_min": 60,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 5270,
+        "location_name": "TUGHLAKABAD DRAIN",
+        "water_body_type": "DELHI",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": "-",
+        "do_min": "-",
+        "do_max": "-",
+        "ph_min": "-",
+        "ph_max": 7.2,
+        "cond_min": 7.9,
+        "cond_max": 43,
+        "bod_min": 97,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 4860,
+        "location_name": "RANIA DRAIN MEETING DISCHARGE OF PHED STP, 6 MLD, RANIA, SIRSA",
+        "water_body_type": "HARYANA",
+        "state": "-",
+        "temp_min": "-",
+        "temp_max": 5.2,
+        "do_min": 6.1,
+        "do_max": 1720,
+        "ph_min": 1870,
+        "ph_max": 7.2,
+        "cond_min": 7.9,
+        "cond_max": 21,
+        "bod_min": 28,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 77000,
+        "faecal_min": 150000,
+        "faecal_max": 120000,
+        "total_min": 220000
+    },
+    {
+        "station_code": 3868,
+        "location_name": "BARAGRAM NALLAH BEFORE CONFLUENCE TO RIVER BEAS",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 3,
+        "temp_min": 14,
+        "temp_max": 7.6,
+        "do_min": 9.9,
+        "do_max": 48,
+        "ph_min": 94,
+        "ph_max": 7,
+        "cond_min": 8.2,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.9,
+        "nitrate_max": 22,
+        "faecal_min": 94,
+        "faecal_max": 130,
+        "total_min": 430
+    },
+    {
+        "station_code": 3881,
+        "location_name": "BHATIAN NALLAH D/S SARA TEXTILE, NALAGARH",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 15,
+        "temp_min": 33,
+        "temp_max": 2.5,
+        "do_min": 4,
+        "do_max": 777,
+        "ph_min": 5200,
+        "ph_max": 7,
+        "cond_min": 8.3,
+        "cond_max": 2.2,
+        "bod_min": 90,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 17,
+        "faecal_min": 920,
+        "faecal_max": 58,
+        "total_min": 1600
+    },
+    {
+        "station_code": 3879,
+        "location_name": "BHATIAN NALLAH U/S BHATIAN VILLAGE, NALAGARH",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 13,
+        "temp_min": 34,
+        "temp_max": 1,
+        "do_min": 3,
+        "do_max": 787,
+        "ph_min": 6180,
+        "ph_max": 7.1,
+        "cond_min": 8.3,
+        "cond_max": 1.6,
+        "bod_min": 110,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 17,
+        "faecal_min": 920,
+        "faecal_max": 70,
+        "total_min": 1600
+    },
+    {
+        "station_code": 4463,
+        "location_name": "DHANESON NALLAH (U/S SAINJ WATER SUPPLY SCHEME)",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 8,
+        "temp_min": 19,
+        "temp_max": 7,
+        "do_min": 9,
+        "do_max": 729,
+        "ph_min": 11570,
+        "ph_max": 7.6,
+        "cond_min": 8.8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.4,
+        "nitrate_min": 2.1,
+        "nitrate_max": 2,
+        "faecal_min": 280,
+        "faecal_max": 540,
+        "total_min": 1600
+    },
+    {
+        "station_code": 4481,
+        "location_name": "HATHLI NALLAH LIFT WATER SUPPLY SCHEME FOR MUNICIPAL COUNCIL HAMIRPUR",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 11,
+        "temp_min": 29,
+        "temp_max": 7.1,
+        "do_min": 8.8,
+        "do_max": 255,
+        "ph_min": 326,
+        "ph_max": 7.6,
+        "cond_min": 8.1,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.5,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 17,
+        "total_min": 26
+    },
+    {
+        "station_code": 4466,
+        "location_name": "JARANGLA NALLAH",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 4,
+        "temp_min": 14,
+        "temp_max": 8.7,
+        "do_min": 9.4,
+        "do_max": 126,
+        "ph_min": 164,
+        "ph_max": 7.4,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 17,
+        "total_min": 34
+    },
+    {
+        "station_code": 4454,
+        "location_name": "JARANGLA NALLAH U/S IPH WATER SUPPLY SCHEME (FOR MOHALLA MUGLA & VILLAGE KARIAN)",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 4,
+        "temp_min": 14,
+        "temp_max": 8.7,
+        "do_min": 9.4,
+        "do_max": 104,
+        "ph_min": 167,
+        "ph_max": 6.9,
+        "cond_min": 7.9,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1.2,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 17,
+        "total_min": 24
+    },
+    {
+        "station_code": 4477,
+        "location_name": "KHALADA NALA WATER SUPPLY SCHEME KULLU TOWN TEHSIL KULLU",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 7,
+        "temp_min": 15,
+        "temp_max": 7.8,
+        "do_min": 9.3,
+        "do_max": 110,
+        "ph_min": 280,
+        "ph_max": 7.5,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1.9,
+        "nitrate_max": 31,
+        "faecal_min": 94,
+        "faecal_max": 120,
+        "total_min": 430
+    },
+    {
+        "station_code": 4455,
+        "location_name": "KLUIN NALLAH U/S IPH WATER SUPPLY SCHEME (FOR CHAMBA TOWN)",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 4,
+        "temp_min": 16,
+        "temp_max": 8.7,
+        "do_min": 9.3,
+        "do_max": 208,
+        "ph_min": 377,
+        "ph_max": 7.4,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.5,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 21,
+        "total_min": 27
+    },
+    {
+        "station_code": 4430,
+        "location_name": "LIFT NALLAH BEFORE CONFLUENCE TO ASHWANI KHAD NEAR DOGRHA BRIDGE",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 12,
+        "temp_min": 17,
+        "temp_max": 6.4,
+        "do_min": 7,
+        "do_max": 2738,
+        "ph_min": 7101,
+        "ph_max": 7.4,
+        "cond_min": 8.1,
+        "cond_max": 2.8,
+        "bod_min": 40,
+        "bod_max": 0.8,
+        "nitrate_min": 10.9,
+        "nitrate_max": 7,
+        "faecal_min": 1600,
+        "faecal_max": 1600,
+        "total_min": 1600
+    },
+    {
+        "station_code": 4482,
+        "location_name": "LIFT WATER SUPPLY SCHEME (PANJARAR) AND BHOTA ROPARI & UJHAN",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 12,
+        "temp_min": 28,
+        "temp_max": 7.2,
+        "do_min": 8.8,
+        "do_max": 257,
+        "ph_min": 319,
+        "ph_max": 7.7,
+        "cond_min": 8.1,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.3,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 14,
+        "total_min": 25
+    },
+    {
+        "station_code": 4475,
+        "location_name": "MACHADA NALLAH, MAJHOUTI WATER SUPPLY SCHEME NEW NIRSOO, MAJHOUTI",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 8,
+        "temp_min": 15,
+        "temp_max": 9.3,
+        "do_min": 9.7,
+        "do_max": 1145,
+        "ph_min": 2590,
+        "ph_max": 7.5,
+        "cond_min": 8.2,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1,
+        "nitrate_max": 7,
+        "faecal_min": 1600,
+        "faecal_max": 33,
+        "total_min": 1600
+    },
+    {
+        "station_code": 4476,
+        "location_name": "MANALSU NALA (( WATER SUPPLY SCHEME FOR MANALI TOWN U/S OF OLD MANALI THESIL MANALI DIST KULLU",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 4,
+        "temp_min": 12,
+        "temp_max": 8,
+        "do_min": 9.7,
+        "do_max": 34,
+        "ph_min": 71,
+        "ph_max": 6.9,
+        "cond_min": 8.3,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.7,
+        "nitrate_max": 22,
+        "faecal_min": 70,
+        "faecal_max": 63,
+        "total_min": 280
+    },
+    {
+        "station_code": 4474,
+        "location_name": "NALLAH, HALOG WATER SUPPLY SCHEME BAG KHANEREI, HALOG",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 8,
+        "temp_min": 15,
+        "temp_max": 9.3,
+        "do_min": 9.8,
+        "do_max": 120,
+        "ph_min": 2690,
+        "ph_max": 7.5,
+        "cond_min": 8.4,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1,
+        "nitrate_max": 2,
+        "faecal_min": 920,
+        "faecal_max": 33,
+        "total_min": 1600
+    },
+    {
+        "station_code": 3863,
+        "location_name": "RAMPUR JATTAN MOGINAND NALA BEFORE CONFLUENCE TO RIVER MARKANDA NEAR RADHA SWAMI SATSANG BHAWAN",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 17,
+        "temp_min": 27,
+        "temp_max": 5.9,
+        "do_min": 6.4,
+        "do_max": 324,
+        "ph_min": 652,
+        "ph_max": 7.1,
+        "cond_min": 8.1,
+        "cond_max": 1.1,
+        "bod_min": 5,
+        "bod_max": 0.3,
+        "nitrate_min": 1.3,
+        "nitrate_max": 17,
+        "faecal_min": 170,
+        "faecal_max": 170,
+        "total_min": 920
+    },
+    {
+        "station_code": 4425,
+        "location_name": "RAW WATER FROM AT CHURAT NALLAH",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 10,
+        "temp_min": 15,
+        "temp_max": 7.9,
+        "do_min": 8.9,
+        "do_max": 150,
+        "ph_min": 2236,
+        "ph_max": 6.5,
+        "cond_min": 8.2,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1.1,
+        "nitrate_max": 2,
+        "faecal_min": 1600,
+        "faecal_max": 2,
+        "total_min": 1600
+    },
+    {
+        "station_code": 3865,
+        "location_name": "ROON NALLAH NEAR MEERPUR KOTLA, GURUDWARA",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 23,
+        "temp_min": 25,
+        "temp_max": 7.2,
+        "do_min": 8.4,
+        "do_max": 217,
+        "ph_min": 603,
+        "ph_max": 7.1,
+        "cond_min": 8.1,
+        "cond_max": 1,
+        "bod_min": 2.2,
+        "bod_max": 0.3,
+        "nitrate_min": 0.7,
+        "nitrate_max": 22,
+        "faecal_min": 39,
+        "faecal_max": 70,
+        "total_min": 280
+    },
+    {
+        "station_code": 4035,
+        "location_name": "SAHU NALLAH D/S BHURI SINGH SHEP",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 3,
+        "temp_min": 15,
+        "temp_max": 8.6,
+        "do_min": 9.1,
+        "do_max": 209,
+        "ph_min": 244,
+        "ph_max": 7.5,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.7,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 31,
+        "total_min": 47
+    },
+    {
+        "station_code": 4034,
+        "location_name": "SAHU NALLAH U/S BHURI SINGH SHEP",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 3,
+        "temp_min": 15,
+        "temp_max": 8.6,
+        "do_min": 9.1,
+        "do_max": 194,
+        "ph_min": 236,
+        "ph_max": 7.3,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 0.5,
+        "nitrate_max": 2,
+        "faecal_min": 2,
+        "faecal_max": 25,
+        "total_min": 33
+    },
+    {
+        "station_code": 4462,
+        "location_name": "SAINJ NALLAH (U/S SAINJ WATER SUPPLY SCHEME)",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 9,
+        "temp_min": 19,
+        "temp_max": 7,
+        "do_min": 8.9,
+        "do_max": 1701,
+        "ph_min": 6109,
+        "ph_max": 7.7,
+        "cond_min": 8.8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 3.4,
+        "nitrate_max": 2,
+        "faecal_min": 350,
+        "faecal_max": 350,
+        "total_min": 1600
+    },
+    {
+        "station_code": 3861,
+        "location_name": "SALANI NALLAH NEAR BRIDGE, NH-7, MOGINAND KALA AMB",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 15,
+        "temp_min": 26,
+        "temp_max": 7.1,
+        "do_min": 8.2,
+        "do_max": 315,
+        "ph_min": 626,
+        "ph_max": 7.3,
+        "cond_min": 7.9,
+        "cond_max": 1,
+        "bod_min": 3.8,
+        "bod_max": 0.3,
+        "nitrate_min": 0.8,
+        "nitrate_max": 22,
+        "faecal_min": 70,
+        "faecal_max": 94,
+        "total_min": 280
+    },
+    {
+        "station_code": 3867,
+        "location_name": "SARVARI NALLAH BEFORE CONFLUENCE TO RIVER BEAS",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 6,
+        "temp_min": 18,
+        "temp_max": 7.8,
+        "do_min": 9.6,
+        "do_max": 110,
+        "ph_min": 183,
+        "ph_max": 7.4,
+        "cond_min": 8,
+        "cond_max": 1,
+        "bod_min": 1,
+        "bod_max": 0.3,
+        "nitrate_min": 1.1,
+        "nitrate_max": 27,
+        "faecal_min": 84,
+        "faecal_max": 150,
+        "total_min": 430
+    },
+    {
+        "station_code": 4480,
+        "location_name": "SURAJMUKHI NALLAH D/S STP SAMTI SOLAN",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 9,
+        "temp_min": 21,
+        "temp_max": 7.2,
+        "do_min": 9.2,
+        "do_max": 205,
+        "ph_min": 664,
+        "ph_max": 7.5,
+        "cond_min": 8.5,
+        "cond_max": 1,
+        "bod_min": 7.4,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 27,
+        "faecal_max": 33,
+        "total_min": 130
+    },
+    {
+        "station_code": 3875,
+        "location_name": "SURAJMUKHI NALLAH U/S DWSS GALAYANA NEAR M/S SHOOLINI UNIVERSITY",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 9,
+        "temp_min": 21,
+        "temp_max": 7.2,
+        "do_min": 8.7,
+        "do_max": 195,
+        "ph_min": 701,
+        "ph_max": 7.5,
+        "cond_min": 8.5,
+        "cond_max": 1,
+        "bod_min": 2.2,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 25,
+        "faecal_max": 26,
+        "total_min": 84
+    },
+    {
+        "station_code": 4029,
+        "location_name": "TAALO NALA (FROM NAHAR TOWN) AT KHADDAR KA BAGH B/C TO RIVER MARKANDA",
+        "water_body_type": "HIMACHAL PRADESH",
+        "state": 15,
+        "temp_min": 25,
+        "temp_max": 6.1,
+        "do_min": 7.8,
+        "do_max": 302,
+        "ph_min": 726,
+        "ph_max": 7,
+        "cond_min": 8.1,
+        "cond_max": 1,
+        "bod_min": 2.8,
+        "bod_max": 0.4,
+        "nitrate_min": 2.5,
+        "nitrate_max": 22,
+        "faecal_min": 70,
+        "faecal_max": 94,
+        "total_min": 350
+    },
+    {
+        "station_code": 4082,
+        "location_name": "BAJU NALLAH AT KHOKHYAL NEAR BARAGE, CONFLUENCE POINT",
+        "water_body_type": "JAMMU & KASHMIR",
+        "state": 15,
+        "temp_min": 29,
+        "temp_max": 5.3,
+        "do_min": 6.5,
+        "do_max": 182,
+        "ph_min": 348,
+        "ph_max": 7.6,
+        "cond_min": 8.2,
+        "cond_max": 1.5,
+        "bod_min": 2.2,
+        "bod_max": 0.1,
+        "nitrate_min": 0.1,
+        "nitrate_max": "-",
+        "faecal_min": "-",
+        "faecal_max": "-",
+        "total_min": "-"
+    },
+    {
+        "station_code": 2763,
+        "location_name": "ASANGI NALLA AT ASANGI VILLAGE,",
+        "water_body_type": "KARNATAKA",
+        "state": 17,
+        "temp_min": 21,
+        "temp_max": 6.1,
+        "do_min": 7.3,
+        "do_max": 380,
+        "ph_min": 1020,
+        "ph_max": 7.4,
+        "cond_min": 8.9,
+        "cond_max": 1,
+        "bod_min": 4,
+        "bod_max": 0.5,
+        "nitrate_min": 5.5,
+        "nitrate_max": 540,
+        "faecal_min": 920,
+        "faecal_max": 920,
+        "total_min": 1600
+    },
+    {
+        "station_code": 2785,
+        "location_name": "BPT NAVAPUR (DISCHARGE FROM MIDC TARAPUR), NAVAPUR, PALGHAR, THANE",
+        "water_body_type": "MAHARASHTRA",
+        "state": 25,
+        "temp_min": 27,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 6434,
+        "ph_min": 36960,
+        "ph_max": 5.5,
+        "cond_min": 8.1,
+        "cond_max": 110,
+        "bod_min": 1400,
+        "bod_max": 0.3,
+        "nitrate_min": 31.1,
+        "nitrate_max": 110,
+        "faecal_min": 240,
+        "faecal_max": 350,
+        "total_min": 920
+    },
+    {
+        "station_code": 2178,
+        "location_name": "CHIKHALI NALLAH MEETS GODAVARI RIVER, CHIKHALI, NASHIK",
+        "water_body_type": "MAHARASHTRA",
+        "state": 17,
+        "temp_min": 25,
+        "temp_max": 1.9,
+        "do_min": 5.2,
+        "do_max": 496,
+        "ph_min": 1591,
+        "ph_max": 6.9,
+        "cond_min": 8,
+        "cond_max": 4.2,
+        "bod_min": 16,
+        "bod_max": 0.3,
+        "nitrate_min": 3.3,
+        "nitrate_max": 15,
+        "faecal_min": 27,
+        "faecal_max": 170,
+        "total_min": 350
+    },
+    {
+        "station_code": 2783,
+        "location_name": "COLOUR CHEMICAL NALLAH, VILLAGE- MAJIWADA, THANE",
+        "water_body_type": "MAHARASHTRA",
+        "state": 25,
+        "temp_min": 30,
+        "temp_max": 0.3,
+        "do_min": 6.9,
+        "do_max": 546,
+        "ph_min": 6386,
+        "ph_max": 6.9,
+        "cond_min": 7.6,
+        "cond_max": 3.4,
+        "bod_min": 60,
+        "bod_max": 0.3,
+        "nitrate_min": 3.2,
+        "nitrate_max": 7,
+        "faecal_min": 920,
+        "faecal_max": 63,
+        "total_min": 1600
+    },
+    {
+        "station_code": 2789,
+        "location_name": "NALLA AT D/S OF AKLAI MANDIR, AKLAI, MALSHIRAS, SOLAPUR",
+        "water_body_type": "MAHARASHTRA",
+        "state": 12,
+        "temp_min": 36,
+        "temp_max": 4.6,
+        "do_min": 5.9,
+        "do_max": 500,
+        "ph_min": 9777,
+        "ph_max": 7.6,
+        "cond_min": 8.8,
+        "cond_max": 5.2,
+        "bod_min": 13.5,
+        "bod_max": 1.8,
+        "nitrate_min": 4.7,
+        "nitrate_max": 15,
+        "faecal_min": 40,
+        "faecal_max": 140,
+        "total_min": 1600
+    },
+    {
+        "station_code": 2790,
+        "location_name": "PIMPAL-PANERI NALLA NEAR FINOLEX INDUSTRIES, YAHGANIGAON, RATNAGIRI",
+        "water_body_type": "MAHARASHTRA",
+        "state": 23,
+        "temp_min": 32,
+        "temp_max": 5.1,
+        "do_min": 7,
+        "do_max": 179,
+        "ph_min": 562,
+        "ph_max": 5.5,
+        "cond_min": 7.8,
+        "cond_max": 1.8,
+        "bod_min": 2.4,
+        "bod_max": 0.3,
+        "nitrate_min": 2.8,
+        "nitrate_max": 4,
+        "faecal_min": 6,
+        "faecal_max": 14,
+        "total_min": 38
+    },
+    {
+        "station_code": 2782,
+        "location_name": "RABODI NALLAH, RABODI, THANE",
+        "water_body_type": "MAHARASHTRA",
+        "state": 25,
+        "temp_min": 36,
+        "temp_max": 0.3,
+        "do_min": 2.2,
+        "do_max": 502,
+        "ph_min": 1098,
+        "ph_max": 6.8,
+        "cond_min": 7.4,
+        "cond_max": 55,
+        "bod_min": 170,
+        "bod_max": 0.3,
+        "nitrate_min": 3.7,
+        "nitrate_max": 7,
+        "faecal_min": 920,
+        "faecal_max": 49,
+        "total_min": 1600
+    },
+    {
+        "station_code": 2784,
+        "location_name": "SANDOZ NALLAH, SANDOZBAUG, THANE",
+        "water_body_type": "MAHARASHTRA",
+        "state": 25,
+        "temp_min": 30,
+        "temp_max": 0.3,
+        "do_min": 2.4,
+        "do_max": 556,
+        "ph_min": 2682,
+        "ph_max": 6.9,
+        "cond_min": 7.4,
+        "cond_max": 24,
+        "bod_min": 110,
+        "bod_max": 0.3,
+        "nitrate_min": 3.2,
+        "nitrate_max": 17,
+        "faecal_min": 1600,
+        "faecal_max": 84,
+        "total_min": 1600
+    },
+    {
+        "station_code": 3930,
+        "location_name": "BANGURU NALLAH (OVER BRIDGE TALCHER RENGALI DAM ROAD, SARKISOREPAL)",
+        "water_body_type": "ODISHA",
+        "state": 21,
+        "temp_min": 26,
+        "temp_max": 5.6,
+        "do_min": 9.2,
+        "do_max": 164,
+        "ph_min": 966,
+        "ph_max": 6.5,
+        "cond_min": 7.7,
+        "cond_max": 1,
+        "bod_min": 1.9,
+        "bod_max": 0.3,
+        "nitrate_min": 6.4,
+        "nitrate_max": 20,
+        "faecal_min": 1400,
+        "faecal_max": 330,
+        "total_min": 3500
+    },
+    {
+        "station_code": 3934,
+        "location_name": "GANDA NALLAH AT MARTHAPUR",
+        "water_body_type": "ODISHA",
+        "state": 21,
+        "temp_min": 24,
+        "temp_max": 6.7,
+        "do_min": 8.1,
+        "do_max": 138,
+        "ph_min": 549,
+        "ph_max": 7.1,
+        "cond_min": 7.9,
+        "cond_max": 1,
+        "bod_min": 2.1,
+        "bod_max": 0.3,
+        "nitrate_min": 28.3,
+        "nitrate_max": 45,
+        "faecal_min": 2100,
+        "faecal_max": 170,
+        "total_min": 4300
+    },
+    {
+        "station_code": 3923,
+        "location_name": "GURADIH NALLAH AT PANPOSH",
+        "water_body_type": "ODISHA",
+        "state": 17,
+        "temp_min": 30,
+        "temp_max": 2.1,
+        "do_min": 4.3,
+        "do_max": 312,
+        "ph_min": 495,
+        "ph_max": 6.9,
+        "cond_min": 8.5,
+        "cond_max": 5.2,
+        "bod_min": 9.3,
+        "bod_max": 0.4,
+        "nitrate_min": 8.1,
+        "nitrate_max": 11000,
+        "faecal_min": 160000,
+        "faecal_max": 35000,
+        "total_min": 160000
+    },
+    {
+        "station_code": 3939,
+        "location_name": "KUNDRA NALLAH AT JODA",
+        "water_body_type": "ODISHA",
+        "state": 21,
+        "temp_min": 31,
+        "temp_max": 5.8,
+        "do_min": 7.3,
+        "do_max": 78,
+        "ph_min": 186,
+        "ph_max": 6.6,
+        "cond_min": 7.8,
+        "cond_max": 1,
+        "bod_min": 1.9,
+        "bod_max": 0.5,
+        "nitrate_min": 1.5,
+        "nitrate_max": 220,
+        "faecal_min": 2400,
+        "faecal_max": 790,
+        "total_min": 4700
+    },
+    {
+        "station_code": 2906,
+        "location_name": "DHANAULA DRAIN FALLING INTO LASSARA DRAIN NEAR VILL. DHUNAS, PUNJAB",
+        "water_body_type": "PUNJAB",
+        "state": 10,
+        "temp_min": 34,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 3508,
+        "ph_min": 5397,
+        "ph_max": 7,
+        "cond_min": 7.9,
+        "cond_max": 104,
+        "bod_min": 209,
+        "bod_max": 3.2,
+        "nitrate_min": 6.2,
+        "nitrate_max": 22000,
+        "faecal_min": 210000,
+        "faecal_max": 350000,
+        "total_min": 460000
+    },
+    {
+        "station_code": 2907,
+        "location_name": "HUDIARA DRAIN AT VILL. DHAHUKE (WHERE IT ENTERS PAKISTAN), PUNJAB",
+        "water_body_type": "PUNJAB",
+        "state": 15,
+        "temp_min": 29,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 1108,
+        "ph_min": 1640,
+        "ph_max": 7.1,
+        "cond_min": 8,
+        "cond_max": 72,
+        "bod_min": 196,
+        "bod_max": 1.5,
+        "nitrate_min": 5.2,
+        "nitrate_max": 110000,
+        "faecal_min": 330000,
+        "faecal_max": 250000,
+        "total_min": 940000
+    },
+    {
+        "station_code": 2914,
+        "location_name": "POINT SOURSE BUDHA NALLAH, PUNJAB",
+        "water_body_type": "PUNJAB",
+        "state": 18,
+        "temp_min": 30,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 1280,
+        "ph_min": 2351,
+        "ph_max": 6.3,
+        "cond_min": 7.5,
+        "cond_max": 105,
+        "bod_min": 175,
+        "bod_max": 3.1,
+        "nitrate_min": 5.7,
+        "nitrate_max": 1100000,
+        "faecal_min": 11000000,
+        "faecal_max": 2100000,
+        "total_min": 17000000
+    },
+    {
+        "station_code": 4158,
+        "location_name": "SAGARPARA DRAIN AT VILL SAGRA DIST, PATIALA",
+        "water_body_type": "PUNJAB",
+        "state": 10,
+        "temp_min": 36,
+        "temp_max": 1,
+        "do_min": 2.1,
+        "do_max": 693,
+        "ph_min": 1365,
+        "ph_max": 7.2,
+        "cond_min": 8,
+        "cond_max": 15,
+        "bod_min": 49,
+        "bod_max": 1,
+        "nitrate_min": 2.7,
+        "nitrate_max": 4500,
+        "faecal_min": 8100,
+        "faecal_max": 32000,
+        "total_min": 84000
+    },
+    {
+        "station_code": 10051,
+        "location_name": "CHENNAI WATERWAYS AT BUCKINGHAM CANAL X OTTERI NULLAH CONFLUENCE (GMR VASAVI INDUSTRIES)",
+        "water_body_type": "TAMIL NADU",
+        "state": 26,
+        "temp_min": 32,
+        "temp_max": 0.3,
+        "do_min": 0.3,
+        "do_max": 892,
+        "ph_min": 2780,
+        "ph_max": 6.8,
+        "cond_min": 7.6,
+        "cond_max": 10,
+        "bod_min": 57,
+        "bod_max": 0.3,
+        "nitrate_min": 1.8,
+        "nitrate_max": 78,
+        "faecal_min": 490,
+        "faecal_max": 490,
+        "total_min": 1700
+    },
+    {
+        "station_code": 10056,
+        "location_name": "CHENNAI WATERWAYS AT MAMBALAM DRAIN (GOLF COURSE)",
+        "water_body_type": "TAMIL NADU",
+        "state": 25,
+        "temp_min": 30,
+        "temp_max": 0.3,
+        "do_min": 3.9,
+        "do_max": 734,
+        "ph_min": 1725,
+        "ph_max": 6.7,
+        "cond_min": 7.4,
+        "cond_max": 5,
+        "bod_min": 70,
+        "bod_max": 0.3,
+        "nitrate_min": 1.3,
+        "nitrate_max": 2,
+        "faecal_min": 490,
+        "faecal_max": 78,
+        "total_min": 1700
+    },
+    {
+        "station_code": 10048,
+        "location_name": "CHENNAI WATERWAYS AT OTTERI NULLAH (KILPAUK GARDEN)",
+        "water_body_type": "TAMIL NADU",
+        "state": 28,
+        "temp_min": 32,
+        "temp_max": 0.3,
+        "do_min": 3,
+        "do_max": 923,
+        "ph_min": 2630,
+        "ph_max": 6.7,
+        "cond_min": 7.6,
+        "cond_max": 6,
+        "bod_min": 68,
+        "bod_max": 0.3,
+        "nitrate_min": 1.2,
+        "nitrate_max": 20,
+        "faecal_min": 460,
+        "faecal_max": 130,
+        "total_min": 1700
+    },
+    {
+        "station_code": 10047,
+        "location_name": "CHENNAI WATERWAYS AT OTTERI NULLAH (ORIGIN)",
+        "water_body_type": "TAMIL NADU",
+        "state": 28,
+        "temp_min": 32,
+        "temp_max": 0.3,
+        "do_min": 2.2,
+        "do_max": 845,
+        "ph_min": 4140,
+        "ph_max": 6.8,
+        "cond_min": 7.4,
+        "cond_max": 9,
+        "bod_min": 110,
+        "bod_max": 0.3,
+        "nitrate_min": 0.9,
+        "nitrate_max": 45,
+        "faecal_min": 1100,
+        "faecal_max": 230,
+        "total_min": 2800
+    },
+    {
+        "station_code": 3054,
+        "location_name": "OUTLET OF ASH POND EFFLUENTS OF M/S.NTPC, RAMAGUNDAM, KARIMNAGAR",
+        "water_body_type": "TELANGANA",
+        "state": 27,
+        "temp_min": 30,
+        "temp_max": 3.2,
+        "do_min": 5.2,
+        "do_max": 1088,
+        "ph_min": 1565,
+        "ph_max": 9,
+        "cond_min": 11,
+        "cond_max": 2.1,
+        "bod_min": 4,
+        "bod_max": 0.3,
+        "nitrate_min": 2,
+        "nitrate_max": 2,
+        "faecal_min": 4,
+        "faecal_max": 2,
+        "total_min": 220
+    },
+    {
+        "station_code": 3060,
+        "location_name": "OUTLET OF STP, DURGAM CHERUVU, RANGAREDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 30,
+        "temp_max": 2.6,
+        "do_min": 4.4,
+        "do_max": 980,
+        "ph_min": 2090,
+        "ph_max": 7,
+        "cond_min": 8.5,
+        "cond_max": 9,
+        "bod_min": 27,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 79,
+        "faecal_max": 17,
+        "total_min": 540
+    },
+    {
+        "station_code": 3058,
+        "location_name": "OUTLET OF STP, KHAIRATABAD ON HUSSAINSAGAR LAKE, RANGA REDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 31,
+        "temp_max": 3.6,
+        "do_min": 5.2,
+        "do_max": 987,
+        "ph_min": 1293,
+        "ph_max": 7.1,
+        "cond_min": 8.6,
+        "cond_max": 8,
+        "bod_min": 23,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 79,
+        "faecal_max": 2,
+        "total_min": 540
+    },
+    {
+        "station_code": 3056,
+        "location_name": "OUTLET OF STP, LANGARHOUSE LAKE, RANGA REDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 31,
+        "temp_max": 3.3,
+        "do_min": 6.1,
+        "do_max": 1261,
+        "ph_min": 1644,
+        "ph_max": 7.1,
+        "cond_min": 8.2,
+        "cond_max": 9,
+        "bod_min": 28,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 63,
+        "faecal_max": 17,
+        "total_min": 920
+    },
+    {
+        "station_code": 3057,
+        "location_name": "OUTLET OF STP, NAGOLE ON MUSI, RANGA REDDY",
+        "water_body_type": "TELANGANA",
+        "state": 28,
+        "temp_min": 31,
+        "temp_max": 3.6,
+        "do_min": 5.7,
+        "do_max": 1272,
+        "ph_min": 1527,
+        "ph_max": 7.1,
+        "cond_min": 8.2,
+        "cond_max": 10,
+        "bod_min": 14,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 13,
+        "faecal_min": 240,
+        "faecal_max": 49,
+        "total_min": 920
+    },
+    {
+        "station_code": 3061,
+        "location_name": "OUTLET OF STP, NALLACHERUVU ON MUSI, RANGAREDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 30,
+        "temp_max": 3.4,
+        "do_min": 5.5,
+        "do_max": 1351,
+        "ph_min": 1791,
+        "ph_max": 7.1,
+        "cond_min": 8.4,
+        "cond_max": 7,
+        "bod_min": 19,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 5,
+        "faecal_min": 70,
+        "faecal_max": 17,
+        "total_min": 540
+    },
+    {
+        "station_code": 3059,
+        "location_name": "OUTLET OF STP, SAFILGUDA LAKE, RANGA REDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 31,
+        "temp_max": 3,
+        "do_min": 4.8,
+        "do_max": 1574,
+        "ph_min": 2348,
+        "ph_max": 6.9,
+        "cond_min": 8,
+        "cond_max": 15,
+        "bod_min": 29,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 63,
+        "faecal_max": 2,
+        "total_min": 920
+    },
+    {
+        "station_code": 3062,
+        "location_name": "OUTLET OF STP, SAROOR NAGAR, RANGAREDDY",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 31,
+        "temp_max": 3.3,
+        "do_min": 4.8,
+        "do_max": 1303,
+        "ph_min": 1998,
+        "ph_max": 6.9,
+        "cond_min": 8.3,
+        "cond_max": 4,
+        "bod_min": 26,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 4,
+        "faecal_min": 79,
+        "faecal_max": 58,
+        "total_min": 540
+    },
+    {
+        "station_code": 3055,
+        "location_name": "TREATED EFFLUENTS OF 339 MLD STP, AMBERPET, HYDERABAD BEFORE JOINING TO MUSI, HYDERABAD",
+        "water_body_type": "TELANGANA",
+        "state": 20,
+        "temp_min": 30,
+        "temp_max": 1.9,
+        "do_min": 5.5,
+        "do_max": 1155,
+        "ph_min": 1606,
+        "ph_max": 7.2,
+        "cond_min": 8.1,
+        "cond_max": 12,
+        "bod_min": 29,
+        "bod_max": "-",
+        "nitrate_min": "-",
+        "nitrate_max": 2,
+        "faecal_min": 79,
+        "faecal_max": 23,
+        "total_min": 920
     }
 ]
