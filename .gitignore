@@ -34,3 +34,30 @@ backend/.env
 # Data
 backend/data/
 
+# Environment variables - NEVER commit these
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Large data files
+*.json
+!package.json
+!package-lock.json
+NWMP_Data/
+groundwater_data/
+rainfall_data/
+data/
+nwmp_all_years.json
+
+# Temporary/debug scripts
+test_listen.js
+verify_rows.js
+
+# Python installer (unrelated)
+get-pip.py
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,321 +1,209 @@
 /**
- * AuthPage.jsx
- * -------------
- * Combined Login + Signup page.
- * Users can toggle between Login and Signup using tabs.
- *
- * Features:
- *  - Email / Password login
- *  - Email / Password / Confirm Password signup
- *  - Form validation with inline error messages
- *  - Redirects to /setup or /dashboard after auth
+ * AuthPage.jsx — Clean login / signup.
  */
 
 import React, { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-// ─── Divider with text ────────────────────────────────────────────────────────
-const Divider = ({ text }) => (
-    <div className="relative my-5">
-        <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-200" />
-        </div>
-        <div className="relative flex justify-center text-xs">
-            <span className="bg-white px-3 text-gray-400 uppercase tracking-wide">{text}</span>
-        </div>
-    </div>
-);
-
-// ─── Input Field Component ────────────────────────────────────────────────────
-const FormInput = ({ label, id, type = 'text', value, onChange, placeholder, error }) => (
+// Defined OUTSIDE AuthPage so React doesn't remount inputs on every keystroke
+const F = ({ label, id, type = 'text', value, onChange, placeholder, error, children }) => (
     <div>
         <label htmlFor={id} className="input-label">{label}</label>
-        <input
-            id={id}
-            type={type}
-            value={value}
-            onChange={onChange}
-            placeholder={placeholder}
-            className={`input-field ${error ? 'border-red-400 focus:ring-red-400 focus:border-red-400' : ''}`}
-            autoComplete="off"
-        />
-        {error && <p className="error-text">{error}</p>}
+        {children || (
+            <input id={id} type={type} value={value} onChange={onChange}
+                placeholder={placeholder}
+                className={`input-field ${error ? 'border-red-400 focus:ring-red-400' : ''}`} />
+        )}
+        {error && <p className="error-text">⚠ {error}</p>}
     </div>
 );
 
-// ─── Main AuthPage Component ──────────────────────────────────────────────────
 const AuthPage = () => {
     const { currentUser, isProfileComplete, login, signup } = useAuth();
     const navigate = useNavigate();
+    const [tab, setTab] = useState('login');
+    const [loading, setLoading] = useState(false);
 
-    // Which tab is active: 'login' or 'signup'
-    const [activeTab, setActiveTab] = useState('login');
+    // ── Login state ──────────────────────────────────────────────────────────────
+    const [lf, setLf] = useState({ email: '', password: '' });
+    const [le, setLe] = useState({});
+    const [lapiErr, setLapiErr] = useState('');
 
-    // ── Login form state ──
-    const [loginForm, setLoginForm] = useState({ email: '', password: '' });
-    const [loginErrors, setLoginErrors] = useState({});
-    const [loginApiError, setLoginApiError] = useState('');
+    // ── Signup state ─────────────────────────────────────────────────────────────
+    const [sf, setSf] = useState({ email: '', password: '', confirm: '', phone: '' });
+    const [se, setSe] = useState({});
+    const [sapiErr, setSapiErr] = useState('');
 
-    // ── Signup form state ──
-    const [signupForm, setSignupForm] = useState({
-        email: '',
-        password: '',
-        confirmPassword: '',
-    });
-    const [signupErrors, setSignupErrors] = useState({});
-    const [signupApiError, setSignupApiError] = useState('');
+    if (currentUser) return <Navigate to={isProfileComplete ? '/dashboard' : '/setup'} replace />;
 
-    // ── If already logged in, redirect appropriately ──
-    if (currentUser) {
-        return <Navigate to={isProfileComplete ? '/dashboard' : '/setup'} replace />;
-    }
-
-    // ─── Login Validation ──────────────────────────────────────────────────────
+    // ── Validation ───────────────────────────────────────────────────────────────
     const validateLogin = () => {
-        const errors = {};
-        if (!loginForm.email.trim()) {
-            errors.email = 'Email is required.';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginForm.email)) {
-            errors.email = 'Please enter a valid email address.';
-        }
-        if (!loginForm.password) {
-            errors.password = 'Password is required.';
-        }
-        return errors;
+        const e = {};
+        if (!lf.email.trim()) e.email = 'Email is required.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lf.email)) e.email = 'Enter a valid email.';
+        if (!lf.password) e.password = 'Password is required.';
+        return e;
     };
 
-    // ─── Signup Validation ─────────────────────────────────────────────────────
     const validateSignup = () => {
-        const errors = {};
-        if (!signupForm.email.trim()) {
-            errors.email = 'Email is required.';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(signupForm.email)) {
-            errors.email = 'Please enter a valid email address.';
-        }
-        if (!signupForm.password) {
-            errors.password = 'Password is required.';
-        } else if (signupForm.password.length < 6) {
-            errors.password = 'Password must be at least 6 characters.';
-        }
-        if (!signupForm.confirmPassword) {
-            errors.confirmPassword = 'Please confirm your password.';
-        } else if (signupForm.password !== signupForm.confirmPassword) {
-            errors.confirmPassword = 'Passwords do not match.';
-        }
-        return errors;
+        const e = {};
+        if (!sf.email.trim()) e.email = 'Email is required.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(sf.email)) e.email = 'Enter a valid email.';
+        if (!sf.password) e.password = 'Password is required.';
+        else if (sf.password.length < 6) e.password = 'Minimum 6 characters.';
+        if (!sf.confirm) e.confirm = 'Please confirm your password.';
+        else if (sf.password !== sf.confirm) e.confirm = 'Passwords do not match.';
+        if (!sf.phone.trim()) e.phone = 'Phone number is required.';
+        else if (!/^[6-9]\d{9}$/.test(sf.phone.trim())) e.phone = 'Enter a valid 10-digit Indian number.';
+        return e;
     };
 
-    // ─── Handle Login Submit ───────────────────────────────────────────────────
+    // ── Handlers ─────────────────────────────────────────────────────────────────
     const handleLogin = async (e) => {
-        e.preventDefault();
-        setLoginApiError('');
-
-        const errors = validateLogin();
-        setLoginErrors(errors);
-        if (Object.keys(errors).length > 0) return;
-
-        const error = await login(loginForm.email.trim(), loginForm.password);
-        if (error) {
-            setLoginApiError(error);
-        } else {
-            navigate('/setup'); // AuthContext will redirect to dashboard if profile exists
-        }
+        e.preventDefault(); setLapiErr('');
+        const err = validateLogin(); setLe(err);
+        if (Object.keys(err).length) return;
+        setLoading(true);
+        const apiErr = await login(lf.email.trim(), lf.password);
+        setLoading(false);
+        if (apiErr) setLapiErr(apiErr); else navigate('/setup');
     };
 
-    // ─── Handle Signup Submit ──────────────────────────────────────────────────
     const handleSignup = async (e) => {
-        e.preventDefault();
-        setSignupApiError('');
+        e.preventDefault(); setSapiErr('');
+        const err = validateSignup(); setSe(err);
+        if (Object.keys(err).length) return;
+        setLoading(true);
 
-        const errors = validateSignup();
-        setSignupErrors(errors);
-        if (Object.keys(errors).length > 0) return;
+        // Auto-generate username from email prefix
+        const autoUsername = sf.email.trim().split('@')[0].replace(/[^a-z0-9_]/gi, '_');
 
-        const error = await signup(signupForm.email.trim(), signupForm.password);
-        if (error) {
-            setSignupApiError(error);
-        } else {
-            navigate('/setup'); // New users always go to profile setup
+        const result = await signup(
+            sf.email.trim(), sf.password,
+            autoUsername, '',           // fullname collected on /setup
+            sf.phone.trim() || null,
+            null,                       // location collected on /setup
+        );
+
+        if (result) {
+            setLoading(false);
+            // Route the error to the exact field that caused it
+            const { error, field } = result;
+            if (field === 'email') {
+                setSe(p => ({ ...p, email: error }));
+            } else if (field === 'phone') {
+                setSe(p => ({ ...p, phone: error }));
+            } else if (field === 'both') {
+                setSe(p => ({ ...p, email: 'This email is already registered.', phone: 'This phone number is already registered.' }));
+            } else {
+                setSapiErr(error);
+            }
+            return;
         }
+
+        const loginErr = await login(sf.email.trim(), sf.password);
+        setLoading(false);
+        if (!loginErr) navigate('/setup');
+        else setSapiErr('Account created! Please log in.');
     };
 
-    // ─── Tab switch helper ─────────────────────────────────────────────────────
-    const switchTab = (tab) => {
-        setActiveTab(tab);
-        setLoginErrors({});
-        setSignupErrors({});
-        setLoginApiError('');
-        setSignupApiError('');
-    };
+    const switchTab = (t) => { setTab(t); setLe({}); setSe({}); setLapiErr(''); setSapiErr(''); };
+    const setS = (k) => (e) => setSf(p => ({ ...p, [k]: e.target.value }));
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-10 px-4">
 
-            {/* ── Page Header ── */}
+            {/* Header */}
             <div className="sm:mx-auto sm:w-full sm:max-w-md text-center mb-6">
-                {/* Water drop icon */}
                 <div className="flex justify-center mb-3">
-                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="white"
-                            className="w-7 h-7"
-                        >
-                            <path d="M12 2.25a.75.75 0 01.612.317l6.75 9a.75.75 0 01.138.433v.75a6.75 6.75 0 01-13.5 0V12a.75.75 0 01.138-.433l6.75-9A.75.75 0 0112 2.25z" />
+                    <div className="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                        <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
+                            <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2z" />
                         </svg>
                     </div>
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900">Water Quality Monitor</h1>
-
+                <h1 className="text-2xl font-bold text-gray-900">WaterWatch India</h1>
+                <p className="text-sm text-gray-500 mt-1">Water Quality Monitoring Platform</p>
             </div>
 
-            {/* ── Auth Card ── */}
+            {/* Card */}
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                <div className="bg-white border border-gray-200 rounded-xl shadow-card px-6 py-8 sm:px-8">
+                <div className="bg-white border border-gray-200 rounded-2xl shadow-md px-6 py-7 sm:px-8">
 
-                    {/* ── Tabs ── */}
-                    <div className="flex border border-gray-200 rounded-lg p-1 mb-6 bg-gray-50">
-                        <button
-                            onClick={() => switchTab('login')}
-                            className={`flex-1 py-2 text-sm font-medium rounded-md transition-all duration-200 ${activeTab === 'login'
-                                ? 'bg-white text-blue-600 shadow-sm border border-gray-200'
-                                : 'text-gray-500 hover:text-gray-700'
-                                }`}
-                        >
-                            Login
-                        </button>
-                        <button
-                            onClick={() => switchTab('signup')}
-                            className={`flex-1 py-2 text-sm font-medium rounded-md transition-all duration-200 ${activeTab === 'signup'
-                                ? 'bg-white text-blue-600 shadow-sm border border-gray-200'
-                                : 'text-gray-500 hover:text-gray-700'
-                                }`}
-                        >
-                            Sign Up
-                        </button>
+                    {/* Tabs */}
+                    <div className="flex border border-gray-200 rounded-lg p-1 mb-6 bg-gray-50 gap-1">
+                        {['login', 'signup'].map(t => (
+                            <button key={t} onClick={() => switchTab(t)}
+                                className={`flex-1 py-2 text-sm font-medium rounded-md transition-all duration-200 ${tab === t ? 'bg-white text-blue-600 shadow-sm border border-gray-200' : 'text-gray-500 hover:text-gray-700'
+                                    }`}>
+                                {t === 'login' ? 'Sign In' : 'Create Account'}
+                            </button>
+                        ))}
                     </div>
 
-                    {/* ══════════════════ LOGIN FORM ══════════════════ */}
-                    {activeTab === 'login' && (
+                    {/* ── LOGIN ──────────────────────────────────────────────────────────── */}
+                    {tab === 'login' && (
                         <form onSubmit={handleLogin} noValidate className="space-y-4">
-
-                            {/* API-level error (e.g., wrong password) */}
-                            {loginApiError && (
-                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">
-                                    {loginApiError}
-                                </div>
+                            {lapiErr && (
+                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">{lapiErr}</div>
                             )}
-
-                            <FormInput
-                                label="Email Address"
-                                id="login-email"
-                                type="email"
-                                value={loginForm.email}
-                                onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })}
-                                placeholder="you@example.com"
-                                error={loginErrors.email}
-                            />
-
-                            <FormInput
-                                label="Password"
-                                id="login-password"
-                                type="password"
-                                value={loginForm.password}
-                                onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
-                                placeholder="Enter your password"
-                                error={loginErrors.password}
-                            />
-
-                            {/* Forgot password (UI only) */}
-                            <div className="text-right">
-                                <button
-                                    type="button"
-                                    className="text-xs text-blue-600 hover:underline"
-                                    onClick={() => alert('Password reset is not available.')}
-                                >
-                                    Forgot password?
-                                </button>
-                            </div>
-
-                            <button type="submit" className="btn-primary mt-2">
-                                Login
+                            <F label="Email Address" id="l-email" type="email" value={lf.email}
+                                onChange={e => setLf({ ...lf, email: e.target.value })}
+                                placeholder="you@example.com" error={le.email} />
+                            <F label="Password" id="l-pw" type="password" value={lf.password}
+                                onChange={e => setLf({ ...lf, password: e.target.value })}
+                                placeholder="Enter your password" error={le.password} />
+                            <button type="submit" disabled={loading} className="btn-primary mt-1">
+                                {loading ? 'Signing in…' : 'Sign In'}
                             </button>
-
-                            <p className="text-center text-xs text-gray-500 mt-4">
+                            <p className="text-center text-xs text-gray-500">
                                 Don't have an account?{' '}
-                                <button
-                                    type="button"
-                                    onClick={() => switchTab('signup')}
-                                    className="text-blue-600 font-medium hover:underline"
-                                >
-                                    Sign up
+                                <button type="button" onClick={() => switchTab('signup')} className="text-blue-600 font-medium hover:underline">
+                                    Create one
                                 </button>
                             </p>
                         </form>
                     )}
 
-                    {/* ══════════════════ SIGNUP FORM ══════════════════ */}
-                    {activeTab === 'signup' && (
+                    {/* ── SIGNUP ─────────────────────────────────────────────────────────── */}
+                    {tab === 'signup' && (
                         <form onSubmit={handleSignup} noValidate className="space-y-4">
-
-                            {/* API-level error (e.g., email already exists) */}
-                            {signupApiError && (
-                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">
-                                    {signupApiError}
-                                </div>
+                            {sapiErr && (
+                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">⚠ {sapiErr}</div>
                             )}
 
-                            <FormInput
-                                label="Email Address"
-                                id="signup-email"
-                                type="email"
-                                value={signupForm.email}
-                                onChange={(e) => setSignupForm({ ...signupForm, email: e.target.value })}
-                                placeholder="you@example.com"
-                                error={signupErrors.email}
-                            />
+                            <F label="Email Address *" id="s-email" type="email" value={sf.email}
+                                onChange={setS('email')} placeholder="you@example.com" error={se.email} />
 
-                            <FormInput
-                                label="Password"
-                                id="signup-password"
-                                type="password"
-                                value={signupForm.password}
-                                onChange={(e) => setSignupForm({ ...signupForm, password: e.target.value })}
-                                placeholder="Minimum 6 characters"
-                                error={signupErrors.password}
-                            />
+                            <F label="Password *" id="s-pw" type="password" value={sf.password}
+                                onChange={setS('password')} placeholder="Minimum 6 characters" error={se.password} />
 
-                            <FormInput
-                                label="Confirm Password"
-                                id="signup-confirm"
-                                type="password"
-                                value={signupForm.confirmPassword}
-                                onChange={(e) => setSignupForm({ ...signupForm, confirmPassword: e.target.value })}
-                                placeholder="Re-enter your password"
-                                error={signupErrors.confirmPassword}
-                            />
+                            <F label="Confirm Password *" id="s-confirm" type="password" value={sf.confirm}
+                                onChange={setS('confirm')} placeholder="Re-enter your password" error={se.confirm} />
 
-                            <button type="submit" className="btn-primary mt-2">
-                                Create Account
+                            <F label="Phone Number *" id="s-phone" error={se.phone}>
+                                <div className="flex">
+                                    <span className="inline-flex items-center px-3 text-sm text-gray-500 bg-gray-50 border border-r-0 border-gray-300 rounded-l-lg">+91</span>
+                                    <input id="s-phone" type="tel" value={sf.phone} onChange={setS('phone')}
+                                        placeholder="9876543210" maxLength={10}
+                                        className={`input-field rounded-l-none ${se.phone ? 'border-red-400' : ''}`} />
+                                </div>
+                            </F>
+
+                            <button type="submit" disabled={loading} className="btn-primary mt-1">
+                                {loading ? 'Creating account…' : 'Create Account'}
                             </button>
-
-                            <p className="text-center text-xs text-gray-500 mt-4">
+                            <p className="text-center text-xs text-gray-500">
                                 Already have an account?{' '}
-                                <button
-                                    type="button"
-                                    onClick={() => switchTab('login')}
-                                    className="text-blue-600 font-medium hover:underline"
-                                >
-                                    Login
+                                <button type="button" onClick={() => switchTab('login')} className="text-blue-600 font-medium hover:underline">
+                                    Sign in
                                 </button>
                             </p>
                         </form>
                     )}
+
                 </div>
-
-
             </div>
         </div>
     );

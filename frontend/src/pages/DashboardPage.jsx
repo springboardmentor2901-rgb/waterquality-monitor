@@ -10,7 +10,7 @@
  *  - A logout button
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -58,6 +58,11 @@ const icons = {
 const DashboardPage = () => {
     const { currentUser, profile, logout } = useAuth();
     const navigate = useNavigate();
+    const [justCompletedSetup, setJustCompletedSetup] = useState(() => {
+        const flag = sessionStorage.getItem('justSetup') === '1';
+        if (flag) sessionStorage.removeItem('justSetup'); // consume immediately
+        return flag;
+    });
 
     // Format the date profile was completed
     const completedDate = profile?.completedAt
@@ -77,30 +82,32 @@ const DashboardPage = () => {
         <div className="min-h-screen bg-gray-50 py-10 px-4">
             <div className="max-w-2xl mx-auto space-y-6">
 
-                {/* ── Success Banner ── */}
-                <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex items-start gap-4">
-                    {/* Checkmark icon */}
-                    <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={2}
-                            stroke="currentColor"
-                            className="w-5 h-5 text-green-600"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                        </svg>
+                {/* ── Success Banner — only shown right after completing profile setup ── */}
+                {justCompletedSetup && (
+                    <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex items-start gap-4">
+                        {/* Checkmark icon */}
+                        <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="w-5 h-5 text-green-600"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 className="text-base font-semibold text-green-800">
+                                Profile Completed Successfully!
+                            </h2>
+                            <p className="text-sm text-green-700 mt-0.5">
+                                Welcome to Water Quality Monitor. Your profile is all set.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h2 className="text-base font-semibold text-green-800">
-                            Profile Completed Successfully!
-                        </h2>
-                        <p className="text-sm text-green-700 mt-0.5">
-                            Welcome to Water Quality Monitor. Your profile was set up on {completedDate}.
-                        </p>
-                    </div>
-                </div>
+                )}
 
                 {/* ── Profile Card ── */}
                 <div className="bg-white border border-gray-200 rounded-xl shadow-card overflow-hidden">
@@ -115,8 +122,8 @@ const DashboardPage = () => {
                         </div>
                         {/* Avatar circle with initials */}
                         <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                            {profile?.fullName
-                                ? profile.fullName.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2)
+                            {profile?.fullname
+                                ? profile.fullname.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2)
                                 : '?'}
                         </div>
                     </div>
@@ -126,11 +133,11 @@ const DashboardPage = () => {
                         {profile?.username && (
                             <ProfileRow icon={icons.user} label="Username" value={`@${profile.username}`} />
                         )}
-                        <ProfileRow icon={icons.user} label="Full Name" value={profile?.fullName} />
+                        <ProfileRow icon={icons.user} label="Full Name" value={profile?.fullname} />
 
                         <ProfileRow icon={icons.email} label="Email Address" value={currentUser} />
                         <ProfileRow icon={icons.phone} label="Phone Number" value={profile?.phone ? `+91 ${profile.phone}` : null} />
-                        <ProfileRow icon={icons.location} label="Location" value={profile?.city && profile?.state ? `${profile.city}, ${profile.state}` : null} />
+                        <ProfileRow icon={icons.location} label="Location" value={profile?.location || null} />
                     </div>
                 </div>
 
@@ -152,7 +159,7 @@ const DashboardPage = () => {
 
                     {/* Placeholder for future features */}
                     <button
-                        onClick={() => alert('Water quality monitoring features coming soon!')}
+                        onClick={() => { window.location.href = '/googlemaps.html'; }}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 
                        border border-transparent rounded-lg text-sm font-medium text-white 
                        bg-blue-600 hover:bg-blue-700 transition-colors duration-200"

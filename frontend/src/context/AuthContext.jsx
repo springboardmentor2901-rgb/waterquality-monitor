@@ -29,17 +29,20 @@ export const AuthProvider = ({ children }) => {
 
     // ── On app load: restore session from localStorage ──────────────────────────
     useEffect(() => {
+        const token = localStorage.getItem('token');
         const savedEmail = localStorage.getItem(SESSION_KEY);
-        if (savedEmail) {
+        if (token && savedEmail) {
             setCurrentUser(savedEmail);
-            // Fetch the profile from the backend
-            fetch(`${API}/api/users`)
+            fetch(`${API}/api/users/me`, {
+                headers: { 'Authorization': `Bearer ${token}` }
+            })
                 .then(r => r.json())
                 .then(data => {
-                    const user = (data.users || []).find(u => u.email === savedEmail);
-                    setProfile(user?.profile || null);
+                    if (data.success && data.data) {
+                        setProfile(data.data);
+                    }
                 })
-                .catch(() => { }) // ignore network errors on restore
+                .catch(() => { })
                 .finally(() => setLoading(false));
         } else {
             setLoading(false);
@@ -51,27 +54,25 @@ export const AuthProvider = ({ children }) => {
      * Register a new user via POST /api/signup.
      * @returns {Promise<string|null>} Error message, or null on success.
      */
-    const signup = async (email, password) => {
+    const signup = async (email, password, username, fullname, phone, location) => {
         try {
-            const res = await fetch(`${API}/api/signup`, {
+            const res = await fetch(`${API}/api/users/register`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({
+                    email,
+                    password,
+                    username: username || email.split('@')[0],
+                    fullname: fullname || '',
+                    phone: phone || null,
+                    location: location || null,
+                }),
             });
             const data = await res.json();
-
-            if (!res.ok) {
-                return data.error || 'Signup failed. Please try again.';
-            }
-
-            // Auto-login after signup
-            localStorage.setItem(SESSION_KEY, email);
-            setCurrentUser(email);
-            setProfile(null); // Profile not set yet
-
-            return null; // null = no error
+            if (!res.ok) return { error: data.error || 'Signup failed.', field: data.field || null };
+            return null; // success
         } catch {
-            return 'Cannot connect to the server. Make sure the backend is running.';
+            return { error: 'Cannot connect to the server. Make sure the backend is running.', field: null };
         }
     };
 
@@ -82,7 +83,7 @@ export const AuthProvider = ({ children }) => {
      */
     const login = async (email, password) => {
         try {
-            const res = await fetch(`${API}/api/login`, {
+            const res = await fetch(`${API}/api/users/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
@@ -93,10 +94,11 @@ export const AuthProvider = ({ children }) => {
                 return data.error || 'Login failed. Please try again.';
             }
 
-            // Save session
+            // Save JWT token and session
+            localStorage.setItem('token', data.token);
             localStorage.setItem(SESSION_KEY, email);
             setCurrentUser(email);
-            setProfile(data.profile || null);
+            setProfile(data.user || null);
 
             return null; // null = no error
         } catch {
@@ -107,6 +109,7 @@ export const AuthProvider = ({ children }) => {
     // ── LOGOUT ──────────────────────────────────────────────────────────────────
     const logout = () => {
         localStorage.removeItem(SESSION_KEY);
+        localStorage.removeItem('token');
         setCurrentUser(null);
         setProfile(null);
     };
@@ -119,10 +122,22 @@ export const AuthProvider = ({ children }) => {
      */
     const saveProfile = async (profileData) => {
         try {
-            const res = await fetch(`${API}/api/profile`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: currentUser, profile: profileData }),
+            const token = localStorage.getItem('token');
+            const res = await fetch(`${API}/api/users/me`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                // Map frontend camelCase fields → DB lowercase fields
+                body: JSON.stringify({
+                    username: profileData.username,
+                    fullname: profileData.fullName,
+                    phone: profileData.phone,
+                    location: profileData.city && profileData.state
+                        ? `${profileData.city}, ${profileData.state}`
+                        : profileData.location || null,
+                }),
             });
             const data = await res.json();
 
@@ -130,7 +145,7 @@ export const AuthProvider = ({ children }) => {
                 return data.error || 'Failed to save profile.';
             }
 
-            setProfile(data.profile);
+            setProfile(data.data);  // backend returns { success, data: { user fields } }
             return null; // success
         } catch {
             return 'Cannot connect to the server. Make sure the backend is running.';
@@ -147,7 +162,8 @@ export const AuthProvider = ({ children }) => {
         login,                          // async function
         logout,                         // function
         saveProfile,                    // async function
-        isProfileComplete: !!profile,   // boolean shorthand
+        // Profile is "complete" only when all required fields are filled
+        isProfileComplete: !!(profile?.fullname && profile?.phone && profile?.location),
     };
 
     return (

@@ -20,7 +20,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 600;
     color: #111827;
   }
@@ -28,29 +33,20 @@
 
 /* Reusable component classes */
 @layer components {
+
   /* Primary button style */
   .btn-primary {
-    @apply w-full flex justify-center items-center px-4 py-2.5 border border-transparent 
-           rounded-lg text-sm font-medium text-white bg-blue-600 
-           hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 
-           focus:ring-blue-500 transition-colors duration-200 disabled:opacity-50 
-           disabled:cursor-not-allowed;
+    @apply w-full flex justify-center items-center px-4 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   /* Secondary / outline button */
   .btn-secondary {
-    @apply w-full flex justify-center items-center px-4 py-2.5 border border-gray-300 
-           rounded-lg text-sm font-medium text-gray-700 bg-white 
-           hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 
-           focus:ring-blue-500 transition-colors duration-200;
+    @apply w-full flex justify-center items-center px-4 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200;
   }
 
   /* Input field style */
   .input-field {
-    @apply block w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm 
-           placeholder-gray-400 text-gray-900 bg-white
-           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
-           transition-colors duration-200;
+    @apply block w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-400 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
   }
 
   /* Label style */
