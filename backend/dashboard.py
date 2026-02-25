@@ -99,24 +99,50 @@ PAL    = ["#3b82f6","#22c55e","#f59e0b","#ef4444","#8b5cf6",
           "#06b6d4","#ec4899","#14b8a6","#f97316","#84cc16"]
 CBG = "#ffffff"; CPP = "#f8fafc"; GRD = "#e2e8f0"; FC = "#1a2a3a"
 
+# ── PARAMETER INFO ─────────────────────────────────────────────────────────────
+# FIX: Added full Nitrate significance, health impact, and proper threshold text.
+# Previously NO3 had threshold text but no significance in WQI or alerts.
 PINFO = {
     "DO":  ("Dissolved Oxygen (DO)",
-            "Oxygen dissolved in water — essential for fish and aquatic life to survive.",
+            "Oxygen dissolved in water — essential for fish, aquatic insects and aerobic bacteria to survive. "
+            "Low DO indicates organic pollution consuming oxygen (dead zones). "
+            "Rivers below 4 mg/L cannot sustain fish life.",
             "✅ Safe ≥6 mg/L | ⚠️ Warning <4 mg/L | 🔴 Critical <2 mg/L"),
+
     "BOD": ("Biochemical Oxygen Demand (BOD)",
-            "Oxygen microbes need to break down organic waste — higher value = more pollution.",
+            "Oxygen microbes need to break down organic waste — higher value = more sewage/industrial pollution. "
+            "High BOD directly depletes DO, creating oxygen-starved water. "
+            "A key indicator of untreated sewage discharge.",
             "✅ Safe ≤3 mg/L | ⚠️ Warning >10 mg/L | 🔴 Critical >30 mg/L"),
+
     "pH":  ("pH Level",
-            "Acidity/alkalinity scale. 7=neutral, <7=acidic, >7=alkaline. Extremes harm aquatic life.",
+            "Acidity/alkalinity scale. 7 = neutral, <7 = acidic, >7 = alkaline. "
+            "Extremes harm aquatic life — acidic water dissolves heavy metals (lead, mercury) making them more toxic. "
+            "Alkaline water from industrial effluents can be equally damaging.",
             "✅ Safe 6.5–8.5 | ⚠️ Warning <6 or >9 | 🔴 Critical <5 or >10"),
+
     "FC":  ("Faecal Coliform",
-            "Bacteria from human/animal waste — high levels mean sewage contamination and serious disease risk.",
+            "Bacteria from human/animal intestinal waste — high levels confirm sewage contamination. "
+            "Direct health risk: cholera, typhoid, diarrhoea, hepatitis A. "
+            "India's rivers carry some of the world's highest FC counts due to open defecation and untreated sewage.",
             "✅ Safe ≤100 MPN/100mL | ⚠️ Warning >500 | 🔴 Critical >1000 MPN/100mL"),
+
+    # FIX: Expanded significance — eutrophication, blue baby syndrome, agricultural runoff
     "NO3": ("Nitrate (NO₃)",
-            "Excess nitrate causes algal blooms and oxygen depletion (eutrophication).",
+            "Excess nitrate — primarily from agricultural fertiliser runoff and sewage — triggers eutrophication: "
+            "explosive algal blooms that block sunlight, deplete oxygen on decomposition, and create aquatic dead zones. "
+            "At >45 mg/L in drinking water it causes methemoglobinemia (Blue Baby Syndrome) in infants under 6 months, "
+            "a potentially fatal condition where nitrate prevents blood from carrying oxygen. "
+            "Also linked to higher cancer risk in adults with prolonged exposure. "
+            "India's agricultural states (Punjab, Haryana, UP) frequently exceed safe limits due to over-fertilisation. "
+            "This parameter is included in the WQI score (10% weight) and triggers alerts at WHO thresholds.",
             "✅ Safe ≤45 mg/L | ⚠️ Warning >45 mg/L | 🔴 Critical >100 mg/L"),
+
     "WQI": ("Water Quality Index (WQI)",
-            "Composite score 0–100 combining DO, BOD, pH and Faecal Coliform into a single rating.",
+            "Composite score 0–100 combining DO (25%), BOD (25%), pH (20%), Faecal Coliform (20%) "
+            "and Nitrate (10%) into a single rating. "
+            "Nitrate is now included because elevated nitrate frequently co-occurs with agricultural runoff "
+            "and represents a distinct public health risk not captured by organic pollution indicators alone.",
             "🟢 Excellent 90–100 | 🟡 Good 70–89 | 🟠 Fair 50–69 | 🔴 Poor 30–49 | ⛔ Critical <30"),
 }
 
@@ -205,24 +231,24 @@ def load_nwmp(years=None, types=None):
     cm = {}
     for c in df.columns:
         cl = c.lower().strip()
-        if cl in ("station_code","stationcode","code"):                                cm[c] = "station_code"
+        if cl in ("station_code","stationcode","code"):                                  cm[c] = "station_code"
         elif cl in ("location_name","locationname","name","station_name","stationname"): cm[c] = "loc"
-        elif cl in ("water_body_type","waterbodytype","type","body_type"):             cm[c] = "wbtype"
-        elif cl == "state":                                                             cm[c] = "state"
-        elif cl in ("do_min","domin"):      cm[c] = "do_min"
-        elif cl in ("do_max","domax"):      cm[c] = "do_max"
-        elif cl in ("ph_min","phmin"):      cm[c] = "ph_min"
-        elif cl in ("ph_max","phmax"):      cm[c] = "ph_max"
-        elif cl in ("bod_min","bodmin"):    cm[c] = "bod_min"
-        elif cl in ("bod_max","bodmax"):    cm[c] = "bod_max"
+        elif cl in ("water_body_type","waterbodytype","type","body_type"):               cm[c] = "wbtype"
+        elif cl == "state":                                                               cm[c] = "state"
+        elif cl in ("do_min","domin"):       cm[c] = "do_min"
+        elif cl in ("do_max","domax"):       cm[c] = "do_max"
+        elif cl in ("ph_min","phmin"):       cm[c] = "ph_min"
+        elif cl in ("ph_max","phmax"):       cm[c] = "ph_max"
+        elif cl in ("bod_min","bodmin"):     cm[c] = "bod_min"
+        elif cl in ("bod_max","bodmax"):     cm[c] = "bod_max"
         elif cl in ("nitrate_min","nitratemin"): cm[c] = "no3_min"
         elif cl in ("nitrate_max","nitratemax"): cm[c] = "no3_max"
         elif cl in ("faecal_min","faecalmin","fcmin"): cm[c] = "fc_min"
         elif cl in ("faecal_max","faecalmax","fcmax"):  cm[c] = "fc_max"
-        elif cl in ("temp_min","tempmin"):  cm[c] = "temp_min"
-        elif cl in ("temp_max","tempmax"):  cm[c] = "temp_max"
-        elif cl in ("cond_min","condmin"):  cm[c] = "cond_min"
-        elif cl in ("cond_max","condmax"):  cm[c] = "cond_max"
+        elif cl in ("temp_min","tempmin"):   cm[c] = "temp_min"
+        elif cl in ("temp_max","tempmax"):   cm[c] = "temp_max"
+        elif cl in ("cond_min","condmin"):   cm[c] = "cond_min"
+        elif cl in ("cond_max","condmax"):   cm[c] = "cond_max"
     df = df.rename(columns=cm)
     for c in ["do_min","do_max","ph_min","ph_max","bod_min","bod_max","fc_min","fc_max",
               "no3_min","no3_max","temp_min","temp_max","cond_min","cond_max"]:
@@ -288,17 +314,46 @@ def load_rain():
     return df
 
 # ── WQI ───────────────────────────────────────────────────────────────────────
+# FIX: Nitrate (NO3) is now included in WQI with 10% weight.
+# Old weights: DO=30%, pH=20%, BOD=30%, FC=20%  → total=100%, NO3 ignored
+# New weights: DO=25%, pH=20%, BOD=25%, FC=20%, NO3=10% → total=100%
+# Rationale: Nitrate is a distinct public health risk (Blue Baby Syndrome,
+# eutrophication) not captured by BOD/FC. Agricultural runoff in India
+# (Punjab, Haryana, UP) frequently pushes NO3 above safe limits even when
+# other parameters are acceptable. Adding it at 10% reflects its importance
+# without over-shadowing the primary organic pollution indicators.
 def calc_wqi(row):
     try:
-        do = row.get("do_min", float("nan")); p1 = row.get("ph_min", float("nan"))
-        p2 = row.get("ph_max", float("nan")); bd = row.get("bod_max", float("nan"))
-        fc = row.get("fc_max", float("nan"))
+        do  = row.get("do_min",  float("nan"))
+        p1  = row.get("ph_min",  float("nan"))
+        p2  = row.get("ph_max",  float("nan"))
+        bd  = row.get("bod_max", float("nan"))
+        fc  = row.get("fc_max",  float("nan"))
+        no3 = row.get("no3_max", float("nan"))   # FIX: was never read before
+
+        # Dissolved Oxygen score (higher DO = better)
         ds = (100 if do >= 6 else (70 if do >= 4 else 30)) if pd.notna(do) else 50
+
+        # pH score (safe range 6.5–8.5)
         ps = 100 if (pd.notna(p1) and pd.notna(p2) and 6.5 <= p1 and p2 <= 8.5) else 50
+
+        # BOD score (lower BOD = better)
         bs = (100 if bd <= 3 else (60 if bd <= 6 else 20)) if pd.notna(bd) else 50
+
+        # Faecal Coliform score (lower FC = better)
         fs = (100 if fc <= 100 else (50 if fc <= 500 else 10)) if pd.notna(fc) else 50
-        return round(ds*.3 + ps*.2 + bs*.3 + fs*.2)
-    except: return 50
+
+        # Nitrate score (lower NO3 = better)
+        # Negative values are sensor anomalies — treated as missing (score=50, neutral)
+        # ≤45 mg/L → safe (WHO drinking water guideline)
+        # ≤100 mg/L → borderline (eutrophication risk)
+        # >100 mg/L → critical (Blue Baby Syndrome risk, dead zones)
+        ns = (100 if no3 <= 45 else (50 if no3 <= 100 else 10)) if (pd.notna(no3) and no3 >= 0) else 50
+
+        # FIX: Revised weights — DO 25%, pH 20%, BOD 25%, FC 20%, NO3 10%
+        return round(ds * 0.25 + ps * 0.20 + bs * 0.25 + fs * 0.20 + ns * 0.10)
+    except:
+        return 50
 
 def wlbl(w):
     if w >= 90: return "Excellent", "#16a34a"
@@ -307,22 +362,50 @@ def wlbl(w):
     if w >= 30: return "Poor",      "#dc2626"
     return "Critical", "#991b1b"
 
+# ── ALERTS ────────────────────────────────────────────────────────────────────
+# FIX: Added nitrate alert checks — both WARNING (>45 mg/L) and CRITICAL (>100 mg/L).
+# Previously make_alerts() only checked BOD, FC and DO. Nitrate was completely
+# absent from the alert engine despite being listed in the WHO reference table.
 def make_alerts(df):
     al = []
     if df.empty: return al
     for _, row in df.iterrows():
-        nm = str(row.get("loc","?"))[:55]; st_n = str(row.get("state","")); yr = str(row.get("_year",""))
-        bd = row.get("bod_max", float("nan")); fc = row.get("fc_max", float("nan")); do = row.get("do_min", float("nan"))
+        nm   = str(row.get("loc","?"))[:55]
+        st_n = str(row.get("state",""))
+        yr   = str(row.get("_year",""))
+        bd   = row.get("bod_max",  float("nan"))
+        fc   = row.get("fc_max",   float("nan"))
+        do   = row.get("do_min",   float("nan"))
+        no3  = row.get("no3_max",  float("nan"))   # FIX: read nitrate
+
+        # BOD alerts
         if pd.notna(bd) and bd > 30:
             al.append({"type":"CRITICAL","msg":f"BOD critically high ({bd:.1f} mg/L)","station":nm,"state":st_n,"param":"BOD","yr":yr})
         elif pd.notna(bd) and bd > 10:
             al.append({"type":"WARNING","msg":f"Elevated BOD ({bd:.1f} mg/L)","station":nm,"state":st_n,"param":"BOD","yr":yr})
+
+        # Faecal Coliform alerts
         if pd.notna(fc) and fc > 1000:
             al.append({"type":"CRITICAL","msg":f"Faecal coliform very high ({fc:.0f} MPN/100mL)","station":nm,"state":st_n,"param":"FC","yr":yr})
         elif pd.notna(fc) and fc > 500:
             al.append({"type":"WARNING","msg":f"High faecal coliform ({fc:.0f} MPN/100mL)","station":nm,"state":st_n,"param":"FC","yr":yr})
+
+        # Dissolved Oxygen alerts
         if pd.notna(do) and do < 4:
             al.append({"type":"CRITICAL","msg":f"Dangerously low DO ({do:.1f} mg/L)","station":nm,"state":st_n,"param":"DO","yr":yr})
+
+        # Nitrate alerts — only for physically valid values (no3 >= 0)
+        # Negative nitrate = sensor/data error → skip alert, shown grey in chart
+        if pd.notna(no3) and no3 >= 0:
+            if no3 > 100:
+                al.append({"type":"CRITICAL",
+                           "msg":f"Nitrate critically high ({no3:.1f} mg/L) — Blue Baby Syndrome risk",
+                           "station":nm,"state":st_n,"param":"NO3","yr":yr})
+            elif no3 > 45:
+                al.append({"type":"WARNING",
+                           "msg":f"Nitrate above WHO limit ({no3:.1f} mg/L) — eutrophication risk",
+                           "station":nm,"state":st_n,"param":"NO3","yr":yr})
+
     return al[:50]
 
 # ── CHART HELPERS ─────────────────────────────────────────────────────────────
@@ -478,8 +561,8 @@ if page == "Overview":
         ("📡", f"{len(df):,}",       "NWMP Stations",      "#1e88e5"),
         ("🕳️", f"{len(df_gw):,}",    "GW Records",         "#16a34a"),
         ("🌧️", f"{len(df_rain):,}",  "Rainfall Records",   "#d97706"),
-        ("🚨", str(crit_n),          "Critical Alerts",     "#dc2626"),
-        ("📊", f"{avg_wqi}",         f"Avg WQI — {awl}",   awc)]):
+        ("🚨", str(crit_n),          "Critical Alerts",    "#dc2626"),
+        ("📊", f"{avg_wqi}",         f"Avg WQI — {awl}",  awc)]):
         col.markdown(mcard(ic, v, lb, cl), unsafe_allow_html=True)
 
     if df.empty:
@@ -542,8 +625,9 @@ if page == "Overview":
         sB = cc2.selectbox("Station B", pool, index=min(1, len(pool)-1), key="cmpB")
         rA = df[df["loc"] == sA].iloc[0]
         rB = df[df["loc"] == sB].iloc[0]
+        # FIX: Added no3_max to the comparison bar chart
         pcols = ["do_max","bod_max","ph_max","fc_max","no3_max"]
-        plabs = ["DO (mg/L)","BOD (mg/L)","pH","Faecal Coliform","Nitrate (mg/L)"]
+        plabs = ["DO (mg/L)","BOD (mg/L)","pH","Faecal Coliform (MPN/100mL)","Nitrate (mg/L)"]
         vA = [float(rA.get(p,0)) if pd.notna(rA.get(p)) else 0 for p in pcols]
         vB = [float(rB.get(p,0)) if pd.notna(rB.get(p)) else 0 for p in pcols]
         wA = calc_wqi(rA.to_dict()); wB = calc_wqi(rB.to_dict())
@@ -584,7 +668,7 @@ elif page == "Water Quality":
     if df.empty: st.warning("No data — adjust sidebar filters."); st.stop()
     st.caption(f"{len(df):,} records · {sel_state} · {sel_tlbl} · {sel_stn}")
 
-    tab1,tab2,tab3,tab4,tab5 = st.tabs(["🫁 Dissolved Oxygen","🧪 BOD","⚗️ pH","🦠 Faecal Coliform","🌿 Nitrate"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🫁 Dissolved Oxygen","🧪 BOD","⚗️ pH","🦠 Faecal Coliform","🌿 Nitrate"])
 
     def _ptab(pkey, mxcol, color, ylabel, chart_key, n=15):
         ibox(pkey)
@@ -604,7 +688,135 @@ elif page == "Water Quality":
     with tab2: _ptab("BOD", "bod_max", "#dc2626", "BOD (mg/L)",                 "ptab_bod")
     with tab3: _ptab("pH",  "ph_max",  "#16a34a", "pH",                         "ptab_ph")
     with tab4: _ptab("FC",  "fc_max",  "#d97706", "Faecal Coliform (MPN/100mL)","ptab_fc")
-    with tab5: _ptab("NO3", "no3_max", "#7c3aed", "Nitrate (mg/L)",             "ptab_no3")
+
+    # Nitrate tab — 4-colour system with full legend and negative value handling
+    with tab5:
+        ibox("NO3")
+        sub_no3 = df.dropna(subset=["no3_max"]).nlargest(15, "no3_max")
+        if sub_no3.empty:
+            st.info("No nitrate data available in current selection.")
+        else:
+            # ── COLOUR LEGEND ──────────────────────────────────────────────
+            # The chart uses 4 distinct colours, each with a specific meaning:
+            #
+            #  🩶 GREY   (#94a3b8) — Negative value (< 0 mg/L)
+            #                        Instrument error or sensor malfunction.
+            #                        Nitrate cannot physically be negative.
+            #                        These readings should be flagged for
+            #                        data quality review and excluded from
+            #                        WQI scoring.
+            #
+            #  🟢 GREEN  (#16a34a) — Safe / Borderline-safe (0 – 45 mg/L)
+            #                        At or below WHO drinking water guideline.
+            #                        Aquatic ecosystem not at eutrophication
+            #                        risk. Safe for infant consumption.
+            #                        Note: a bar at exactly 45.0 appears green
+            #                        because it just touches the limit without
+            #                        exceeding it (strict > 45 triggers orange).
+            #
+            #  🟠 ORANGE (#d97706) — Warning (> 45 mg/L and ≤ 100 mg/L)
+            #                        Exceeds WHO guideline. Eutrophication and
+            #                        algal bloom risk. Not safe as drinking
+            #                        water for infants. Agricultural runoff
+            #                        likely. Monitoring intervention required.
+            #
+            #  🟣 PURPLE (#7c3aed) — Critical (> 100 mg/L)
+            #                        Severely elevated. High Blue Baby Syndrome
+            #                        (methemoglobinemia) risk for infants < 6
+            #                        months. Severe eutrophication. Immediate
+            #                        remediation and public health alert needed.
+            # ──────────────────────────────────────────────────────────────
+
+            def _no3_color(v):
+                if v < 0:   return "#94a3b8"   # grey  — negative (data anomaly)
+                if v > 100: return "#7c3aed"   # purple — critical
+                if v > 45:  return "#d97706"   # orange — warning
+                return "#16a34a"               # green  — safe / borderline-safe
+
+            no3_colors = [_no3_color(v) for v in sub_no3["no3_max"]]
+
+            # Hover text shows status label per bar
+            def _no3_status(v):
+                if v < 0:   return "⚫ Data Anomaly (negative)"
+                if v > 100: return "🔴 CRITICAL — Blue Baby risk"
+                if v > 45:  return "⚠️ WARNING — Exceeds WHO limit"
+                return "✅ Safe / Borderline-safe"
+
+            hover_status = [_no3_status(v) for v in sub_no3["no3_max"]]
+
+            fig_no3 = go.Figure(go.Bar(
+                y=[l[:35]+"…" if len(l)>35 else l for l in sub_no3["loc"].tolist()],
+                x=sub_no3["no3_max"].tolist(),
+                orientation="h",
+                marker_color=no3_colors,
+                text=[f"{v:.1f}" for v in sub_no3["no3_max"]],
+                textposition="outside",
+                customdata=list(zip(sub_no3["loc"].tolist(), hover_status)),
+                hovertemplate=(
+                    "<b>%{customdata[0]}</b><br>"
+                    "Nitrate: %{x:.2f} mg/L<br>"
+                    "Status: %{customdata[1]}<extra></extra>"
+                )
+            ))
+
+            # WHO & critical reference lines
+            fig_no3.add_vline(x=45,  line_dash="dash", line_color="#d97706", line_width=2,
+                              annotation_text="WHO Limit (45 mg/L)",
+                              annotation_position="top right",
+                              annotation_font_color="#d97706")
+            fig_no3.add_vline(x=100, line_dash="dash", line_color="#7c3aed", line_width=2,
+                              annotation_text="Critical (100 mg/L)",
+                              annotation_position="top right",
+                              annotation_font_color="#7c3aed")
+
+            fig_no3.update_layout(
+                title=dict(text="Top 15 Stations — Nitrate NO₃ (Max)", font=dict(color=FC, size=14)),
+                xaxis_title="Nitrate (mg/L)",
+                paper_bgcolor=CPP, plot_bgcolor=CBG, font_color=FC, height=480,
+                xaxis=dict(gridcolor=GRD),
+                yaxis=dict(gridcolor=GRD),
+                margin=dict(t=50, b=30, l=220, r=80)
+            )
+            st.plotly_chart(fig_no3, use_container_width=True, key="ptab_no3_custom")
+
+            # ── COLOUR LEGEND displayed below the chart ────────────────────
+            st.markdown("""
+<div style="display:flex;gap:24px;flex-wrap:wrap;padding:10px 0 4px;font-size:13px;align-items:center">
+  <div><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#94a3b8;margin-right:6px;vertical-align:middle"></span><b>Grey</b> — Negative value (data/sensor error)</div>
+  <div><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#16a34a;margin-right:6px;vertical-align:middle"></span><b>Green</b> — Safe / Borderline-safe (0–45 mg/L)</div>
+  <div><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#d97706;margin-right:6px;vertical-align:middle"></span><b>Orange</b> — Warning: Exceeds WHO limit (45–100 mg/L)</div>
+  <div><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:#7c3aed;margin-right:6px;vertical-align:middle"></span><b>Purple</b> — Critical: Blue Baby Syndrome risk (&gt;100 mg/L)</div>
+</div>
+""", unsafe_allow_html=True)
+
+            # ── SUMMARY METRICS ────────────────────────────────────────────
+            n_neg  = (sub_no3["no3_max"] < 0).sum()
+            n_safe = ((sub_no3["no3_max"] >= 0) & (sub_no3["no3_max"] <= 45)).sum()
+            n_warn = ((sub_no3["no3_max"] > 45) & (sub_no3["no3_max"] <= 100)).sum()
+            n_crit = (sub_no3["no3_max"] > 100).sum()
+            s1, s2, s3, s4, s5 = st.columns(5)
+            s1.metric("Stations Shown", len(sub_no3))
+            s2.metric("🩶 Anomaly (<0)", n_neg)
+            s3.metric("🟢 Safe (0–45)", n_safe)
+            s4.metric("🟠 Warning (>45)", n_warn)
+            s5.metric("🟣 Critical (>100)", n_crit)
+
+            # Warning note if negative values are present
+            if n_neg > 0:
+                st.warning(
+                    f"⚠️ **{n_neg} station(s)** have negative nitrate readings (shown in grey). "
+                    "Nitrate cannot be negative — this indicates sensor malfunction, calibration error, "
+                    "or a data entry issue. These values are excluded from alert thresholds but are "
+                    "displayed for data quality awareness. Flag these stations for field inspection."
+                )
+
+            with st.expander("📋 Full nitrate data table"):
+                no3_cols = ["loc","state","_tlbl","_year","no3_min","no3_max","wqi","wql"]
+                full_no3 = df.dropna(subset=["no3_max"]).sort_values("no3_max", ascending=False)
+                full_no3 = safe_df(full_no3, no3_cols).rename(columns={
+                    "loc":"Station","state":"State","_tlbl":"Type","_year":"Year",
+                    "no3_min":"NO3 Min","no3_max":"NO3 Max","wqi":"WQI","wql":"Quality"})
+                st.dataframe(full_no3, use_container_width=True, hide_index=True, height=260)
 
     st.markdown("---")
     st.subheader("🔍 Station Deep Dive")
@@ -618,14 +830,25 @@ elif page == "Water Quality":
         with g2:
             pmap = {"State":"state","Type":"_tlbl","Year":"_year",
                     "DO Max (mg/L)":"do_max","pH Min–Max":"","BOD Max (mg/L)":"bod_max",
-                    "Faecal Max (MPN)":"fc_max","Nitrate Max (mg/L)":"no3_max",
+                    "Faecal Max (MPN)":"fc_max",
+                    "Nitrate Max (mg/L)":"no3_max",   # FIX: was present but now shown with context
                     "Conductivity Max":"cond_max","Temp Min (°C)":"temp_min","Temp Max (°C)":"temp_max"}
             rows = []
             for label, col in pmap.items():
                 if col == "": val = f"{srow.get('ph_min','')} – {srow.get('ph_max','')}"
                 else:         val = str(srow.get(col,""))
+                # Flag nitrate value with status label in deep dive (4 states)
+                if col == "no3_max" and val not in ("", "nan", "None"):
+                    try:
+                        nv = float(val)
+                        if nv < 0:    flag = " 🩶 DATA ANOMALY (negative — sensor error)"
+                        elif nv > 100: flag = " 🔴 CRITICAL (Blue Baby risk)"
+                        elif nv > 45:  flag = " ⚠️ WARNING (exceeds WHO limit)"
+                        else:          flag = " ✅ Safe"
+                        val = f"{nv:.1f}{flag}"
+                    except: pass
                 rows.append({"Parameter":label,"Value":val})
-            st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True, height=300)
+            st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True, height=320)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # GROUNDWATER
@@ -687,7 +910,8 @@ elif page == "Groundwater":
 elif page == "Rainfall":
     st.title("🌧️ Rainfall Monitoring")
     st.markdown('<div class="info-box"><h4>ℹ️ Rainfall Data</h4>'
-                '<p>Telemetric readings in mm from IMD/CWC gauges. High rainfall increases runoff, worsening water quality.</p></div>',
+                '<p>Telemetric readings in mm from IMD/CWC gauges. High rainfall increases runoff, '
+                'worsening water quality — especially nitrate from agricultural fields and faecal coliform from open areas.</p></div>',
                 unsafe_allow_html=True)
     if df_rain.empty: st.warning(f"No files in {RAINP}"); st.stop()
 
@@ -734,15 +958,20 @@ elif page == "Alerts":
     st.title("🚨 Alerts & Advisories")
     st.markdown('<div class="info-box"><h4>ℹ️ How Alerts Are Generated</h4>'
                 '<p>CRITICAL = immediate health risk. WARNING = concerning, needs monitoring. '
-                'Thresholds from WHO and BIS IS:10500.</p></div>', unsafe_allow_html=True)
+                'Thresholds from WHO and BIS IS:10500. '
+                'Parameters monitored: BOD, Faecal Coliform, Dissolved Oxygen, and Nitrate (NO₃).</p></div>',
+                unsafe_allow_html=True)
 
     all_al  = make_alerts(df_all) if not df_all.empty else []
     a_state = st.selectbox("Filter by State", ["All States"] + clean_states, key="al_state")
+    # FIX: Added NO3 to the param filter so users can filter nitrate alerts specifically
+    a_param = st.selectbox("Filter by Parameter", ["All Parameters","BOD","FC","DO","NO3"], key="al_param")
     a_srch  = st.text_input("🔍 Search station name", placeholder="e.g. River Ganga or Chennai…", key="al_srch")
 
     shown = all_al
-    if a_state != "All States": shown = [a for a in shown if a["state"] == a_state]
-    if a_srch.strip():          shown = [a for a in shown if a_srch.lower() in a["station"].lower()]
+    if a_state != "All States":     shown = [a for a in shown if a["state"] == a_state]
+    if a_param != "All Parameters": shown = [a for a in shown if a["param"] == a_param]
+    if a_srch.strip():              shown = [a for a in shown if a_srch.lower() in a["station"].lower()]
 
     st.caption(f"Showing {len(shown)} alerts")
     if not shown:
@@ -767,8 +996,10 @@ elif page == "Alerts":
                                      ["#dc2626","#d97706","#1e88e5"]),
                             use_container_width=True, key="pc_al_sev")
         with c2:
+            # FIX: NO3 will now appear in this pie since alerts include nitrate
             pc = adf["param"].value_counts()
-            st.plotly_chart(make_pie(pc.index.tolist(), pc.values.tolist(), "By Parameter"),
+            st.plotly_chart(make_pie(pc.index.tolist(), pc.values.tolist(), "By Parameter",
+                                     ["#1e88e5","#dc2626","#16a34a","#7c3aed"]),
                             use_container_width=True, key="pc_15")
         with c3:
             sc = adf.groupby("state").size().sort_values(ascending=False).head(10)
@@ -780,13 +1011,15 @@ elif page == "Alerts":
 
     st.markdown("---")
     st.subheader("📋 WHO / BIS IS:10500 Reference Thresholds")
+    # FIX: Updated Nitrate row to clarify Blue Baby Syndrome and eutrophication significance
     tdf = pd.DataFrame([
-        {"Parameter":"Dissolved Oxygen","Safe":">= 6 mg/L","Warning":"< 4 mg/L","Critical":"< 2 mg/L"},
-        {"Parameter":"BOD","Safe":"<= 3 mg/L","Warning":"> 10 mg/L","Critical":"> 30 mg/L"},
-        {"Parameter":"pH","Safe":"6.5–8.5","Warning":"<6 or >9","Critical":"<5 or >10"},
-        {"Parameter":"Faecal Coliform","Safe":"<= 100 MPN/100mL","Warning":">500","Critical":">1000"},
-        {"Parameter":"Nitrate","Safe":"<= 45 mg/L","Warning":">45 mg/L","Critical":">100 mg/L"},
-        {"Parameter":"Conductivity","Safe":"< 1500 μS/cm","Warning":"1500–3000","Critical":">3000"},
+        {"Parameter":"Dissolved Oxygen","Safe":">= 6 mg/L","Warning":"< 4 mg/L","Critical":"< 2 mg/L","Significance":"Aquatic life survival"},
+        {"Parameter":"BOD","Safe":"<= 3 mg/L","Warning":"> 10 mg/L","Critical":"> 30 mg/L","Significance":"Organic/sewage pollution"},
+        {"Parameter":"pH","Safe":"6.5–8.5","Warning":"<6 or >9","Critical":"<5 or >10","Significance":"Acidity/alkalinity balance"},
+        {"Parameter":"Faecal Coliform","Safe":"<= 100 MPN/100mL","Warning":">500","Critical":">1000","Significance":"Sewage contamination, disease risk"},
+        {"Parameter":"Nitrate (NO₃)","Safe":"<= 45 mg/L","Warning":">45 mg/L","Critical":">100 mg/L",
+         "Significance":"Blue Baby Syndrome, eutrophication, algal blooms"},   # FIX: added significance
+        {"Parameter":"Conductivity","Safe":"< 1500 μS/cm","Warning":"1500–3000","Critical":">3000","Significance":"Dissolved salts/industrial load"},
     ])
     for c in tdf.columns: tdf[c] = tdf[c].astype(str)
     st.dataframe(tdf, use_container_width=True, hide_index=True)
@@ -828,6 +1061,12 @@ elif page == "NGO Dashboard":
                                 marker_color=clrs, text=[f"{v:.1f}" for v in sp.values],
                                 textposition="outside",
                                 hovertemplate="<b>%{x}</b><br>"+sel_param+": %{y:.2f}<extra></extra>"))
+        # FIX: Add WHO reference line when nitrate is selected
+        if sel_param == "Nitrate (mg/L)":
+            figP.add_hline(y=45, line_dash="dash", line_color="#d97706",
+                           annotation_text="WHO limit 45 mg/L")
+            figP.add_hline(y=100, line_dash="dash", line_color="#dc2626",
+                           annotation_text="Critical 100 mg/L")
         figP.update_layout(yaxis_title=sel_param)
         st.plotly_chart(_layout(figP, 400, 90), use_container_width=True, key="pc_17")
 
@@ -851,19 +1090,38 @@ elif page == "NGO Dashboard":
     with col_l:
         st.subheader("🔴 Critical Stations (WQI < 30)")
         if not crit_st.empty:
-            st.dataframe(safe_df(crit_st.sort_values("wqi"), ["loc","state","_tlbl","_year","wqi","bod_max","fc_max"])
+            st.dataframe(safe_df(crit_st.sort_values("wqi"),
+                                 ["loc","state","_tlbl","_year","wqi","bod_max","fc_max","no3_max"])
                          .rename(columns={"loc":"Station","state":"State","_tlbl":"Type","_year":"Year",
-                                          "wqi":"WQI","bod_max":"BOD Max","fc_max":"FC Max"}),
+                                          "wqi":"WQI","bod_max":"BOD Max","fc_max":"FC Max",
+                                          "no3_max":"NO3 Max"}),  # FIX: added NO3 column
                          use_container_width=True, hide_index=True, height=280)
         else: st.success("No critical stations in selection!")
+
     with col_r:
         st.subheader("⚠️ Stations Exceeding BOD Limit (>30 mg/L)")
         bod_exc = df[df["bod_max"] > 30].sort_values("bod_max", ascending=False).head(10)
         if not bod_exc.empty:
-            st.dataframe(safe_df(bod_exc, ["loc","state","bod_max","fc_max","wqi"])
-                         .rename(columns={"loc":"Station","state":"State","bod_max":"BOD Max","fc_max":"FC Max","wqi":"WQI"}),
+            st.dataframe(safe_df(bod_exc, ["loc","state","bod_max","fc_max","no3_max","wqi"])
+                         .rename(columns={"loc":"Station","state":"State","bod_max":"BOD Max",
+                                          "fc_max":"FC Max","no3_max":"NO3 Max","wqi":"WQI"}),  # FIX
                          use_container_width=True, hide_index=True, height=280)
         else: st.success("No BOD exceedance in selection!")
+
+    # FIX: New section — stations where nitrate exceeds WHO limit
+    st.markdown("---")
+    st.subheader("🌿 Stations Exceeding Nitrate WHO Limit (>45 mg/L)")
+    if "no3_max" in df.columns:
+        no3_exc = df[df["no3_max"] > 45].sort_values("no3_max", ascending=False).head(10)
+        if not no3_exc.empty:
+            st.dataframe(safe_df(no3_exc, ["loc","state","_tlbl","no3_max","bod_max","wqi"])
+                         .rename(columns={"loc":"Station","state":"State","_tlbl":"Type",
+                                          "no3_max":"Nitrate Max (mg/L)","bod_max":"BOD Max","wqi":"WQI"}),
+                         use_container_width=True, hide_index=True, height=250)
+        else:
+            st.success("✅ No stations exceed the nitrate WHO limit in current selection.")
+    else:
+        st.info("Nitrate data not available in current selection.")
 
     st.markdown("---")
     st.subheader("🗺️ State Water Quality Ranking")
@@ -872,14 +1130,16 @@ elif page == "NGO Dashboard":
             avg_wqi=("wqi","mean"), stations=("loc","count"),
             critical=("wqi", lambda x: (x < 30).sum()),
             poor=("wqi", lambda x: ((x >= 30) & (x < 50)).sum()),
-            avg_bod=("bod_max","mean"), avg_fc=("fc_max","mean")
+            avg_bod=("bod_max","mean"),
+            avg_fc=("fc_max","mean"),
+            avg_no3=("no3_max","mean")    # FIX: added nitrate average
         ).round(1).sort_values("avg_wqi").reset_index()
         sw["Quality"] = sw["avg_wqi"].apply(lambda x: wlbl(x)[0])
         sw_s = sw.copy()
         for c in sw_s.columns: sw_s[c] = sw_s[c].astype(str)
         st.dataframe(sw_s.rename(columns={"state":"State","avg_wqi":"Avg WQI","stations":"Stations",
                                            "critical":"Critical","poor":"Poor","avg_bod":"Avg BOD",
-                                           "avg_fc":"Avg FC","Quality":"Quality"}),
+                                           "avg_fc":"Avg FC","avg_no3":"Avg NO3","Quality":"Quality"}),
                      use_container_width=True, hide_index=True, height=300)
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -888,7 +1148,8 @@ elif page == "NGO Dashboard":
 elif page == "Trends":
     st.title("📈 Historical Trends — 2021 · 2022 · 2023")
     st.markdown('<div class="info-box"><h4>ℹ️ Reading Trends</h4>'
-                '<p>Rising BOD/FC = worsening pollution. Falling DO = oxygen depletion.</p></div>',
+                '<p>Rising BOD/FC/NO3 = worsening pollution. Falling DO = oxygen depletion. '
+                'Rising Nitrate = increasing agricultural runoff or sewage infiltration.</p></div>',
                 unsafe_allow_html=True)
     if df_all.empty: st.warning("No NWMP data."); st.stop()
 
@@ -930,6 +1191,7 @@ elif page == "Trends":
                 if len(pv2) >= 2:
                     delta = (pv2.iloc[-1] - pv2.iloc[0]).round(2).reset_index()
                     delta.columns = ["State","Change 2021→2023"]
+                    # FIX: Nitrate is a "lower is better" parameter like BOD/FC
                     delta["Direction"] = delta["Change 2021→2023"].apply(
                         lambda x: "⬆️ Worsened" if (x > 0 and sel_p not in ("Dissolved Oxygen (DO)","WQI"))
                                   else ("⬆️ Improved" if x > 0 else
@@ -955,6 +1217,12 @@ elif page == "Trends":
                     textposition="top center", line=dict(color="#1e88e5", width=3),
                     marker=dict(size=12, color="#1e88e5", line=dict(color="white", width=2)),
                     fill="tozeroy", fillcolor="rgba(30,136,229,0.08)"))
+                # FIX: Add WHO reference line for nitrate trend chart
+                if sel_p == "Nitrate":
+                    figS.add_hline(y=45, line_dash="dash", line_color="#d97706",
+                                   annotation_text="WHO limit 45 mg/L")
+                    figS.add_hline(y=100, line_dash="dash", line_color="#dc2626",
+                                   annotation_text="Critical 100 mg/L")
                 figS.update_layout(title=f"{sel_p} at: {sel_ts[:60]}",
                     paper_bgcolor=CPP, plot_bgcolor=CBG, font_color=FC, height=300,
                     xaxis=dict(gridcolor=GRD, title="Year"), yaxis=dict(gridcolor=GRD, title=sel_p),
