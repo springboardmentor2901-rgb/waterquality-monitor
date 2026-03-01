@@ -1,35 +1,19 @@
-/**
- * DashboardPage.jsx
- * ------------------
- * This is the "Profile Completed" page shown after a user
- * has successfully logged in AND completed their profile setup.
- *
- * It displays:
- *  - A success banner
- *  - The user's full profile details in a clean card layout
- *  - A logout button
- */
-
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-// ─── Profile Detail Row ───────────────────────────────────────────────────────
-// Renders a single label + value pair
 const ProfileRow = ({ icon, label, value }) => (
-    <div className="flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
-        {/* Icon circle */}
-        <div className="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+    <div className="flex items-start gap-3 py-3 border-b border-gray-100 dark:border-gray-700 last:border-0">
+        <div className="flex-shrink-0 w-8 h-8 bg-blue-50 dark:bg-blue-900/40 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
             {icon}
         </div>
         <div className="min-w-0">
-            <p className="text-xs font-medium text-gray-400 uppercase tracking-wide">{label}</p>
-            <p className="text-sm font-medium text-gray-900 mt-0.5">{value || '—'}</p>
+            <p className="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wide">{label}</p>
+            <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mt-0.5">{value || '—'}</p>
         </div>
     </div>
 );
 
-// ─── SVG Icons ────────────────────────────────────────────────────────────────
 const icons = {
     user: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
@@ -54,17 +38,15 @@ const icons = {
     ),
 };
 
-// ─── Main DashboardPage ───────────────────────────────────────────────────────
 const DashboardPage = () => {
     const { currentUser, profile, logout } = useAuth();
     const navigate = useNavigate();
-    const [justCompletedSetup, setJustCompletedSetup] = useState(() => {
+    const [justCompletedSetup] = useState(() => {
         const flag = sessionStorage.getItem('justSetup') === '1';
-        if (flag) sessionStorage.removeItem('justSetup'); // consume immediately
+        if (flag) sessionStorage.removeItem('justSetup');
         return flag;
     });
 
-    // Format the date profile was completed
     const completedDate = profile?.completedAt
         ? new Date(profile.completedAt).toLocaleDateString('en-IN', {
             day: 'numeric',
@@ -79,57 +61,51 @@ const DashboardPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-10 px-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 transition-colors duration-300">
             <div className="max-w-2xl mx-auto space-y-6">
 
-                {/* ── Success Banner — only shown right after completing profile setup ── */}
                 {justCompletedSetup && (
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex items-start gap-4">
-                        {/* Checkmark icon */}
-                        <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <div className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-5 flex items-start gap-4">
+                        <div className="flex-shrink-0 w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={2}
                                 stroke="currentColor"
-                                className="w-5 h-5 text-green-600"
+                                className="w-5 h-5 text-green-600 dark:text-green-400"
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
                         </div>
                         <div>
-                            <h2 className="text-base font-semibold text-green-800">
+                            <h2 className="text-base font-semibold text-green-800 dark:text-green-300">
                                 Profile Completed Successfully!
                             </h2>
-                            <p className="text-sm text-green-700 mt-0.5">
+                            <p className="text-sm text-green-700 dark:text-green-400 mt-0.5">
                                 Welcome to Water Quality Monitor. Your profile is all set.
                             </p>
                         </div>
                     </div>
                 )}
 
-                {/* ── Profile Card ── */}
-                <div className="bg-white border border-gray-200 rounded-xl shadow-card overflow-hidden">
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-card dark:shadow-gray-900/30 overflow-hidden transition-colors duration-300">
 
-                    {/* Card Header */}
-                    <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+                    <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
                         <div>
-                            <h3 className="text-base font-semibold text-gray-900">Your Profile</h3>
+                            <h3 className="text-base font-semibold text-gray-900 dark:text-white">Your Profile</h3>
                             {profile?.username && (
-                                <p className="text-xs text-blue-500 font-medium mt-0.5">@{profile.username}</p>
+                                <p className="text-xs text-blue-500 dark:text-blue-400 font-medium mt-0.5">@{profile.username}</p>
                             )}
                         </div>
-                        {/* Avatar circle with initials */}
-                        <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                        <div className="w-10 h-10 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                             {profile?.fullname
                                 ? profile.fullname.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2)
                                 : '?'}
                         </div>
                     </div>
 
-                    {/* Profile Details */}
-                    <div className="px-6 py-2 divide-y divide-gray-50">
+                    <div className="px-6 py-2 divide-y divide-gray-50 dark:divide-gray-700/50">
                         {profile?.username && (
                             <ProfileRow icon={icons.user} label="Username" value={`@${profile.username}`} />
                         )}
@@ -141,15 +117,12 @@ const DashboardPage = () => {
                     </div>
                 </div>
 
-
-                {/* ── Actions ── */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                    {/* Logout button */}
                     <button
                         onClick={handleLogout}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 
-                       border border-gray-300 rounded-lg text-sm font-medium text-gray-700 
-                       bg-white hover:bg-gray-50 transition-colors duration-200"
+                       border border-gray-300 dark:border-gray-600 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 
+                       bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
@@ -157,12 +130,11 @@ const DashboardPage = () => {
                         Logout
                     </button>
 
-                    {/* Placeholder for future features */}
                     <button
                         onClick={() => { window.location.href = '/googlemaps.html'; }}
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 
                        border border-transparent rounded-lg text-sm font-medium text-white 
-                       bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                       bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />

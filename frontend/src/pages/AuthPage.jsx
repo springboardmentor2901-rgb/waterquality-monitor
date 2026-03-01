@@ -1,12 +1,7 @@
-/**
- * AuthPage.jsx — Clean login / signup.
- */
-
 import React, { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-// Defined OUTSIDE AuthPage so React doesn't remount inputs on every keystroke
 const F = ({ label, id, type = 'text', value, onChange, placeholder, error, children }) => (
     <div>
         <label htmlFor={id} className="input-label">{label}</label>
@@ -25,19 +20,16 @@ const AuthPage = () => {
     const [tab, setTab] = useState('login');
     const [loading, setLoading] = useState(false);
 
-    // ── Login state ──────────────────────────────────────────────────────────────
     const [lf, setLf] = useState({ email: '', password: '' });
     const [le, setLe] = useState({});
     const [lapiErr, setLapiErr] = useState('');
 
-    // ── Signup state ─────────────────────────────────────────────────────────────
     const [sf, setSf] = useState({ email: '', password: '', confirm: '', phone: '' });
     const [se, setSe] = useState({});
     const [sapiErr, setSapiErr] = useState('');
 
     if (currentUser) return <Navigate to={isProfileComplete ? '/dashboard' : '/setup'} replace />;
 
-    // ── Validation ───────────────────────────────────────────────────────────────
     const validateLogin = () => {
         const e = {};
         if (!lf.email.trim()) e.email = 'Email is required.';
@@ -59,7 +51,6 @@ const AuthPage = () => {
         return e;
     };
 
-    // ── Handlers ─────────────────────────────────────────────────────────────────
     const handleLogin = async (e) => {
         e.preventDefault(); setLapiErr('');
         const err = validateLogin(); setLe(err);
@@ -76,19 +67,17 @@ const AuthPage = () => {
         if (Object.keys(err).length) return;
         setLoading(true);
 
-        // Auto-generate username from email prefix
         const autoUsername = sf.email.trim().split('@')[0].replace(/[^a-z0-9_]/gi, '_');
 
         const result = await signup(
             sf.email.trim(), sf.password,
-            autoUsername, '',           // fullname collected on /setup
+            autoUsername, '',
             sf.phone.trim() || null,
-            null,                       // location collected on /setup
+            null,
         );
 
         if (result) {
             setLoading(false);
-            // Route the error to the exact field that caused it
             const { error, field } = result;
             if (field === 'email') {
                 setSe(p => ({ ...p, email: error }));
@@ -112,41 +101,39 @@ const AuthPage = () => {
     const setS = (k) => (e) => setSf(p => ({ ...p, [k]: e.target.value }));
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-10 px-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col justify-center py-10 px-4 transition-colors duration-300">
 
-            {/* Header */}
             <div className="sm:mx-auto sm:w-full sm:max-w-md text-center mb-6">
                 <div className="flex justify-center mb-3">
-                    <div className="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-11 h-11 bg-blue-600 dark:bg-blue-500 rounded-xl flex items-center justify-center shadow-md">
                         <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">
                             <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0C19 10 12 2 12 2z" />
                         </svg>
                     </div>
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900">WaterWatch India</h1>
-                <p className="text-sm text-gray-500 mt-1">Water Quality Monitoring Platform</p>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">WaterWatch India</h1>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Water Quality Monitoring Platform</p>
             </div>
 
-            {/* Card */}
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-md px-6 py-7 sm:px-8">
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md dark:shadow-gray-900/30 px-6 py-7 sm:px-8 transition-colors duration-300">
 
-                    {/* Tabs */}
-                    <div className="flex border border-gray-200 rounded-lg p-1 mb-6 bg-gray-50 gap-1">
+                    <div className="flex border border-gray-200 dark:border-gray-600 rounded-lg p-1 mb-6 bg-gray-50 dark:bg-gray-700/50 gap-1">
                         {['login', 'signup'].map(t => (
                             <button key={t} onClick={() => switchTab(t)}
-                                className={`flex-1 py-2 text-sm font-medium rounded-md transition-all duration-200 ${tab === t ? 'bg-white text-blue-600 shadow-sm border border-gray-200' : 'text-gray-500 hover:text-gray-700'
+                                className={`flex-1 py-2 text-sm font-medium rounded-md transition-all duration-200 ${tab === t
+                                    ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm border border-gray-200 dark:border-gray-600'
+                                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
                                     }`}>
                                 {t === 'login' ? 'Sign In' : 'Create Account'}
                             </button>
                         ))}
                     </div>
 
-                    {/* ── LOGIN ──────────────────────────────────────────────────────────── */}
                     {tab === 'login' && (
                         <form onSubmit={handleLogin} noValidate className="space-y-4">
                             {lapiErr && (
-                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">{lapiErr}</div>
+                                <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg px-4 py-3 text-sm text-red-600 dark:text-red-400">{lapiErr}</div>
                             )}
                             <F label="Email Address" id="l-email" type="email" value={lf.email}
                                 onChange={e => setLf({ ...lf, email: e.target.value })}
@@ -157,20 +144,19 @@ const AuthPage = () => {
                             <button type="submit" disabled={loading} className="btn-primary mt-1">
                                 {loading ? 'Signing in…' : 'Sign In'}
                             </button>
-                            <p className="text-center text-xs text-gray-500">
+                            <p className="text-center text-xs text-gray-500 dark:text-gray-400">
                                 Don't have an account?{' '}
-                                <button type="button" onClick={() => switchTab('signup')} className="text-blue-600 font-medium hover:underline">
+                                <button type="button" onClick={() => switchTab('signup')} className="text-blue-600 dark:text-blue-400 font-medium hover:underline">
                                     Create one
                                 </button>
                             </p>
                         </form>
                     )}
 
-                    {/* ── SIGNUP ─────────────────────────────────────────────────────────── */}
                     {tab === 'signup' && (
                         <form onSubmit={handleSignup} noValidate className="space-y-4">
                             {sapiErr && (
-                                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">⚠ {sapiErr}</div>
+                                <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg px-4 py-3 text-sm text-red-600 dark:text-red-400">⚠ {sapiErr}</div>
                             )}
 
                             <F label="Email Address *" id="s-email" type="email" value={sf.email}
@@ -184,7 +170,7 @@ const AuthPage = () => {
 
                             <F label="Phone Number *" id="s-phone" error={se.phone}>
                                 <div className="flex">
-                                    <span className="inline-flex items-center px-3 text-sm text-gray-500 bg-gray-50 border border-r-0 border-gray-300 rounded-l-lg">+91</span>
+                                    <span className="inline-flex items-center px-3 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700 border border-r-0 border-gray-300 dark:border-gray-600 rounded-l-lg">+91</span>
                                     <input id="s-phone" type="tel" value={sf.phone} onChange={setS('phone')}
                                         placeholder="9876543210" maxLength={10}
                                         className={`input-field rounded-l-none ${se.phone ? 'border-red-400' : ''}`} />
@@ -194,9 +180,9 @@ const AuthPage = () => {
                             <button type="submit" disabled={loading} className="btn-primary mt-1">
                                 {loading ? 'Creating account…' : 'Create Account'}
                             </button>
-                            <p className="text-center text-xs text-gray-500">
+                            <p className="text-center text-xs text-gray-500 dark:text-gray-400">
                                 Already have an account?{' '}
-                                <button type="button" onClick={() => switchTab('login')} className="text-blue-600 font-medium hover:underline">
+                                <button type="button" onClick={() => switchTab('login')} className="text-blue-600 dark:text-blue-400 font-medium hover:underline">
                                     Sign in
                                 </button>
                             </p>

@@ -1,7 +1,3 @@
-/**
- * ProfileSetupPage.jsx — Clean simple profile setup matching the login page style.
- */
-
 import React, { useState, useRef } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -74,7 +70,6 @@ const ProfileSetupPage = () => {
         if (usernameStatus === 'checking') { setErrors(p => ({ ...p, username: 'Please wait…' })); return; }
         setSaving(true);
 
-        // Set flag BEFORE saveProfile so it survives any re-render-triggered <Navigate>
         sessionStorage.setItem('justSetup', '1');
 
         const result = await saveProfile({
@@ -85,12 +80,12 @@ const ProfileSetupPage = () => {
         });
         setSaving(false);
         if (result) {
-            sessionStorage.removeItem('justSetup'); // clear on error
+            sessionStorage.removeItem('justSetup');
             if (result.toLowerCase().includes('username')) {
                 setErrors(p => ({ ...p, username: result }));
                 setUsernameStatus('taken');
             } else {
-                setApiError(result); // show all other errors in banner
+                setApiError(result);
             }
             return;
         }
@@ -98,56 +93,50 @@ const ProfileSetupPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-10 px-4">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 transition-colors duration-300">
             <div className="max-w-xl mx-auto">
 
-                {/* Header */}
                 <div className="mb-6">
-                    <h1 className="text-2xl font-bold text-gray-900">Complete Your Profile</h1>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Complete Your Profile</h1>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                         Fill in your details to start using Water Quality Monitor.
                     </p>
 
-                    {/* Progress bar */}
                     <div className="mt-4">
-                        <div className="flex justify-between text-xs text-gray-500 mb-1">
+                        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
                             <span>Profile completion</span>
                             <span>{Math.round((filled / 4) * 100)}%</span>
                         </div>
                         <div className="flex gap-1">
                             {[0, 1, 2, 3].map(i => (
-                                <div key={i} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${i < filled ? 'bg-blue-600' : 'bg-gray-200'}`} />
+                                <div key={i} className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${i < filled ? 'bg-blue-600 dark:bg-blue-500' : 'bg-gray-200 dark:bg-gray-700'}`} />
                             ))}
                         </div>
                     </div>
                 </div>
 
-                {/* Form Card */}
-                <div className="bg-white border border-gray-200 rounded-2xl shadow-md p-6 sm:p-8">
-                    {/* API error banner */}
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md dark:shadow-gray-900/30 p-6 sm:p-8 transition-colors duration-300">
                     {apiError && (
-                        <div className="mb-4 bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-600">
+                        <div className="mb-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg px-4 py-3 text-sm text-red-600 dark:text-red-400">
                             ⚠ {apiError}
                         </div>
                     )}
                     <form onSubmit={handleSubmit} noValidate className="space-y-5">
 
-                        {/* Username */}
                         <div>
                             <label className="input-label">Username <span className="text-red-500">*</span></label>
                             <div className="relative">
-                                <span className="absolute inset-y-0 left-3 flex items-center text-gray-400 text-sm">@</span>
+                                <span className="absolute inset-y-0 left-3 flex items-center text-gray-400 dark:text-gray-500 text-sm">@</span>
                                 <input type="text" value={form.username} onChange={handleChange('username')}
                                     placeholder="e.g. archi_jain" maxLength={30}
                                     className={`input-field pl-7 ${errors.username ? 'border-red-400' : usernameStatus === 'available' ? 'border-green-400' : ''}`} />
                             </div>
                             {errors.username && <p className="error-text">{errors.username}</p>}
-                            {!errors.username && usernameStatus === 'checking' && <p className="text-xs text-gray-400 mt-1">⏳ Checking availability…</p>}
-                            {!errors.username && usernameStatus === 'available' && <p className="text-xs text-green-600 mt-1">✓ Username is available!</p>}
-                            {!errors.username && usernameStatus === 'taken' && <p className="text-xs text-red-500 mt-1">✗ Username already taken.</p>}
+                            {!errors.username && usernameStatus === 'checking' && <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">⏳ Checking availability…</p>}
+                            {!errors.username && usernameStatus === 'available' && <p className="text-xs text-green-600 dark:text-green-400 mt-1">✓ Username is available!</p>}
+                            {!errors.username && usernameStatus === 'taken' && <p className="text-xs text-red-500 dark:text-red-400 mt-1">✗ Username already taken.</p>}
                         </div>
 
-                        {/* Full Name */}
                         <div>
                             <label className="input-label">Full Name <span className="text-red-500">*</span></label>
                             <input type="text" value={form.fullName} onChange={handleChange('fullName')}
@@ -156,7 +145,6 @@ const ProfileSetupPage = () => {
                             {errors.fullName && <p className="error-text">{errors.fullName}</p>}
                         </div>
 
-                        {/* City + State */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label className="input-label">City <span className="text-red-500">*</span></label>
@@ -176,7 +164,6 @@ const ProfileSetupPage = () => {
                             </div>
                         </div>
 
-                        {/* Submit */}
                         <button type="submit"
                             disabled={saving || usernameStatus === 'checking' || usernameStatus === 'taken'}
                             className="btn-primary mt-2">
@@ -186,7 +173,7 @@ const ProfileSetupPage = () => {
                     </form>
                 </div>
 
-                <p className="text-center text-xs text-gray-400 mt-4">
+                <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-4">
                     Fields marked <span className="text-red-500">*</span> are required.
                 </p>
             </div>

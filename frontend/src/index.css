@@ -1,15 +1,16 @@
-/* Import Google Font - Inter for professional look */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles */
 @layer base {
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   body {
@@ -18,6 +19,11 @@
     color: #1f2937;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body {
+    background-color: #111827;
+    color: #f3f4f6;
   }
 
   h1,
@@ -29,38 +35,40 @@
     font-weight: 600;
     color: #111827;
   }
+
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: #f9fafb;
+  }
 }
 
-/* Reusable component classes */
 @layer components {
 
-  /* Primary button style */
   .btn-primary {
-    @apply w-full flex justify-center items-center px-4 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply w-full flex justify-center items-center px-4 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-offset-gray-900;
   }
 
-  /* Secondary / outline button */
   .btn-secondary {
-    @apply w-full flex justify-center items-center px-4 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200;
+    @apply w-full flex justify-center items-center px-4 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 dark:border-gray-600 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-offset-gray-900;
   }
 
-  /* Input field style */
   .input-field {
-    @apply block w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-400 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200;
+    @apply block w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm placeholder-gray-400 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 dark:border-gray-600 dark:placeholder-gray-500 dark:text-gray-100 dark:bg-gray-800 dark:focus:ring-blue-400 dark:focus:border-blue-400;
   }
 
-  /* Label style */
   .input-label {
-    @apply block text-sm font-medium text-gray-700 mb-1;
+    @apply block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300;
   }
 
-  /* Error message style */
   .error-text {
-    @apply text-xs text-red-600 mt-1;
+    @apply text-xs text-red-600 mt-1 dark:text-red-400;
   }
 
-  /* Card container */
   .card {
-    @apply bg-white border border-gray-200 rounded-xl shadow-card p-6;
+    @apply bg-white border border-gray-200 rounded-xl shadow-card p-6 dark:bg-gray-800 dark:border-gray-700;
   }
 }
